@@ -95,3 +95,17 @@ transport . voyageurs:
     seul: 1
     en couple: 2
     en famille: 4
+
+transport . voyageurs . duree:
+  ordre: 2
+  titre: Nombre voyageurs
+  question: Quelle est la durée de votre séjour  ?
+  description: |
+    Si vous êtes en couple renseignez 2. Si vous êtes une famille composée de deux adultes et deux enfants, renseignez 4. Etc.
+  par défaut: 7
+  plancher: 1
+  avertissement: |
+    Le nombre d'habitants ne peut pas être nul ni inférieur à 1.
+  suggestions:
+    Une semaine: 7
+    Un week-end: 2
