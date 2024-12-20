@@ -20,7 +20,7 @@ logement:
       - hébergement
 
 logement . habitants:
-  formule: transport . voyageurs + transport . voyageurs . duree
+  formule: transport . voyageurs + transport . voyageurs . duree + transport . existe
 #  titre: Nombre voyageurs
 #  question: Combien de personnes voyagent (vous inclus) ?
 #  description: |
