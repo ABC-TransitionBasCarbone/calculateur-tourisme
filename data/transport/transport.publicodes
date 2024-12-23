@@ -82,7 +82,7 @@ transport . taxi . présent:
 
 
 transport . voyageurs:
-  ordre: 1
+  ordre: 2
   titre: Nombre voyageurs
   question: Combien de personnes voyagent (vous inclus) ?
   description: |
@@ -96,7 +96,7 @@ transport . voyageurs:
     en couple: 2
     en famille: 4
 
-transport . existe:
+transport . passé:
   ordre: 1
   titre: Voyage passé
   question: Le séjour a-t-il déjà eu lieu ?
@@ -104,9 +104,8 @@ transport . existe:
 
 transport . voyageurs . duree:
   ordre: 2
-  titre: Nombre voyageurs
+  titre: Durée du séjour
   question: Quelle sera la durée de votre séjour ?
-  question-dependante: transport . existe
   question-passee: Quelle a été la durée de votre séjour ?
   description: |
     Si vous êtes en couple renseignez 2. Si vous êtes une famille composée de deux adultes et deux enfants, renseignez 4. Etc.
