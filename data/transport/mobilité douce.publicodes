@@ -70,7 +70,7 @@ transport . mobilité douce . type . vélo:
   applicable si: présent
   icônes: 🦵🚲
 # On proratise la construction en fonction de la durée du séjour car il s'agit très certainement d'un vélo de location
-  formule: construction amortie * (transport . durée séjour / 365)
+  formule: construction amortie * (transport . durée vacances / 365)
   unité: kgCO2e
   note: |
     Nous considérons que **l'usage** du vélo musculaire a une empreinte nulle.

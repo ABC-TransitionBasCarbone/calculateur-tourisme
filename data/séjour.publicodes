@@ -4,13 +4,8 @@
 séjour:
   applicable si:
     une de ces conditions:
-      - transport . train . présent
-      - transport . car longue distance . présent
-      - transport . voiture . présent
-      - transport . deux roues . présent
-      - transport . transports commun . présent
-#      - transport . mobilité douce . présent
-      - transport . taxi . présent
+      - durée vacances > 0
+      - localisation vacances > 0
   titre: Transport pendant le séjour
   mosaique:
     type: selection
@@ -1657,7 +1652,7 @@ séjour . mobilité douce . type . vélo:
   applicable si: séjour . mobilité douce . type . vélo . présent
   icônes: 🦵🚲
 #On ne peut malheureusement pas simplifier et renvoyer vers la même variable dans "mobilité douce.publicodes" du fait de conditions "applicable si" au sein de ce fichier --> on reprend donc les variables "construction amortie"
-  formule: construction amortie * (transport . durée séjour / 365)
+  formule: construction amortie * (transport . durée vacances / 365)
   unité: kgCO2e
   note: |
     Nous considérons que **l'usage** du vélo musculaire a une empreinte nulle.

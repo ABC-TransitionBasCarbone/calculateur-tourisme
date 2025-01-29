@@ -220,7 +220,7 @@ transport . voiture . empreinte non régulier électrique:
         voiture . utilisateur: "'propriétaire'"
 
 transport . voiture . empreinte calculée:
-  formule: (usage + construction) / voyageurs / durée séjour
+  formule: (usage + construction) / voyageurs / durée vacances
   unité: kgCO2e
 
 transport . voiture . voyageurs:

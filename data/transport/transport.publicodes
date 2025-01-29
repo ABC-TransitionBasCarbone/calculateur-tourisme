@@ -3,8 +3,8 @@ transport:
 #  ordre: 4
   applicable si:
     toutes ces conditions:
-      - durée séjour > 0
-      - localisation séjour > 0
+      - durée vacances > 0
+      - localisation vacances > 0
   titre: Transport pour venir en HdF
   mosaique:
     type: selection
@@ -88,7 +88,7 @@ transport . taxi . présent:
 transport . voyageurs:
   ordre: 1
   titre: Nombre voyageurs
-  question: Combien de personnes voyageront (vous inclus) ?
+  question: Combien de personnes voyageront (vous inclus) ???
   description: |
     Si vous êtes en couple renseignez 2. Si vous êtes une famille composée de deux adultes et deux enfants, renseignez 4. Etc.
   par défaut: 2
@@ -100,7 +100,7 @@ transport . voyageurs:
     en couple: 2
     en famille: 4
 
-transport . durée séjour:
+transport . durée vacances:
   ordre: 2
   titre: Durée du séjour
   question: Quelle sera la durée de votre séjour ?
@@ -116,7 +116,7 @@ transport . durée séjour:
     une semaine: 7
   unité: jours
 
-transport . localisation séjour:
+transport . localisation vacances:
   ordre: 3
   titre: Localisation du séjour
   question: En vous basant sur la carte ci-dessous dans quel région allez-vous majoritairement passer votre séjour ?
