@@ -82,6 +82,10 @@ ui . pédagogie . sous catégories . alimentation . viande:
     # - alimentation . devenir végétalien
     - alimentation . bonus . manger de saison
     - alimentation . bonus . manger local
+  informations:
+    - informations regionales . alimentation . slide-1
+    - informations regionales . alimentation . slide-2
+    - informations regionales . alimentation . slide-3
 
 ui . pédagogie . sous catégories . alimentation . poisson:
   titre: Repas avec poisson
@@ -190,6 +194,10 @@ ui . pédagogie . sous catégories . divers . textile:
   formule: divers . textile
   actions:
     - divers . textile . réduire neuf . diviser par deux achats
+  informations:
+    - informations regionales . divers . slide-1
+    - informations regionales . divers . slide-2
+    - informations regionales . divers . slide-3
 
 ui . pédagogie . sous catégories . divers . numérique:
   icônes: 📺
