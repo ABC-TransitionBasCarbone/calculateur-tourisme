@@ -194,6 +194,10 @@ ui . pédagogie . sous catégories . divers . textile:
   formule: divers . textile
   actions:
     - divers . textile . réduire neuf . diviser par deux achats
+  informations:
+    - informations regionales . divers . slide-1
+    - informations regionales . divers . slide-2
+    - informations regionales . divers . slide-3
 
 ui . pédagogie . sous catégories . divers . numérique:
   icônes: 📺

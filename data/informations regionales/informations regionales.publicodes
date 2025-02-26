@@ -5,8 +5,8 @@ informations regionales . alimentation :
   titre: Informations regionales sur l'alimentation
 informations regionales . alimentation . slide-1:
   titre: Slide 1
-  couleur: dark
   icônes: 🥩1️⃣
+  intensiteCouleur: 100
   description: |
     Vous consommez de la viande à tous les repas ?
 
@@ -14,8 +14,8 @@ informations regionales . alimentation . slide-1:
 
 informations regionales . alimentation . slide-2:
   titre: Slide 2
-  couleur: dark
   icônes: 🥩1️⃣
+  intensiteCouleur: 300
   description: |
     Vous consommez de la viande à tous les repas ?
 
@@ -23,8 +23,8 @@ informations regionales . alimentation . slide-2:
 
 informations regionales . alimentation . slide-3:
   titre: Slide 3
-  couleur: dark
   icônes: 🥩1️⃣
+  intensiteCouleur: 200
   description: |
     Vous consommez de la viande à tous les repas ?
 
@@ -35,8 +35,8 @@ informations regionales . divers :
 
 informations regionales . divers . slide-1:
   titre: Slide 1 divers
-  couleur: dark
   icônes: 🥩1️⃣
+  intensiteCouleur: 100
   description: |
     Vous consommez de la viande à tous les repas ?
 
@@ -44,8 +44,8 @@ informations regionales . divers . slide-1:
 
 informations regionales . divers . slide-2:
   titre: Slide 2 divers
-  couleur: dark
   icônes: 🥩1️⃣
+  intensiteCouleur: 200
   description: |
     Vous consommez de la viande à tous les repas ?
 
@@ -53,8 +53,8 @@ informations regionales . divers . slide-2:
 
 informations regionales . divers . slide-3:
   titre: Slide 3 divers
-  couleur: dark
   icônes: 🥩1️⃣
+  intensiteCouleur: 200
   description: |
     Vous consommez de la viande à tous les repas ?
 
