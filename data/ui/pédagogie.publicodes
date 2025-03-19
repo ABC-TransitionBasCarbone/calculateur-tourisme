@@ -86,6 +86,9 @@ ui . pédagogie . sous catégories . alimentation . viande:
     - informations regionales . alimentation . slide-1
     - informations regionales . alimentation . slide-2
     - informations regionales . alimentation . slide-3
+  titre-informations: Découvrez les recettes typiques de la région
+  description-informations: Si vous mangez ça qui est très carboné essayez de compenser ailleurs ou après votre séjour
+
 
 ui . pédagogie . sous catégories . alimentation . poisson:
   titre: Repas avec poisson
