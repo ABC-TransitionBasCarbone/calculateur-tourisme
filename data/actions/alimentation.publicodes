@@ -1,30 +1,30 @@
 alimentation . nombre de plats viande:
   formule: plats . viande blanche . nombre + plats . viande rouge . nombre
-  unité: repas/semaine
+  unité: repas
 
 alimentation . nombre de plats poisson:
   formule: plats . poisson gras . nombre + plats . poisson blanc . nombre
-  unité: repas/semaine
+  unité: repas
 
 alimentation . repas . réduire viande:
 alimentation . repas . réduire viande . max 1 par jour:
-  applicable si: nombre de plats viande > 7 repas/semaine
-  titre: Réduire la viande à un repas par jour
+  applicable si: nombre de plats viande >= transport . durée séjour
+  titre: Limiter la viande à un repas par jour pendant votre séjour
   icônes: 🥩1️⃣
-  formule: différence par semaine * commun . semaines par an
+  formule: différence séjour * transport . durée séjour
   description: |
-    Vous consommez de la viande à tous les repas ?
+    Pour un séjour végétarien, essayez d'éviter de consommer de la viande à tous les repas !
 
-    Pour réduire facilement votre consommation de protéines animales, ne consommez de viande qu’une fois par jour et en plus petite quantité. C’est un bon début pour limiter votre empreinte carbone.
+    Pas toujours simple me direz-vous quand les offres de repas sont toutes carnées mais c'est un geste fort pour limiter l'empreinte de votre séjour.
 
-alimentation . repas . réduire viande . max 1 par jour . différence par semaine:
+alimentation . repas . réduire viande . max 1 par jour . différence séjour:
   formule: plats - nouveau régime
 
 alimentation . repas . réduire viande . max 1 par jour . nouveau régime:
   formule:
     somme:
-      - (plats . viande blanche / nombre de plats viande) * 7 repas/semaine
-      - (plats . viande rouge / nombre de plats viande) * 7 repas/semaine
+      - (plats . viande blanche / nombre de plats viande) * transport . durée séjour #Nb de repas par jour = 2 * transport . durée séjour --> on divise donc bien par deux
+      - (plats . viande rouge / nombre de plats viande) * transport . durée séjour
       - plats . végétalien
       - plats . végétarien
       - plats . poisson gras
@@ -32,46 +32,46 @@ alimentation . repas . réduire viande . max 1 par jour . nouveau régime:
       - compensation végétarienne
 
 alimentation . repas . réduire viande . max 1 par jour . nouveau régime . compensation végétarienne:
-  formule: plats . végétarien . empreinte * (nombre de plats viande - 7 repas/semaine)
+  formule: plats . végétarien . empreinte * (nombre de plats viande - transport . durée séjour)
 
-alimentation . repas . réduire viande . max 2 par semaine:
-  applicable si: nombre de plats viande > 2
-  action:
-    dépasse:
-      - alimentation . repas . viande faible empreinte
-      - alimentation . repas . réduire viande . max 1 par jour
-  titre: Réduire la viande à deux repas par semaine
-  icônes: 🥩2️⃣
-  formule: différence par semaine * commun . semaines par an
-  description: |
-    Vous voulez réduire votre empreinte carbone en changeant vos habitudes alimentaires et en consommant moins de produits d'origine animale ?
-
-    Ne pas manger de viande plus de deux fois par semaine, vous permettra de réduire de façon importante vos émissions de gaz à effet de serre.
-
-alimentation . repas . réduire viande . max 2 par semaine . différence par semaine:
-  formule: plats - nouveau régime
-
-alimentation . repas . réduire viande . max 2 par semaine . nouveau régime:
-  formule:
-    somme:
-      - (plats . viande blanche / nombre de plats viande) * 2 repas/semaine
-      - (plats . viande rouge / nombre de plats viande) * 2 repas/semaine
-      - plats . végétalien
-      - plats . végétarien
-      - plats . poisson gras
-      - plats . poisson blanc
-      - compensation végétarienne
-
-alimentation . repas . réduire viande . max 2 par semaine . nouveau régime . compensation végétarienne:
-  formule: plats . végétarien . empreinte * ( nombre de plats viande - 2 repas/semaine )
+#alimentation . repas . réduire viande . max 2 par semaine:
+#  applicable si: nombre de plats viande > 2
+#  action:
+#    dépasse:
+#      - alimentation . repas . viande faible empreinte
+#      - alimentation . repas . réduire viande . max 1 par jour
+#  titre: Réduire la viande à deux repas par semaine
+#  icônes: 🥩2️⃣
+#  formule: différence par semaine * commun . semaines par an
+#  description: |
+#    Vous voulez réduire votre empreinte carbone en changeant vos habitudes alimentaires et en consommant moins de produits d'origine animale ?
+#
+#    Ne pas manger de viande plus de deux fois par semaine, vous permettra de réduire de façon importante vos émissions de gaz à effet de serre.
+#
+#alimentation . repas . réduire viande . max 2 par semaine . différence par semaine:
+#  formule: plats - nouveau régime
+#
+#alimentation . repas . réduire viande . max 2 par semaine . nouveau régime:
+#  formule:
+#    somme:
+#      - (plats . viande blanche / nombre de plats viande) * 2 repas/semaine
+#      - (plats . viande rouge / nombre de plats viande) * 2 repas/semaine
+#      - plats . végétalien
+#      - plats . végétarien
+#      - plats . poisson gras
+#      - plats . poisson blanc
+#      - compensation végétarienne
+#
+#alimentation . repas . réduire viande . max 2 par semaine . nouveau régime . compensation végétarienne:
+#  formule: plats . végétarien . empreinte * ( nombre de plats viande - 2 repas/semaine )
 
 alimentation . repas . viande faible empreinte:
   applicable si: plats . viande rouge . nombre > 0
   action:
     dépasse:
       - alimentation . repas . réduire viande . max 1 par jour
-  titre: Privilégier la volaille ou le porc
-  formule: différence par semaine * commun . semaines par an
+  titre: Privilégier la volaille ou le porc pendant votre séjour
+  formule: différence séjour
   icônes: ➡️🍗
   description: |
     Toutes les viandes n’ont pas le même impact sur le climat. Pour réduire son empreinte carbone, il est plus intéressant de manger de la volaille que du porc, du bœuf, du veau, du mouton ou de l’agneau.
@@ -82,10 +82,10 @@ alimentation . repas . viande faible empreinte:
 
     > Pour en savoir plus sur les impacts de notre alimentation sur notre santé et la planète, consultez [le guide « Préserver sa santé et la planète »](https://librairie.ademe.fr/consommer-autrement/6260-preserver-sa-sante-et-la-planete.html)
 
-alimentation . repas . viande faible empreinte . différence par semaine:
+alimentation . repas . viande faible empreinte . différence séjour:
   formule: plats - nouveau régime
 
-alimentation . repas . viande faible empreinte . différence par semaine . nouveau régime:
+alimentation . repas . viande faible empreinte . différence séjour . nouveau régime:
   formule:
     somme:
       - plats . viande blanche
@@ -95,56 +95,56 @@ alimentation . repas . viande faible empreinte . différence par semaine . nouve
       - plats . poisson gras
       - plats . poisson blanc
 
-alimentation . repas . viande faible empreinte . différence par semaine . nouveau régime . compensation viande blanche:
+alimentation . repas . viande faible empreinte . différence séjour . nouveau régime . compensation viande blanche:
   formule: plats . viande blanche . empreinte * plats . viande rouge . nombre
   note: On compense la suppression des plat viande rouge en plat viande blanche.
 
-alimentation . repas . réduire poisson:
-
-alimentation . repas . réduire poisson . max 2 par semaine:
-  applicable si: nombre de plats poisson > 2 repas/semaine
-  action:
-    dépasse:
-      - alimentation . repas . poisson faible empreinte
-  titre: Réduire le poisson à deux repas par semaine
-  icônes: 🐟️2️⃣
-  formule: différence par semaine * commun . semaines par an
-  description: |
-    Vous voulez réduire votre empreinte carbone en changeant vos habitudes alimentaires et en consommant moins de produits d'origine animale et en préservant les ressources de la mer ?
-
-    Ne pas manger de poisson plus de plus de deux fois par semaine, vous permettra de réduire de façon importante vos émissions de gaz à effet de serre. C’est aussi un bon moyen d’éviter la raréfaction de certaines espèces de poisson trop pêchées.
-
-alimentation . repas . réduire poisson . max 2 par semaine . différence par semaine:
-  formule: plats - nouveau régime
-
-alimentation . repas . réduire poisson . max 2 par semaine . nouveau régime:
-  formule:
-    somme:
-      - plats . viande blanche
-      - plats . viande rouge
-      - plats . végétalien
-      - plats . végétarien
-      - plats . poisson gras / nombre de plats poisson * 2 repas/semaine
-      - plats . poisson blanc / nombre de plats poisson * 2 repas/semaine
-      - compensation végétarienne
-
-alimentation . repas . réduire poisson . max 2 par semaine . nouveau régime . compensation végétarienne:
-  formule: plats . végétarien . empreinte * (nombre de plats poisson - 2 repas/semaine)
+# A voir comment adapter l'action au contexte des courts séjour --> pour l'instant on commente
+#alimentation . repas . réduire poisson:
+#alimentation . repas . réduire poisson . max 2 par semaine:
+#  applicable si: nombre de plats poisson > 2 repas/semaine
+#  action:
+#    dépasse:
+#      - alimentation . repas . poisson faible empreinte
+#  titre: Réduire le poisson à deux repas par semaine
+#  icônes: 🐟️2️⃣
+#  formule: différence par semaine * commun . semaines par an
+#  description: |
+#    Vous voulez réduire votre empreinte carbone en changeant vos habitudes alimentaires et en consommant moins de produits d'origine animale et en préservant les ressources de la mer ?
+#
+#    Ne pas manger de poisson plus de plus de deux fois par semaine, vous permettra de réduire de façon importante vos émissions de gaz à effet de serre. C’est aussi un bon moyen d’éviter la raréfaction de certaines espèces de poisson trop pêchées.
+#
+#alimentation . repas . réduire poisson . max 2 par semaine . différence par semaine:
+#  formule: plats - nouveau régime
+#
+#alimentation . repas . réduire poisson . max 2 par semaine . nouveau régime:
+#  formule:
+#    somme:
+#      - plats . viande blanche
+#      - plats . viande rouge
+#      - plats . végétalien
+#      - plats . végétarien
+#      - plats . poisson gras / nombre de plats poisson * 2 repas/semaine
+#      - plats . poisson blanc / nombre de plats poisson * 2 repas/semaine
+#      - compensation végétarienne
+#
+#alimentation . repas . réduire poisson . max 2 par semaine . nouveau régime . compensation végétarienne:
+#  formule: plats . végétarien . empreinte * (nombre de plats poisson - 2 repas/semaine)
 
 alimentation . repas . poisson faible empreinte:
   applicable si: plats . poisson blanc . nombre > 0
   titre: Préférer les poissons gras (thon, saumon...)
-  formule: différence par semaine * commun . semaines par an
+  formule: différence séjour
   icônes: ➡️🐟️
   description: |
     Le choix des poissons que nous consommons a un impact sur notre empreinte carbone. Pêcher, transporter, préparer, stocker des poissons blancs plutôt que des poissons gras consomment plus d’énergie et émet donc plus de gaz à effet de serre.
 
     En moyenne, un repas avec du poisson blanc a une empreinte carbone 50% supérieure à un repas avec un poisson comme le thon, le maquereau, le saumon ou les sardines.
 
-alimentation . repas . poisson faible empreinte . différence par semaine:
+alimentation . repas . poisson faible empreinte . différence séjour:
   formule: plats - nouveau régime
 
-alimentation . repas . poisson faible empreinte . différence par semaine . nouveau régime:
+alimentation . repas . poisson faible empreinte . différence séjour . nouveau régime:
   formule:
     somme:
       - plats . viande blanche
@@ -154,47 +154,47 @@ alimentation . repas . poisson faible empreinte . différence par semaine . nouv
       - plats . poisson gras
       - compensation poisson gras
 
-alimentation . repas . poisson faible empreinte . différence par semaine . nouveau régime . compensation poisson gras:
+alimentation . repas . poisson faible empreinte . différence séjour . nouveau régime . compensation poisson gras:
   formule: plats . poisson gras . empreinte * plats . poisson blanc . nombre
   description: On compense la suppression des plats poisson blanc en plat poisson gras.
 
 alimentation . devenir végétarien:
-  titre: Devenir végétarien
+  titre: Opter pour un séjour végétarien
   applicable si:
     une de ces conditions:
       - nombre de plats viande > 0
       - nombre de plats poisson > 0
   action:
-    dépasse:
+    dépasse: #Je commente certains attributs car j'ai commenté les actions qui correspondent
       - alimentation . repas . réduire viande . max 1 par jour
-      - alimentation . repas . réduire viande . max 2 par semaine
+#      - alimentation . repas . réduire viande . max 2 par semaine
       - alimentation . repas . viande faible empreinte
-      - alimentation . repas . réduire poisson . max 2 par semaine
+#      - alimentation . repas . réduire poisson . max 2 par semaine
       - alimentation . repas . poisson faible empreinte
-  formule: différence par semaine * commun . semaines par an
+  formule: différence séjour
   icônes: 🥗🧀
   description: |
-    Adopter un régime végétarien, sans viande ni poisson mais avec des œufs, du lait, du fromage, des yaourts, permettra de diminuer de manière importante les émissions de gaz à effet de serre générées par votre alimentation.
+    Adopter un régime végétarien, sans viande ni poisson mais avec des œufs, du lait, du fromage, des yaourts, permettra de diminuer de manière importante les émissions de gaz à effet de serre de votre alimentation pendant le séjour.
 
     Intégrez davantage de légumineuses à vos menus. Elles vous apporteront des protéines végétales.
+#
+#    > Pour trouver des idées de recettes à base de légumineuses, [consultez notre livre de recettes](https://librairie.ademe.fr/consommer-autrement/1768-recettes-des-4-saisons-a-base-de-legumes-et-legumineuses.html)
 
-    > Pour trouver des idées de recettes à base de légumineuses, [consultez notre livre de recettes](https://librairie.ademe.fr/consommer-autrement/1768-recettes-des-4-saisons-a-base-de-legumes-et-legumineuses.html)
-
-alimentation . devenir végétarien . différence par semaine:
-  titre: Différence par semaine
+alimentation . devenir végétarien . différence séjour:
+  titre: Différence séjour
   formule:
     somme:
-      - différence par semaine petits déjeuners
-      - différence par semaine repas
+      - différence séjour petits déjeuners
+      - différence séjour repas
 
-alimentation . devenir végétarien . différence par semaine petits déjeuners:
+alimentation . devenir végétarien . différence séjour petits déjeuners:
   applicable si: alimentation . petit déjeuner . type = 'britannique'
-  formule: alimentation . petit déjeuner . par semaine - une semaine petit déjeuner végétalien
+  formule: (alimentation . petit déjeuner . par jour - un jour petit déjeuner végétalien) * transport . durée séjour
 
-alimentation . devenir végétarien . différence par semaine repas:
+alimentation . devenir végétarien . différence séjour repas:
   formule: plats - recalcul
 
-alimentation . devenir végétarien . différence par semaine repas . recalcul:
+alimentation . devenir végétarien . différence séjour repas . recalcul:
   valeur: plats
   contexte:
     plats . végétarien . nombre: nouveau nombre plats végé
@@ -203,72 +203,88 @@ alimentation . devenir végétarien . différence par semaine repas . recalcul:
     plats . poisson gras: 0
     plats . poisson blanc: 0
 
-alimentation . devenir végétarien . différence par semaine repas . nouveau nombre plats végé:
+alimentation . devenir végétarien . différence séjour repas . nouveau nombre plats végé:
   formule: plats . végétarien . nombre + nombre plats non végé
-  unité: repas/semaine
+  unité: repas
 
-alimentation . devenir végétarien . différence par semaine repas . nombre plats non végé:
+alimentation . devenir végétarien . différence séjour repas . nombre plats non végé:
   formule: nombre de plats viande + nombre de plats poisson
-  unité: repas/semaine
+  unité: repas
 
 alimentation . devenir végétalien:
+  titre: Opter pour un séjour végétalien
   applicable si:
     une de ces conditions:
       - nombre de plats viande > 0
       - nombre de plats poisson > 0
       - plats . végétarien . nombre > 0
   action:
-    dépasse:
+    dépasse: #Je commente certains attributs car j'ai commenté les actions qui correspondent
       - alimentation . repas . réduire viande . max 1 par jour
-      - alimentation . repas . réduire viande . max 2 par semaine
+#      - alimentation . repas . réduire viande . max 2 par semaine
       - alimentation . repas . viande faible empreinte
-      - alimentation . repas . réduire poisson . max 2 par semaine
+#      - alimentation . repas . réduire poisson . max 2 par semaine
       - alimentation . repas . poisson faible empreinte
       - alimentation . devenir végétarien
-  formule: différence par semaine * commun . semaines par an
+  formule: différence séjour
   icônes: 🥗🌾
   description: |
-    Supprimer toutes les protéines animales (viande, poisson, œuf, produits laitiers) de votre alimentation diminue très fortement les émissions de gaz à effet de serre. Ce régime végétalien doit être appliqué avec beaucoup de précautions.
+    Supprimer toutes les protéines animales (viande, poisson, œuf, produits laitiers) de votre alimentation diminue très fortement les émissions de gaz à effet de serre.
 
-    ⚠️ Attention ! Le régime végétalien n'est pas adapté à tous les publics. Les risques de carences sont élevés, notamment chez les enfants, les femmes enceintes et les personnes fragiles.
-    Si vous réfléchissez à adopter cette alimentation, pensez à en parler à votre médecin, pour qu'il vérifie que cela ne se fait pas au détriment de votre santé.
+#    ⚠️ Attention ! Le régime végétalien n'est pas adapté à tous les publics. Les risques de carences sont élevés, notamment chez les enfants, les femmes enceintes et les personnes fragiles.
+#    Si vous réfléchissez à adopter cette alimentation, pensez à en parler à votre médecin, pour qu'il vérifie que cela ne se fait pas au détriment de votre santé.
 
-alimentation . devenir végétalien . différence par semaine:
-  titre: Différence par semaine
+alimentation . devenir végétalien . différence séjour:
+  titre: Différence séjour
   formule:
     somme:
-      - différence par semaine repas
-      - différence par semaine petits déjeuners
-      - différence par semaine chocolat chaud
+      - différence séjour repas
+      - différence séjour petits déjeuners
+      - différence séjour chocolat chaud
 
-alimentation . devenir végétalien . différence par semaine repas:
-  formule: plats - une semaine plats végétalien
-
-alimentation . devenir végétalien . différence par semaine petits déjeuners:
+alimentation . devenir végétalien . différence séjour petits déjeuners:
   applicable si:
     une de ces conditions:
       - alimentation . petit déjeuner . type = 'britannique'
       - toutes ces conditions:
           - alimentation . petit déjeuner . type = 'lait céréales'
           - alimentation . type de lait = 'lait de vache'
-  formule: alimentation . petit déjeuner . par semaine - une semaine petit déjeuner végétalien
+  formule: (alimentation . petit déjeuner . par jour - un jour petit déjeuner végétalien) * transport . durée séjour
 
-alimentation . une semaine plats végétalien:
-  formule: 14 repas/semaine * plats . végétalien . empreinte
+alimentation . un jour petit déjeuner végétalien:
+  valeur: petit déjeuner . par jour
+  contexte:
+    alimentation . petit déjeuner . type: "'végétalien'"
 
-alimentation . devenir végétalien . différence par semaine chocolat chaud:
+alimentation . devenir végétalien . différence séjour repas:
+  formule: plats - recalcul
+
+alimentation . devenir végétalien . différence séjour repas . recalcul:
+  valeur: plats
+  contexte:
+    plats . végétalien . nombre: nouveau nombre plats végétalien
+    plats . végétarien: 0
+    plats . viande blanche: 0
+    plats . viande rouge: 0
+    plats . poisson gras: 0
+    plats . poisson blanc: 0
+
+alimentation . devenir végétalien . différence séjour repas . nouveau nombre plats végétalien:
+  formule: plats . végétalien . nombre + plats . végétarien . nombre + nombre plats non végétal
+  unité: repas
+
+alimentation . devenir végétalien . différence séjour repas . nombre plats non végétal:
+  formule: nombre de plats viande + nombre de plats poisson
+  unité: repas
+
+alimentation . devenir végétalien . différence séjour chocolat chaud:
   applicable si:
     toutes ces conditions:
       - alimentation . type de lait = 'lait de vache'
       - alimentation . boisson . chaude . chocolat chaud . nombre > 0
-  formule: alimentation . boisson . chaude . chocolat chaud - une semaine chocolat chaud végétalien
+  formule: alimentation . boisson . chaude . chocolat chaud - séjour chocolat chaud végétalien
 
-alimentation . une semaine petit déjeuner végétalien:
-  valeur: petit déjeuner . par semaine
-  contexte:
-    alimentation . petit déjeuner . type: "'végétalien'"
-
-alimentation . une semaine chocolat chaud végétalien:
+alimentation . séjour chocolat chaud végétalien:
   valeur: boisson . chaude . chocolat chaud
   contexte:
     alimentation . type de lait: "'lait d'avoine'"
@@ -278,118 +294,117 @@ alimentation . boisson . réduire café . max deux par jour:
   applicable si: boisson . chaude . café . nombre > 2 tasse/jour
   titre: Se limiter à deux cafés par jour
   icônes: ☕️2️⃣
-  formule: (boisson . chaude . café . nombre - 2 tasse/jour) * boisson . tasse de café * commun . jours par an
+  formule: (boisson . chaude . café - (2 * boisson . tasse de café)) * transport . durée séjour
   description: |
     Saviez-vous que la consommation de café pouvait avoir une importance non négligeable dans le calcul de votre empreinte carbone ? Chaque tasse de café ajoute 120 grammes de CO₂e à votre empreinte carbone.
 
     Et si vous commenciez par diminuer votre consommation en ne dépassant pas deux cafés par jour ?
 
-alimentation . boisson . réduire café . max un par jour:
-  applicable si: boisson . chaude . café . nombre > 1 tasse/jour
-  action:
-    dépasse:
-      - alimentation . boisson . réduire café . max deux par jour
-      - alimentation . boisson . réduire café . remplace un café par jour par thé
-  titre: Se limiter à un café par jour
-  icônes: ☕️1️⃣
-  formule: (boisson . chaude . café . nombre - 1 tasse/jour) * boisson . tasse de café * commun . jours par an
-  description: |
-    Saviez-vous que la consommation de café pouvait avoir une importance non négligeable dans le calcul de votre empreinte carbone ? Chaque tasse de café ajoute 120 grammes de CO₂e à votre empreinte carbone.
-
-    Et si vous commenciez par diminuer votre consommation en ne buvant qu’un café par jour ?
+#alimentation . boisson . réduire café . max un par jour:
+#  applicable si: boisson . chaude . café . nombre > 1 tasse/jour
+#  action:
+#    dépasse:
+#      - alimentation . boisson . réduire café . max deux par jour
+#      - alimentation . boisson . réduire café . remplace un café par jour par thé
+#  titre: Se limiter à un café par jour
+#  icônes: ☕️1️⃣
+#  formule: (boisson . chaude . café - boisson . tasse de café) * transport . durée séjour
+#  description: |
+#    Saviez-vous que la consommation de café pouvait avoir une importance non négligeable dans le calcul de votre empreinte carbone ? Chaque tasse de café ajoute 120 grammes de CO₂e à votre empreinte carbone.
+#
+#    Et si vous commenciez par diminuer votre consommation en ne buvant qu’un café par jour ?
 
 alimentation . boisson . réduire café . remplace un café par jour par thé:
   applicable si: boisson . chaude . café . nombre > 1 tasse/jour
   titre: Remplacer une tasse de café par du thé
   icônes: ☕️🫖
-  formule: (boisson . tasse de café - boisson . tasse de thé) * 1 tasse/jour * commun . jours par an
+  formule: (boisson . tasse de café - boisson . tasse de thé) * 1 tasse/jour * transport . durée séjour
   description: |
     Le café a une empreinte carbone largement supérieure au thé (près de 20 fois supérieure !).
 
     Et si vous buviez moins de café et plus souvent du thé ? C’est une solution pour réduire l’empreinte carbone de votre alimentation.
 
-alimentation . boisson . réduire café . remplace par thé:
-  applicable si: boisson . chaude . café . nombre >= 1 tasse/jour
-  action:
-    dépasse:
-      - alimentation . boisson . réduire café . max un par jour
-      - alimentation . boisson . réduire café . max deux par jour
-      - alimentation . boisson . réduire café . remplace par chicorée
-      - alimentation . boisson . réduire café . remplace un café par jour par thé
-  titre: Remplacer le café par du thé
-  icônes: ☕️🫖
-  formule: boisson . chaude . café . nombre * (boisson . tasse de café - boisson . tasse de thé) * commun . jours par an
-  description: |
-    Le thé a une empreinte carbone moins élevée que le café.
-
-    Et si vous passiez du café au thé ?
+#alimentation . boisson . réduire café . remplace par thé:
+#  applicable si: boisson . chaude . café . nombre >= 1 tasse/jour
+#  action:
+#    dépasse:
+#      - alimentation . boisson . réduire café . max un par jour
+#      - alimentation . boisson . réduire café . max deux par jour
+#      - alimentation . boisson . réduire café . remplace par chicorée
+#      - alimentation . boisson . réduire café . remplace un café par jour par thé
+#  titre: Remplacer le café par du thé
+#  icônes: ☕️🫖
+#  formule: boisson . chaude . café . nombre * (boisson . tasse de café - boisson . tasse de thé) * transport . durée séjour
+#  description: |
+#    Le thé a une empreinte carbone moins élevée que le café.
+#
+#    Et si vous passiez du café au thé ?
 
 alimentation . boisson . réduire café . remplace par chicorée:
   applicable si: boisson . chaude . café . nombre >= 1 tasse/jour
-  action:
-    dépasse:
-      - alimentation . boisson . réduire café . max deux par jour
-      - alimentation . boisson . réduire café . max un par jour
+#  action:
+#    dépasse: # A voir si je laisse ces conditions ou si je fais apparaitre l'action tout le temps.
+#      - alimentation . boisson . réduire café . max deux par jour
+#      - alimentation . boisson . réduire café . max un par jour
   titre: Remplacer le café par de la chicorée
   icônes: ☕️🌿
-  formule: boisson . chaude . café . nombre * (boisson . tasse de café - boisson . tasse de chicorée) * commun . jours par an
+  formule: boisson . chaude . café . nombre * (boisson . tasse de café - boisson . tasse de chicorée) * transport . durée séjour
   description: |
     La chicorée a une empreinte carbone moins élevée que le café. Utilisée depuis longtemps comme substitut au café, cette plante (dont la France est le premier producteur mondial !) fait en ce moment un retour progressif dans nos tasses, pour des raisons écologiques et de santé.
 
     Et si vous goûtiez à la chicorée ?
 
 alimentation . boisson . réduire chocolat chaud:
-
 alimentation . boisson . réduire chocolat chaud . max un par jour:
   applicable si: boisson . chaude . chocolat chaud . nombre > 1 tasse/jour
   titre: Se limiter à un chocolat chaud par jour
   icônes: ☕️1️⃣
-  formule: (boisson . chaude . chocolat chaud . nombre - 1 tasse/jour) * boisson . tasse de chocolat chaud * commun . jours par an
+  formule: (boisson . chaude . chocolat chaud - boisson . tasse de chocolat chaud) * transport . durée séjour
   description: |
     Le chocolat chaud a une empreinte carbone non négligeable : près de 600 gCO2e / tasse !
 
     Essayez de de pas en consommer plus d'un par jour.
 
-alimentation . boisson . réduire boissons sucrées:
-
-alimentation . boisson . réduire boissons sucrées . changer pour sirop:
-  applicable si: boisson . sucrées . litres > 0
-  # Au vu de l'empreinte eau très importante des jus de fruits, on ne propose pas cette action en face de la consommation de boissons sodas et jus de fruits. L'empreinte eau du sirop étant plus élevée que celle des sodas.
-  non applicable si: métrique != "carbone"
-  titre: Préférer les sirops aux sodas ou jus de fruits
-  description: |
-    Les sirops ajoutés dans l’eau ont une empreinte carbone très inférieure aux sodas et aux jus de fruits : autour de 100 g CO2e / litre contre plus de 500 g CO2e / litre pour les sodas, et 900 g CO2e / litre pour les jus de fruits.
-  formule: boisson . sucrées - boisson . sucrées . litres * boisson . sucrées . facteur sirops * commun . semaines par an
-
-alimentation . boisson . sucrées . facteur sirops:
-  formule:
-    variations:
-      - si: métrique = 'carbone'
-        alors: 0.100 kgCO2e/l
-      - si: métrique = 'eau'
-        alors: 444 l/l
-  note: Facteur d'émission issu d'[Agribalyse, boisson préparée à partir de sirop](https://agribalyse.ademe.fr/app/aliments/18058#Boisson_pr%C3%A9par%C3%A9e_%C3%A0_partir_de_sirop_%C3%A0_diluer_type_menthe,_fraise,_etc,_sucr%C3%A9,_dilu%C3%A9_dans_l'eau). On considère que la masse volumique est de 1kg/l.
-
-alimentation . boisson . réduire boissons sucrées . max un litres par semaine:
-  applicable si: alimentation . boisson . sucrées . litres > 1 l/semaine
-  titre: Se limiter à un litre de jus de fruit ou soda par semaine
-  icônes: 🥤
-  formule: (boisson . sucrées . litres - 1 l/semaine) * boisson . sucrées . facteur * commun . semaines par an
-  description: |
-    L'empreinte carbone des boissons sucrées est loin d'être négligeable. Un litre de soda a une empreinte de 500 g CO2e, et un litre de jus de fruit 900 g CO2e.
-
-    Se limiter à 1 litre de jus et 1 litre de solda par semaine, c’est un bon début pour réduire son empreinte carbone.
-
-alimentation . boisson . réduire alcool:
-alimentation . boisson . réduire alcool . max un litres par semaine:
-  applicable si: alimentation . boisson . alcool . litres > 1 l/semaine
-  titre: Se limiter à un litre d'alcool par semaine
-  icônes: 🍻
-  formule: (boisson . alcool . litres - 1 l/semaine) * boisson . alcool . facteur * commun . semaines par an
-  description: |
-    L'empreinte carbone de l'alcool est loin d'être négligeable. Un litre de bière a une empreinte carbone de 1,12 kg CO2e et un litre de vin 1,22 kg kg CO2e.
-
-    Se limiter à 2 litres par semaine est un bon moyen de réduire son empreinte carbone.
+#alimentation . boisson . réduire boissons sucrées:
+#
+#alimentation . boisson . réduire boissons sucrées . changer pour sirop:
+#  applicable si: boisson . sucrées . litres > 0
+#  # Au vu de l'empreinte eau très importante des jus de fruits, on ne propose pas cette action en face de la consommation de boissons sodas et jus de fruits. L'empreinte eau du sirop étant plus élevée que celle des sodas.
+#  non applicable si: métrique != "carbone"
+#  titre: Préférer les sirops aux sodas ou jus de fruits
+#  description: |
+#    Les sirops ajoutés dans l’eau ont une empreinte carbone très inférieure aux sodas et aux jus de fruits : autour de 100 g CO2e / litre contre plus de 500 g CO2e / litre pour les sodas, et 900 g CO2e / litre pour les jus de fruits.
+#  formule: boisson . sucrées - boisson . sucrées . litres * boisson . sucrées . facteur sirops * commun . semaines par an
+#
+#alimentation . boisson . sucrées . facteur sirops:
+#  formule:
+#    variations:
+#      - si: métrique = 'carbone'
+#        alors: 0.100 kgCO2e/l
+#      - si: métrique = 'eau'
+#        alors: 444 l/l
+#  note: Facteur d'émission issu d'[Agribalyse, boisson préparée à partir de sirop](https://agribalyse.ademe.fr/app/aliments/18058#Boisson_pr%C3%A9par%C3%A9e_%C3%A0_partir_de_sirop_%C3%A0_diluer_type_menthe,_fraise,_etc,_sucr%C3%A9,_dilu%C3%A9_dans_l'eau). On considère que la masse volumique est de 1kg/l.
+#
+#alimentation . boisson . réduire boissons sucrées . max un litres par semaine:
+#  applicable si: alimentation . boisson . sucrées . litres > 1 l/semaine
+#  titre: Se limiter à un litre de jus de fruit ou soda par semaine
+#  icônes: 🥤
+#  formule: (boisson . sucrées . litres - 1 l/semaine) * boisson . sucrées . facteur * commun . semaines par an
+#  description: |
+#    L'empreinte carbone des boissons sucrées est loin d'être négligeable. Un litre de soda a une empreinte de 500 g CO2e, et un litre de jus de fruit 900 g CO2e.
+#
+#    Se limiter à 1 litre de jus et 1 litre de solda par semaine, c’est un bon début pour réduire son empreinte carbone.
+#
+#alimentation . boisson . réduire alcool:
+#alimentation . boisson . réduire alcool . max un litres par semaine:
+#  applicable si: alimentation . boisson . alcool . litres > 1 l/semaine
+#  titre: Se limiter à un litre d'alcool par semaine
+#  icônes: 🍻
+#  formule: (boisson . alcool . litres - 1 l/semaine) * boisson . alcool . facteur * commun . semaines par an
+#  description: |
+#    L'empreinte carbone de l'alcool est loin d'être négligeable. Un litre de bière a une empreinte carbone de 1,12 kg CO2e et un litre de vin 1,22 kg kg CO2e.
+#
+#    Se limiter à 2 litres par semaine est un bon moyen de réduire son empreinte carbone.
 
 alimentation . bonus . manger local:
   non applicable si: local . consommation = 'oui toujours'
@@ -434,73 +449,73 @@ alimentation . bonus . manger de saison . recalcul:
   contexte:
     alimentation . de saison . consommation: "'oui toujours'"
 
-alimentation . boisson . eau en bouteille . arrêter:
-  applicable si:
-    toutes ces conditions:
-      - est défini: consommateur
-      - consommateur
-  titre: Arrêter d'acheter de l'eau en bouteille
-  formule: consommation annuelle * empreinte
-  icônes: ➡️🚰
-  description: |
-    L'eau en bouteille a un impact environnemental 450 fois supérieur à l'eau du robinet. Elle coûte entre 100 et 300 fois plus cher (80 % du prix est imputable à la production de l'emballage) et participe fortement à la pollution plastique partout dans le monde.
-  note: |
-    Sources : [Écobilan de l’eau potable](http://esu-services.ch/fileadmin/download/jungbluth-2015-ecobilan-eau.pdf) et [Ministère de la Transition Ecologique p106](https://www.economie.gouv.fr/files/files/directions_services/cge/filieres-dechets-recyclage.pdf)
-
-alimentation . déchets . devenir zéro déchet:
-  titre: Passer au "zéro déchet"
-  action:
-    dépasse:
-      - alimentation . déchets . réduire gaspillage
-      - alimentation . déchets . composter
-      - alimentation . déchets . avoir un stop pub
-  non applicable si: quantité jetée = 'zéro déchet'
-  icônes: 📦🚯
-  formule: déchets - recalcul
-  description: |
-    Comme certains foyers qui se sont déjà lancés, vous pouvez vous lancer dans une démarche drastique de réduction de vos déchets, jusqu'à n'avoir (presque) plus de poubelles à sortir.
-
-    > Trouvez des conseils pour vous lancer sur le site [Zero Waste France](https://www.zerowastefrance.org/passer-a-laction/adopter-zero-dechet/).
-
-alimentation . déchets . devenir zéro déchet . recalcul:
-  valeur: alimentation . déchets
-  contexte:
-    alimentation . déchets . quantité jetée: "'zéro déchet'"
-
-alimentation . déchets . réduire gaspillage:
-  titre: Réduire le gaspillage alimentaire
-  icônes: 🚯
-  applicable si: quantité jetée = 'base'
-  non applicable si: gestes . gaspillage alimentaire . présent
-  formule: gestes . empreinte gaspillage alimentaire
-  description: |
-    Chaque Français jette environ 30 kg d’aliments par an dont 7 kg sont encore emballés !
-
-    Réduire le gaspillage alimentaire est essentiel afin d'éviter de produire pour jeter !
-
-    > Vous trouverez plus d’informations et des conseils pour éviter de gaspiller de la nourriture [ici](https://agirpourlatransition.ademe.fr/particuliers/conso/alimentation/pourquoi-gaspillons-autant-nourriture)
-
-alimentation . déchets . composter:
-  titre: Composter
-  icônes: 🐛🌱
-  applicable si: quantité jetée = 'base'
-  non applicable si: gestes . compostage biodéchets . présent
-  formule: gestes . bonus compostage biodéchets
-  description: |
-    Nos biodéchets (épluchures, restes de repas, entretien du jardin, etc.) sont aujourd’hui faciles à valoriser. Ils peuvent être apportés dans des bornes de collecte, placés dans les espaces publics, apportés en déchèteries ou compostés à la maison ou dans le jardin.
-
-    > Découvrez des conseils utiles dans [le guide « Comment réussir son compost »](https://librairie.ademe.fr/dechets-economie-circulaire/5487-comment-reussir-son-compost--9791029719325.html).
-
-# Cette action n'a pas forcément sa place iic mais c'est plus cohérent avec le reste des règles "déchets" dans alimentation
-alimentation . déchets . avoir un stop pub:
-  titre: Coller un stop pub sur sa boîte aux lettres
-  icônes: 📬
-  non applicable si:
-    une de ces conditions:
-      - alimentation . déchets . quantité jetée = 'zéro déchet'
-      - alimentation . déchets . gestes . stop pub . présent
-  formule: alimentation . déchets . bonus stop pub
-  description: |
-    En indiquant « stop pub » sur votre boîte aux lettres, vous informez les distributeurs de publicités que vous refusez de recevoir des catalogues, des promotions, des menus de restaurants et des publicités en tout genre.
-
-    Vous pourrez ainsi diminuer la quantité de papier fabriquée inutilement car non lue avant d’être mise à la poubelle. C’est autant de déchets en moins à collecter et à traiter. C’est donc aussi des économies d’eau et d’énergie et des gaz à effet de serre évités.
+#alimentation . boisson . eau en bouteille . arrêter:
+#  applicable si:
+#    toutes ces conditions:
+#      - est défini: consommateur
+#      - consommateur
+#  titre: Arrêter d'acheter de l'eau en bouteille
+#  formule: consommation annuelle * empreinte
+#  icônes: ➡️🚰
+#  description: |
+#    L'eau en bouteille a un impact environnemental 450 fois supérieur à l'eau du robinet. Elle coûte entre 100 et 300 fois plus cher (80 % du prix est imputable à la production de l'emballage) et participe fortement à la pollution plastique partout dans le monde.
+#  note: |
+#    Sources : [Écobilan de l’eau potable](http://esu-services.ch/fileadmin/download/jungbluth-2015-ecobilan-eau.pdf) et [Ministère de la Transition Ecologique p106](https://www.economie.gouv.fr/files/files/directions_services/cge/filieres-dechets-recyclage.pdf)
+#
+#alimentation . déchets . devenir zéro déchet:
+#  titre: Passer au "zéro déchet"
+#  action:
+#    dépasse:
+#      - alimentation . déchets . réduire gaspillage
+#      - alimentation . déchets . composter
+#      - alimentation . déchets . avoir un stop pub
+#  non applicable si: quantité jetée = 'zéro déchet'
+#  icônes: 📦🚯
+#  formule: déchets - recalcul
+#  description: |
+#    Comme certains foyers qui se sont déjà lancés, vous pouvez vous lancer dans une démarche drastique de réduction de vos déchets, jusqu'à n'avoir (presque) plus de poubelles à sortir.
+#
+#    > Trouvez des conseils pour vous lancer sur le site [Zero Waste France](https://www.zerowastefrance.org/passer-a-laction/adopter-zero-dechet/).
+#
+#alimentation . déchets . devenir zéro déchet . recalcul:
+#  valeur: alimentation . déchets
+#  contexte:
+#    alimentation . déchets . quantité jetée: "'zéro déchet'"
+#
+#alimentation . déchets . réduire gaspillage:
+#  titre: Réduire le gaspillage alimentaire
+#  icônes: 🚯
+#  applicable si: quantité jetée = 'base'
+#  non applicable si: gestes . gaspillage alimentaire . présent
+#  formule: gestes . empreinte gaspillage alimentaire
+#  description: |
+#    Chaque Français jette environ 30 kg d’aliments par an dont 7 kg sont encore emballés !
+#
+#    Réduire le gaspillage alimentaire est essentiel afin d'éviter de produire pour jeter !
+#
+#    > Vous trouverez plus d’informations et des conseils pour éviter de gaspiller de la nourriture [ici](https://agirpourlatransition.ademe.fr/particuliers/conso/alimentation/pourquoi-gaspillons-autant-nourriture)
+#
+#alimentation . déchets . composter:
+#  titre: Composter
+#  icônes: 🐛🌱
+#  applicable si: quantité jetée = 'base'
+#  non applicable si: gestes . compostage biodéchets . présent
+#  formule: gestes . bonus compostage biodéchets
+#  description: |
+#    Nos biodéchets (épluchures, restes de repas, entretien du jardin, etc.) sont aujourd’hui faciles à valoriser. Ils peuvent être apportés dans des bornes de collecte, placés dans les espaces publics, apportés en déchèteries ou compostés à la maison ou dans le jardin.
+#
+#    > Découvrez des conseils utiles dans [le guide « Comment réussir son compost »](https://librairie.ademe.fr/dechets-economie-circulaire/5487-comment-reussir-son-compost--9791029719325.html).
+#
+## Cette action n'a pas forcément sa place iic mais c'est plus cohérent avec le reste des règles "déchets" dans alimentation
+#alimentation . déchets . avoir un stop pub:
+#  titre: Coller un stop pub sur sa boîte aux lettres
+#  icônes: 📬
+#  non applicable si:
+#    une de ces conditions:
+#      - alimentation . déchets . quantité jetée = 'zéro déchet'
+#      - alimentation . déchets . gestes . stop pub . présent
+#  formule: alimentation . déchets . bonus stop pub
+#  description: |
+#    En indiquant « stop pub » sur votre boîte aux lettres, vous informez les distributeurs de publicités que vous refusez de recevoir des catalogues, des promotions, des menus de restaurants et des publicités en tout genre.
+#
+#    Vous pourrez ainsi diminuer la quantité de papier fabriquée inutilement car non lue avant d’être mise à la poubelle. C’est autant de déchets en moins à collecter et à traiter. C’est donc aussi des économies d’eau et d’énergie et des gaz à effet de serre évités.

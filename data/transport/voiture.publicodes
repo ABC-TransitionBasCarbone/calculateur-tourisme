@@ -1,5 +1,7 @@
+### Il faut revoir le modèle en fonction des différentes possibilités (proprio, covoit ou location/empreint)
 transport . voiture:
-  titre: voiture
+  applicable si: présent
+  titre: Voiture
   icônes: 🚘
   formule:
     variations:
@@ -14,45 +16,65 @@ transport . voiture:
                   - si:
                       une de ces conditions:
                         - utilisateur = 'propriétaire'
-                        - utilisateur = 'régulier non propriétaire'
+                        - utilisateur = 'propriétaire covoit'
+#                        - utilisateur = 'régulier non propriétaire'
                     alors: empreinte calculée
-                  - si: utilisateur = 'non régulier'
-                    alors: empreinte moyenne non régulier
+                  - si:
+                      toutes ces conditions:
+                        - une de ces conditions:
+                          - utilisateur = 'régulier non propriétaire'
+                          - utilisateur = 'régulier non propriétaire covoit'
+                        - motorisation = 'thermique'
+                    alors: empreinte régulier non propriétaire thermique
+                  - si:
+                      toutes ces conditions:
+                        - une de ces conditions:
+                          - utilisateur = 'régulier non propriétaire'
+                          - utilisateur = 'régulier non propriétaire covoit'
+                        - motorisation = 'électrique'
+                    alors: empreinte régulier non propriétaire électrique
+                  - si: 
+                      toutes ces conditions:
+                        - utilisateur = 'non régulier'
+                        - motorisation = 'thermique'
+                    alors: empreinte non régulier thermique
+                  - si: 
+                      toutes ces conditions:
+                        - utilisateur = 'non régulier'
+                        - motorisation = 'électrique'
+                    alors: empreinte non régulier électrique
             - sinon: empreinte moyenne
   unité: kgCO2e
-  description: |
-    ![](https://upload.wikimedia.org/wikipedia/commons/9/9a/Congestion_caused_by_a_road_accident%2C_Algarve%2C_Portugal.jpg)
-
-    La voiture est aujourd'hui en France essentiellement thermique (essence, diesel), bien que l'électrique progresse lentement.
-
-    Pourtant, électrique ou thermique, elle reste un moyen de déplacement très peu efficient :
-    **il s'agit en moyenne de déplacer un humain de 80kg dans une boîte en métal de 1200kg**.
-
-    Un peu comme si chaque midi, nous faisions à manger pour 10 avant de jeter 90% de la nourriture, ou que nous décidions de chauffer tout le pâté de maisons plutôt que l'intérieur de chacune des 10 maisons.
-
-    Notons finalement qu'il est important de prendre en compte à la fois l'usage (les km parcourus) et la construction de ce véhicule de plus d'une tonne de matériaux divers.
+#  description: |
+#    ![](https://upload.wikimedia.org/wikipedia/commons/9/9a/Congestion_caused_by_a_road_accident%2C_Algarve%2C_Portugal.jpg)
+#
+#    La voiture est aujourd'hui en France essentiellement thermique (essence, diesel), bien que l'électrique progresse lentement.
+#
+#    Pourtant, électrique ou thermique, elle reste un moyen de déplacement très peu efficient :
+#    **il s'agit en moyenne de déplacer un humain de 80kg dans une boîte en métal de 1200kg**.
+#
+#    Un peu comme si chaque midi, nous faisions à manger pour 10 avant de jeter 90% de la nourriture, ou que nous décidions de chauffer tout le pâté de maisons plutôt que l'intérieur de chacune des 10 maisons.
+#
+#    Notons finalement qu'il est important de prendre en compte à la fois l'usage (les km parcourus) et la construction de ce véhicule de plus d'une tonne de matériaux divers.
 
 transport . voiture . km:
+#  ordre: 1
   titre: Km en voiture
-  question: Quelle distance parcourez-vous à l'année en voiture ?
+  question: Quelle distance allez-vous parcourir en voiture pour aller et revenir de votre lieu de séjour  ?
   description: |
-    Ne comptez que les kilomètres de déplacement personnel (courses, loisirs, famille, etc.) et de déplacement domicile travail pour rejoindre votre lieu de travail habituel.
-
-    Par exemple, si vous êtes en mission professionnelle dans un autre département ou un autre pays, cela rentre dans la comptabilité de votre entreprise : ne le comptez pas ici.
-  # It seems that there is a [publicodes bug](https://github.com/publicodes/publicodes/issues/517). For now, we can't use `km annuels moyen réel` directly here, until the problem is fixed.
-  par défaut: 8210
+    Ne cherchez pas à renseignez le kilométrage exact, l'arrondi à la dizaine ou centaine supérieure fera l'affaire.
+# It seems that there is a [publicodes bug](https://github.com/publicodes/publicodes/issues/517). For now, we can't use `km annuels moyen réel` directly here, until the problem is fixed.
+#  par défaut: 8210  
+  par défaut: 500 
   unité: km
   plancher: 0
   suggestions:
-    zéro: 0
-    vacances: 2000
-    10km / jour: 3600
-    1000km / mois: 12000
-    20 000km / an: 20000
+    Paris ⇄ Lille: 400
+    Bruxelle ⇄ Lille : 200
 
-transport . voiture . km annuels moyen réel:
-  #8210
-  formule: km annuels moyen * nombre véhicules circulation / population
+#transport . voiture . km annuels moyen réel:
+#  #8210
+#  formule: km annuels moyen * nombre véhicules circulation / population
 
 transport . voiture . km annuels moyen:
   #12216
@@ -111,49 +133,47 @@ transport . voiture . nombre véhicules circulation . VUL:
 
     Nous considérons néanmoins les données pour l'année 2022 car la distance moyenne parcourue par véhicule n'est dispo que pour 2022.
 
+#On garde la sémantique du modèle source NGC (propriétaire, régulier non propriétaire, non régulier) pour ne pas se compliquer quand bien même elle n'est pas des plus claire au regard des cas d'utilisation (proprio, location/emprunt, covoit)
 transport . voiture . utilisateur:
-  question: Utilisez-vous majoritairement la même voiture pour vous déplacer ?
+#  ordre: 2
+#  question: Allez-vous utiliser votre propre voiture, faire du covoiturage ou bien utiliser une voiture louée ou empruntée ?
+  question: Parmi les situations ci-dessous, dans quel cas vous trouverez-vous pour venir en Hauts-de-France en voiture ?
   applicable si: km > 0
   formule:
     une possibilité:
       choix obligatoire: oui
       possibilités:
         - propriétaire
+        - propriétaire covoit
         - régulier non propriétaire
+        - régulier non propriétaire covoit
         - non régulier
-  description: |
-    Deux données sont importantes dans le cadre du calcul de l'empreinte liée à la construction :
-
-    - L'usage ou non d'un même véhicule pour tous les kilomètres parcourus (si non : on vous attribue un véhicule "moyen")
-    - La propriété ou non dudit véhicule s'il s'agit toujours du même
-
-    Nous avons fait le choix d'attribuer l'empreinte de construction au pro-rata des kilomètres parcourus. Mais cette approche avait deux défauts :
-
-    - Elle était extrêmement avantageuse pour les petits rouleurs, alors que leur véhicule qui roule moins peut s'user plus vite (un moteur a besoin de tourner régulièrement) et donc avoir une durée de vie inférieure.
-    - Elle ne permettait pas de valoriser l'engagement de ne pas disposer de son propre véhicule, et de pratiquer à la place l'autopartage, ou la location ponctuelle (car l'empreinte de construction était la même, que l'on soit propriétaire ou non).
-
-    > Pour pallier ces deux problèmes, et mieux représenter qu'un véhicule possédé mais sous-utilisé s'use plus vite et mérite une empreinte de construction plus importante, **nous appliquons un seuil pour la partie construction de l'empreinte, pour les propriétaires**.
-  par défaut: "'régulier non propriétaire'"
+#  par défaut: "'propriétaire'"
+#  par défaut: "'régulier non propriétaire'"
+#  par défaut: "'non régulier'"
 
 transport . voiture . utilisateur . propriétaire:
-  titre: Oui et j'en suis propriétaire
-  description: Vous faites la grande majorité de vos trajets avec un même véhicule que vous possédez.
+  titre: Je vais utiliser ma propre voiture
+  description: Cette voiture vous appartient que vous soyez une personne seule, un couple, ou une famille
+transport . voiture . utilisateur . propriétaire covoit:
+  titre: Je vais utiliser ma propre voiture et prendre des covoitureurs
+  description: Cette voiture vous appartient que vous soyez une personne seule, un couple, ou une famille et vous allez prendre des covoitureurs pour le trajet
 transport . voiture . utilisateur . régulier non propriétaire:
-  titre: Oui mais ce n'est pas la mienne
-  description: Vous utilisez presque systématiquement la voiture d'un ami, de votre grand-mère, ou le même véhicule en autopartage.
+  titre: Je vais louer ou emprunter une voiture
+transport . voiture . utilisateur . régulier non propriétaire covoit:
+  titre: Je vais louer ou emprunter une voiture et prendre des covoitureurs pour le trajet
 transport . voiture . utilisateur . non régulier:
-  titre: Non, je change souvent (autopartage, proches, taxi...)
-  description: Vous ne disposez pas de votre propre véhicule et les usages sont tous différents.
+  titre: Je vais faire du covoiturage (en tant que passager)
 
-transport . voiture . notif utilsateur irrégulier:
-  type: notification
-  formule:
-    toutes ces conditions:
-      - est défini: voiture . utilisateur
-      - utilisateur = 'non régulier'
-      - km > 0
-  description: |
-    Vous roulez avec des véhicules différents : nous vous avons donc attribué les caractéristiques d'une voiture "moyenne".
+#transport . voiture . notif utilsateur irrégulier:
+#  type: notification
+#  formule:
+#    toutes ces conditions:
+#      - est défini: voiture . utilisateur
+#      - utilisateur = 'non régulier'
+#      - km > 0
+#  description: |
+#    Vous roulez avec des véhicules différents : nous vous avons donc attribué les caractéristiques d'une voiture "moyenne".
 
 transport . voiture . empreinte moyenne:
   valeur: voiture . empreinte calculée
@@ -170,44 +190,67 @@ transport . voiture . empreinte moyenne:
         voiture . motorisation: "'thermique'"
         voiture . thermique . carburant: "'essence E5 ou E10'"
 
-transport . voiture . empreinte moyenne non régulier:
+transport . voiture . empreinte régulier non propriétaire thermique:
   valeur: voiture . empreinte calculée
   contexte:
-    voiture . utilisateur: "'régulier non propriétaire'"
-    voiture . gabarit: "'berline'"
-    voiture . motorisation: "'thermique'"
+    voiture . utilisateur: "'propriétaire'" #Nécessaire pour la variable "carburant"
     voiture . thermique . carburant: "'essence E5 ou E10'"
     voiture . thermique . consommation aux 100:
       valeur: voiture . thermique . consommation estimée
       contexte:
-        voiture . utilisateur: "'régulier non propriétaire'"
-        voiture . gabarit: "'berline'"
-        voiture . motorisation: "'thermique'"
+        voiture . utilisateur: "'propriétaire'" #Nécessaire pour la variable "consommation au 100"
         voiture . thermique . carburant: "'essence E5 ou E10'"
 
+transport . voiture . empreinte régulier non propriétaire électrique:
+  valeur: voiture . empreinte calculée
+  contexte:
+    voiture . utilisateur: "'propriétaire'" #On spécifie "propriétaire" ici aussi car celui spécifié dans le contexte de "consommation estimée" ne suffit pas
+    voiture . électrique . consommation aux 100:
+      valeur: voiture . électrique . consommation estimée
+      contexte:
+        voiture . utilisateur: "'propriétaire'"
+
+transport . voiture . empreinte non régulier thermique:
+  valeur: voiture . empreinte calculée
+  contexte:
+    voiture . construction: 0 #En vérifiant dans quick-doc le 0 ici n'est pas overuled par le "propriétaire" de voiture . utilisateur (dans cette fonction contexte) qui aurait pu se répercuter dans la variable voiture . construction:
+    voiture . utilisateur: "'propriétaire'" #Nécessaire pour la variable "carburant"
+    voiture . thermique . carburant: "'essence E5 ou E10'"
+    voiture . thermique . consommation aux 100:
+      valeur: voiture . thermique . consommation estimée
+      contexte:
+        voiture . utilisateur: "'propriétaire'" #Nécessaire pour la variable "consommation au 100"
+        voiture . thermique . carburant: "'essence E5 ou E10'"
+
+transport . voiture . empreinte non régulier électrique:
+  valeur: voiture . empreinte calculée
+  contexte:
+    voiture . construction: 0 #En vérifiant dans quick-doc le 0 ici n'est pas overuled par le "propriétaire" de voiture . utilisateur (dans cette fonction contexte) qui aurait pu se répercuter dans la variable voiture . construction:
+    voiture . utilisateur: "'propriétaire'"
+    voiture . électrique . consommation aux 100:
+      valeur: voiture . électrique . consommation estimée
+      contexte:
+        voiture . utilisateur: "'propriétaire'"
+
 transport . voiture . empreinte calculée:
-  formule: (usage + construction) / voyageurs
+#  formule: (usage + construction) / voyageurs / durée séjour #Je commente car je ne sais plus pourquoi j'avais mis divisé par durée séjour (alors qu'on a un amortissement par km en plus).
+  formule: (usage + construction) / voyageurs  
   unité: kgCO2e
 
 transport . voiture . voyageurs:
+#  ordre: 3
   titre: Nombre de voyageurs
-  question: Quel est le nombre moyen de voyageurs dans la voiture ?
+  question: Quel sera le nombre moyen de voyageurs dans la voiture ?
   applicable si: km > 0
   description: |
-    Une voiture consomme à peu près autant qu'elle ait 1, 2 ou 5 voyageurs à bord. Voyager à plusieurs, c'est donc potentiellement diviser par 5 l'empreinte individuelle !
-
-    🤔 Mais cette question n'est pas facile : il est probable que dans une année vous soyez parti en vacances à 3, ayez pris la voiture quotidiennement tout seul, etc.
-
-    Essayez d'estimer une moyenne approximative : si tous les jours vous prenez la voiture tout seul, mettez 1 ou 1,2.
-    Si vous ne la prenez qu'en famille ou entre amis, mettez 3 ou 4.
-
-    > Dans une prochaine évolution du simulateur, nous pourrons séparer les questions par type de trajets : vacances, domicile-travail, quotidiens avec un nombre de voyageurs personnalisable.
-
-    Bien sûr, si vous vous faites conduire ou si vous prenez le taxi, le chauffeur ne compte pas, car il est au service de votre déplacement.
+    Pensez à vous inclure ! Ainsi, si vous voyagez en couple, renseignez 2. Si vous êtes une famille de quatre, renseignez 4, etc.
+    
+    Si jamais vous prévoyez de prendre des covoitureurs ou si vous allez faire du covoiturage vous-même, essayez d'estimer un nombre cohérent avec vos habitudes et/ou votre véhicule.
   plancher: 1
   avertissement: |
-    Le nombre de voyageurs ne peut pas être nul. Au volant de votre voiture, vous en êtes le premier voyageur.
-  par défaut: 1.2
+    Le nombre de voyageurs ne peut pas être nul. Il y a forcément un conducteur derrière le volant.
+  par défaut: 2
+#  par défaut: 1.2
   suggestions:
     je suis seul: 1
     deux: 2
@@ -219,54 +262,54 @@ transport . voiture . usage:
   unité: kgCO2e
 
 transport . voiture . usage au kilomètre:
-  formule: empreinte au kilomètre + base au kilomètre
+  formule: empreinte au kilomètre calculée + base au kilomètre
   unité: kgCO2e/km
 
-transport . voiture . empreinte au kilomètre:
-  formule:
-    variations:
-      - si:
-          est défini: utilisateur
-        alors:
-          variations:
-            - si:
-                une de ces conditions:
-                  - utilisateur = 'propriétaire'
-                  - utilisateur = 'régulier non propriétaire'
-              alors: empreinte au kilomètre calculée
-            - si: utilisateur = 'non régulier'
-              alors: empreinte au kilomètre non régulier
-      - sinon: empreinte au kilomètre moyenne
-
-transport . voiture . empreinte au kilomètre moyenne:
-  valeur: voiture . empreinte au kilomètre calculée
-  contexte:
-    voiture . utilisateur: "'propriétaire'"
-    voiture . gabarit: "'berline'"
-    voiture . motorisation: "'thermique'"
-    voiture . thermique . carburant: "'essence E5 ou E10'"
-    voiture . thermique . consommation aux 100:
-      valeur: voiture . thermique . consommation estimée
-      contexte:
-        voiture . utilisateur: "'propriétaire'"
-        voiture . gabarit: "'berline'"
-        voiture . motorisation: "'thermique'"
-        voiture . thermique . carburant: "'essence E5 ou E10'"
-
-transport . voiture . empreinte au kilomètre non régulier:
-  valeur: voiture . empreinte au kilomètre calculée
-  contexte:
-    voiture . utilisateur: "'régulier non propriétaire'"
-    voiture . gabarit: "'berline'"
-    voiture . motorisation: "'thermique'"
-    voiture . thermique . carburant: "'essence E5 ou E10'"
-    voiture . thermique . consommation aux 100:
-      valeur: voiture . thermique . consommation estimée
-      contexte:
-        voiture . utilisateur: "'régulier non propriétaire'"
-        voiture . gabarit: "'berline'"
-        voiture . motorisation: "'thermique'"
-        voiture . thermique . carburant: "'essence E5 ou E10'"
+transport . voiture . empreinte au kilomètre: #On laisse cette variable intermédaire pour l'instant afin de pas avoir à toucher au modèle action qui s'appuie sur voiture . empreinte au kilomètre
+  formule: empreinte au kilomètre calculée
+#    variations:
+#      - si:
+#          est défini: utilisateur
+#        alors:
+#          variations:
+#            - si:
+#                une de ces conditions:
+#                  - utilisateur = 'propriétaire'
+#                  - utilisateur = 'régulier non propriétaire'
+#              alors: empreinte au kilomètre calculée
+#            - si: utilisateur = 'non régulier'
+#              alors: empreinte au kilomètre non régulier
+#      - sinon: empreinte au kilomètre moyenne
+#
+#transport . voiture . empreinte au kilomètre moyenne:
+#  valeur: voiture . empreinte au kilomètre calculée
+#  contexte:
+#    voiture . utilisateur: "'propriétaire'"
+#    voiture . gabarit: "'berline'"
+#    voiture . motorisation: "'thermique'"
+#    voiture . thermique . carburant: "'essence E5 ou E10'"
+#    voiture . thermique . consommation aux 100:
+#      valeur: voiture . thermique . consommation estimée
+#      contexte:
+#        voiture . utilisateur: "'propriétaire'"
+#        voiture . gabarit: "'berline'"
+#        voiture . motorisation: "'thermique'"
+#        voiture . thermique . carburant: "'essence E5 ou E10'"
+#
+#transport . voiture . empreinte au kilomètre non régulier:
+#  valeur: voiture . empreinte au kilomètre calculée
+#  contexte:
+#    voiture . utilisateur: "'régulier non propriétaire'"
+#    voiture . gabarit: "'berline'"
+#    voiture . motorisation: "'thermique'"
+#    voiture . thermique . carburant: "'essence E5 ou E10'"
+#    voiture . thermique . consommation aux 100:
+#      valeur: voiture . thermique . consommation estimée
+#      contexte:
+#        voiture . utilisateur: "'régulier non propriétaire'"
+#        voiture . gabarit: "'berline'"
+#        voiture . motorisation: "'thermique'"
+#        voiture . thermique . carburant: "'essence E5 ou E10'"
 
 transport . voiture . empreinte au kilomètre calculée:
   formule:
@@ -295,15 +338,17 @@ transport . voiture . empreinte au kilomètre calculée:
     > Hybride : enlever 15% aux consommations ci-dessus (source ADEME: http://www2.ademe.fr/servlet/KBaseShow?catid=13655)
 
 transport . voiture . motorisation:
-  question: Quel type de voiture utilisez-vous ?
+  question: Quelle est la motorisation de la voiture que vous allez utiliser ?
   applicable si:
     toutes ces conditions:
       - est défini: utilisateur
       - une de ces conditions:
           - utilisateur = 'propriétaire'
+          - utilisateur = 'propriétaire covoit'
           - utilisateur = 'régulier non propriétaire'
+          - utilisateur = 'régulier non propriétaire covoit'
+          - utilisateur = 'non régulier'
       - km > 0
-  description: 💡 **Si vous utilisez plusieurs voitures (par exemple dans le cas où vous n'en possédez pas une), choisissez la réponse la plus représentative de votre usage.**
   par défaut: "'thermique'"
   formule:
     une possibilité:
@@ -339,7 +384,8 @@ transport . voiture . thermique . consommation aux 100:
       - est défini: utilisateur
       - une de ces conditions:
           - utilisateur = 'propriétaire'
-          - utilisateur = 'régulier non propriétaire'
+          - utilisateur = 'propriétaire covoit'
+#          - utilisateur = 'régulier non propriétaire'
       - une de ces conditions:
           - motorisation = 'thermique'
           - motorisation = 'hybride'
@@ -520,13 +566,14 @@ transport . voiture . thermique . empreinte au litre:
   unité: kgCO2e/l
 
 transport . voiture . thermique . carburant:
-  question: Quel type de carburant votre voiture consomme-t-elle ?
+  question: Quel type de carburant la voiture consomme-t-elle ?
   applicable si:
     toutes ces conditions:
       - est défini: utilisateur
       - une de ces conditions:
           - utilisateur = 'propriétaire'
-          - utilisateur = 'régulier non propriétaire'
+          - utilisateur = 'propriétaire covoit'
+#          - utilisateur = 'régulier non propriétaire'
       - une de ces conditions:
           - motorisation = 'thermique'
           - motorisation = 'hybride'
@@ -584,9 +631,11 @@ transport . voiture . électrique:
 transport . voiture . électrique . empreinte au kilomètre:
   titre: empreinte au km électrique
   unité: kgCO2e/km
-  formule: consommation au kilomètre * logement . électricité . empreinte au kWh
+  formule: consommation au kilomètre * logement . électricité . réseau . intensité carbone 
   note: |
-    Nous considérons ici le mix électrique moyen français. La majorité des possesseurs de voitures électriques rechargent leur véhicule chez eux avec une tarification heure creuses, qui est plus avantageuse financièrement et correspond d'ailleurs aux moments où la demande en électricité est moins forte et le mix électrique moins carboné (les centrales gaz ne sont pas sollicitées).
+    Nous considérons ici le FE moyen du réseau et on ne fait pas appel à la variable "logement . électricité . empreinte au kWh" (comme le modèle source de NGC) car cette dernière implique le questionnement de la possession de panneaux photo au sein du logement.
+    De plus, ce FE moyen réseau ne correspond pas parfaitement aux réalités de recharge (mais ce n'est pas grave). La majorité des possesseurs de voitures électriques rechargent leur véhicule chez eux avec une tarification heure creuses, qui est plus avantageuse financièrement et correspond d'ailleurs aux moments où la demande en électricité est moins forte et le mix électrique moins carboné (les centrales gaz ne sont pas sollicitées).
+ 
 
 transport . voiture . électrique . consommation au kilomètre:
   formule: consommation aux 100 / 100 km/centkm
@@ -600,7 +649,8 @@ transport . voiture . électrique . consommation aux 100:
       - est défini: utilisateur
       - une de ces conditions:
           - utilisateur = 'propriétaire'
-          - utilisateur = 'régulier non propriétaire'
+          - utilisateur = 'propriétaire covoit'
+#          - utilisateur = 'régulier non propriétaire'
       - motorisation = 'électrique'
       - km > 0
   suggestions:
@@ -632,12 +682,11 @@ transport . voiture . gabarit:
       - est défini: utilisateur
       - une de ces conditions:
           - utilisateur = 'propriétaire'
+          - utilisateur = 'propriétaire covoit'
           - utilisateur = 'régulier non propriétaire'
+          - utilisateur = 'régulier non propriétaire covoit'
+          - utilisateur = 'non régulier'
       - km > 0
-  description: |
-    **💡 Si vous utilisez plusieurs voitures (par exemple dans le cas où vous n'en possédez pas une), choisissez la réponse la plus représentative de votre usage.**
-
-    Plus une voiture est lourde et haute donc avec une forte prise au vent, plus elle consomme donc plus elle pollue !
   par défaut: "'berline'"
   note: |
     Nous considérons que la voiture par défaut est une "Berline", en témoigne [une étude menée par AAA Data](https://www.alphabet.com/fr-fr/parc-automobile-roulant-les-donnees-cles)
@@ -700,7 +749,9 @@ transport . voiture . base au kilomètre:
       - est défini: utilisateur
       - une de ces conditions:
           - utilisateur = 'propriétaire'
+          - utilisateur = 'propriétaire covoit'
           - utilisateur = 'régulier non propriétaire'
+          - utilisateur = 'régulier non propriétaire covoit'
   titre: Entretien et climatisation au kilomètre
   formule: entretien pondéré + climatisation
   unité: kgCO2e/km
@@ -745,16 +796,19 @@ transport . voiture . climatisation . émissions gaz fluorés transport:
     D'après l'excel [Données par substance de gaz à effet de serre (GES) édition 2023, onglet "GF-UE_total"](https://www.citepa.org/wp-content/uploads/publications/secten/2023/Citepa_gaz_a_effet_de_serre_v2.zip),
     les émissions de gaz fluorés pour le secteur du transport (provenant des équipements de réfrigération et d'air conditionné, utilisant des halocarbures ou du SF6), sont de 1374 ktCO₂e.
 
+# On enlève le '* seuil km' pour les propriétaires car c'était beaucoup trop pénalisant --> il n'y a donc pas de variations de modèle entre propriétaire et régulier non propriétaire
 transport . voiture . construction:
   titre: Construction de la voiture
   formule:
     variations:
       - si:
-          toutes ces conditions:
+          une de ces conditions:
             - voiture . utilisateur = 'propriétaire'
-            - km < seuil km
-        alors: construction au kilomètre * seuil km
-      - sinon: construction au kilomètre * km
+            - voiture . utilisateur = 'propriétaire covoit'
+            - voiture . utilisateur = 'régulier non propriétaire'
+            - voiture . utilisateur = 'régulier non propriétaire covoit'
+        alors: construction au kilomètre * km
+      - sinon: 0
   unité: kgCO2e
   note: |
     Pour le moment, nous ne considérons pas l'amortissement complet d'une voiture (c'est-à-dire que nous n'avons pas l'info de l'âge ou le kilométrage complet de la voiture donc sa contruction ne sera jamais nulle).
@@ -850,7 +904,9 @@ transport . voiture . barème construction . barème électrique . batterie . ca
       - est défini: utilisateur
       - une de ces conditions:
           - utilisateur = 'propriétaire'
+          - utilisateur = 'propriétaire covoit'
           - utilisateur = 'régulier non propriétaire'
+          - utilisateur = 'régulier non propriétaire covoit'
       - motorisation = 'électrique'
   description: |
     La capacité de la batterie est exprimée en kWh, elle varie considérablement selon les modèles de véhicules.
@@ -942,4 +998,4 @@ transport . voiture . durée de vie en km:
     - Gabarit "berline" : correspondant au segment B ou C, soit 225000 km
     - Gabarit "SUV" : correspondant au segment E ou F, soit 270000 km
 
-    Pour le moment, nous ne faisons pas la différence entre thermique et électrique. C'est une hypothèse très forte.
+    Pour le moment, nous ne faisons pas la différence entre thermique et électrique. C'est une hypothèse très forte.*

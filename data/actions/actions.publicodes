@@ -2,28 +2,28 @@ actions:
   formule:
     somme:
       - alimentation . repas . réduire viande . max 1 par jour
-      - alimentation . repas . réduire viande . max 2 par semaine
-      - alimentation . repas . réduire poisson . max 2 par semaine
+#      - alimentation . repas . réduire viande . max 2 par semaine
+#      - alimentation . repas . réduire poisson . max 2 par semaine
       - alimentation . repas . poisson faible empreinte
       - alimentation . repas . viande faible empreinte
       - alimentation . devenir végétarien
       - alimentation . devenir végétalien
       - alimentation . boisson . réduire café . max deux par jour
-      - alimentation . boisson . réduire café . max un par jour
+#      - alimentation . boisson . réduire café . max un par jour
       - alimentation . boisson . réduire café . remplace un café par jour par thé
       - alimentation . boisson . réduire café . remplace par chicorée
-      - alimentation . boisson . réduire café . remplace par thé
+#      - alimentation . boisson . réduire café . remplace par thé
       - alimentation . boisson . réduire chocolat chaud . max un par jour
-      - alimentation . boisson . réduire boissons sucrées . max un litres par semaine
-      - alimentation . boisson . réduire boissons sucrées . changer pour sirop
-      - alimentation . boisson . réduire alcool . max un litres par semaine
-      - alimentation . boisson . eau en bouteille . arrêter
+#      - alimentation . boisson . réduire boissons sucrées . max un litres par semaine
+#      - alimentation . boisson . réduire boissons sucrées . changer pour sirop
+#      - alimentation . boisson . réduire alcool . max un litres par semaine
+#      - alimentation . boisson . eau en bouteille . arrêter
       - alimentation . bonus . manger de saison
       - alimentation . bonus . manger local
-      - alimentation . déchets . devenir zéro déchet
-      - alimentation . déchets . réduire gaspillage
-      - alimentation . déchets . composter
-      - alimentation . déchets . avoir un stop pub
+#      - alimentation . déchets . devenir zéro déchet
+#      - alimentation . déchets . réduire gaspillage
+#      - alimentation . déchets . composter
+#      - alimentation . déchets . avoir un stop pub
       - logement . électricité . éteindre appareils
       - logement . électricité . séchage air libre
       - logement . chauffage . se chauffer au bois
@@ -42,24 +42,33 @@ actions:
       - logement . mutualiser son logement
       - logement . installer photovoltaique
       - logement . électricité verte
+      - logement . hébergement . écogestes
       - transport . avion . arrêter l'avion
       - transport . avion . arrêter l'avion court
       - transport . avion . prendre moins l'avion
       - transport . voiture . éco-conduite
-      - transport . voiture . faire durer
-      - transport . voiture . réduire taille
-      - transport . voiture . autopartage
-      - transport . voiture . covoiturage
-      - transport . voiture . voiture 5km
-      - transport . voiture . voiture électrique
+#      - transport . voiture . faire durer
+#      - transport . voiture . réduire taille
+      - transport . voiture . location réduire taille
+#      - transport . voiture . autopartage
+      - transport . voiture . covoiturage un
+      - transport . voiture . covoiturage deux
+#      - transport . voiture . voiture 5km
+#      - transport . voiture . voiture électrique
+      - transport . voiture . location voiture électrique
       - transport . voiture . limitation autoroute
-      - transport . voiture . boulot . faire du covoiturage
-      - transport . voiture . boulot . sans voiture
-      - transport . voiture . boulot . télétravail
+      - transport . voiture . prendre le train
+#      - transport . voiture . boulot . faire du covoiturage
+#      - transport . voiture . boulot . sans voiture
+#      - transport . voiture . boulot . télétravail
       - transport . deux roues . scooter électrique
       - transport . ferry . arrêter ferry
       - transport . ferry . réduire ferry
       - transport . infolettre
+      - transport . train HdF
+      - séjour . voiture . éco-conduite
+      - séjour . voiture . opter transport commun
+      - séjour . voiture . sans voiture
       - divers . partage NGC
       - divers . aider les autres
       - divers . électroménager . appareils . allongement
@@ -71,6 +80,8 @@ actions:
       - divers . textile . réduire neuf . diviser par deux achats
       - divers . produits consommables . réduire
       - divers . autres produits . réduire
+      - divers . loisirs . activité décarbonée
+      - divers . loisirs . activité moins carbonée
       - services sociétaux . voter
       - services sociétaux . pression locale
       - services sociétaux . bien placer argent

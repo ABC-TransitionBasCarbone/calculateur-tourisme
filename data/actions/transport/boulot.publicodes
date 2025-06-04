@@ -100,7 +100,7 @@ transport . voiture . boulot . sans voiture:
       - si: type = 'vélo électrique'
         alors: recalcul vae
       - si: type = 'trotinette électrique'
-        alors: recalcul autres véhicules à moteur
+        alors: recalcul trottinette électrique
   unité: kgCO2e
 
 transport . voiture . boulot . sans voiture . gain empreinte au km:
@@ -112,11 +112,11 @@ transport . voiture . boulot . sans voiture . empreinte:
   formule:
     variations:
       - si: type = 'bus'
-        alors: transports commun . bus . impact par km
+        alors: transports commun . type . bus . impact par km
       - si: type = 'TER'
         alors: train . TER
       - si: type = 'métro ou tramway'
-        alors: transports commun . métro ou tram . impact par km
+        alors: transports commun . type . métro ou tram . impact par km
   unité: kgCO2e/km
   note: |
     On considère qu'un déplacement domicile travail effectué en voiture peut-être remplacé par un train régional et non par un TGV.
@@ -143,21 +143,21 @@ transport . voiture . boulot . sans voiture . type:
         - trotinette électrique
 
 transport . voiture . boulot . recalcul vélo:
-  valeur: transport . mobilité douce . vélo
+  valeur: transport . mobilité douce . type . vélo
   contexte:
-    transport . mobilité douce . vélo . présent: oui
+    transport . mobilité douce . type . vélo . présent: oui
 
 transport . voiture . boulot . recalcul vae:
-  valeur: transport . mobilité douce . vae
+  valeur: transport . mobilité douce . type . vae
   contexte:
-    transport . mobilité douce . vae . présent: oui
-    transport . mobilité douce . vae . km: transport . voiture . boulot . distance
+    transport . mobilité douce . type . vae . présent: oui
+    transport . mobilité douce . type . vae . km: transport . voiture . boulot . distance
 
-transport . voiture . boulot . recalcul autres véhicules à moteur:
-  valeur: transport . mobilité douce . autres véhicules à moteur
+transport . voiture . boulot . recalcul trottinette électrique:
+  valeur: transport . mobilité douce . type . trottinette électrique
   contexte:
-    transport . mobilité douce . autres véhicules à moteur . présent: oui
-    transport . mobilité douce . autres véhicules à moteur . km: transport . voiture . boulot . distance
+    transport . mobilité douce . type . trottinette électrique . présent: oui
+    transport . mobilité douce . type . trottinette électrique . km: transport . voiture . boulot . distance
 
 transport . voiture . boulot . télétravail:
   titre: Faire du télétravail
