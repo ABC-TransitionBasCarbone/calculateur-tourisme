@@ -22,47 +22,76 @@ informations regionales . séjour:
 informations regionales . séjour . vélo:
 informations regionales . séjour . vélo . dunkerquois:
   titre: Découvrez les balades à vélo dans le Dunkerquois
-  icônes: 🚲
+  icônes: 🚲🏞️
 #  formule: 1
 #  unité: kgCO2e
   intensiteCouleur: 100
   description: |
-    3 belles balades pour apprécier les beautés du Dunkerquois 
-      - 17 km de Dunkerque à Bray-Dunes
-      - 18 km de Dunkerque à Bray-Dunes
-      - 19 km autour de Gravelines en passant par la citadelle
+    [Ce site](https://www.komoot.com/fr-fr/guide/1526997/pistes-cyclables-autour-de-dunkerque) vous aidera à trouver votre bonheur à vélo.
+    
+    Petit florilège de belles balades :
+    - 17 km entre [Dunkerque et Bray-Dunes](https://www.lavelomaritime.fr/itineraire/dunkerque-bray-dunes)
+    - 19 km autour [de Gravelines et sa citadelle](https://www.komoot.com/fr-fr/smarttour/36751931?tour_origin=smart_tour_search)
+    - Et bien d'autres
 
-informations regionales . séjour . vélo . pas de calais:
-  titre: Découvrez les balades à vélo dans le Pas-de-Calais
-  icônes: 🚲
+informations regionales . séjour . vélo . calaisis:
+  titre: Découvrez les balades à vélo dans le Calaisis
+  icônes: 🚲🏞️
 #  formule: 1
 #  unité: kgCO2e
   intensiteCouleur: 100
-  description: C'est [ici](https://droitauvelo.org/Carte-des-amenagements-cyclables-des-Hauts-de-France) que ça se passe.
+  description: |
+    [Ce site](https://www.komoot.com/fr-fr/discover/Calais/@50.9524769,1.8538446/tours?sport=touringbicycle&map=true&focusedTour=710693&max_distance=5000) vous aidera à trouver votre bonheur à vélo.
+    
+    Petit florilège de belles balades :
+    - 23 km sur [l'EuroVelo 5](https://www.af3v.org/les-voies-vertes/voies/690-ev5-via-romea-francigena-de-calais-a-ardres/) reliant Calais à Ardres 
+    - 7 km sur [l'EuroVelo 5](https://velo-rando-pasdecalais.com/wp-content/uploads/2022/05/cirkwi_-Veloroute-des-marais-fr-348775.pdf) reliant Coulogne à Guînes 
+    - 20 km de [boucle autour du canal](https://www.komoot.com/fr-fr/smarttour/35632962?tour_origin=smart_tour_search) de Calais
+    - Et bien d'autres
 
-informations regionales . séjour . vélo . somme:
-  titre: Découvrez les balades à vélo dans la Somme
-  icônes: 🚲
+informations regionales . séjour . vélo . boulonnais:
+  titre: Découvrez les balades à vélo dans le Boulonnais
+  icônes: 🚲🏞️
 #  formule: 1
 #  unité: kgCO2e
   intensiteCouleur: 100
-  description: C'est [ici](https://droitauvelo.org/Carte-des-amenagements-cyclables-des-Hauts-de-France) que ça se passe.
+  description: |
+    [Ce site](https://www.komoot.com/fr-fr/discover/Boulogne-sur-Mer/@50.7259985,1.6118771/tours?sport=touringbicycle&map=true&max_distance=5000) vous aidera à trouver votre bonheur à vélo.
+    
+    Petit florilège de belles balades :
+    - 14 km de [boucle cyclotouristique](https://velo-rando-pasdecalais.com/pas-de-calais-a-velo/boucles-cyclotouristiques-et-city-tour/?mb_page=circuit&mb_id=200732&mb_titre=cyclo-d-audinghen-audresselles-ambleteuse) reliant Audinghen, Audresselles et Ambleteuse
+    - 11 km de [boucle](https://www.komoot.com/fr-fr/smarttour/36255139?tour_origin=smart_tour_search) autour de la Pointe de la Crèche au départ de Wimille – Wimereux
+    - Et bien d'autres
 
-informations regionales . séjour . vélo . aisne:
-  titre: Découvrez les balades à vélo dans l'Aisne
-  icônes: 🚲
+informations regionales . séjour . vélo . cote opale:
+  titre: Découvrez les balades à vélo sur la Côte d'Opale
+  icônes: 🚲🏞️
 #  formule: 1
 #  unité: kgCO2e
   intensiteCouleur: 100
-  description: C'est [ici](https://droitauvelo.org/Carte-des-amenagements-cyclables-des-Hauts-de-France) que ça se passe. 
+  description: |
+    [Ce site](https://www.komoot.com/fr-fr/discover/Baie_de_Somme/@50.2137313,1.5964407/tours?sport=touringbicycle&map=true&max_distance=5000) vous aidera à trouver votre bonheur à vélo.
+    
+    Petit florilège de belles balades :
+    - 16 km de [boucle](https://www.komoot.com/fr-fr/smarttour/36252916?tour_origin=smart_tour_search) entre Le Touquet-Paris-Plage et Stella-Plage
+    - 17 km sur [l'Euro Vélo 4](https://www.lavelomaritime.fr/itineraire/berck-le-touquet) de Berck à Le Touquet
+    - 17 km de [boucle](https://www.komoot.com/fr-fr/smarttour/35635323?tour_origin=smart_tour_search) des Bords de la Canche au Bas de falaise au départ de Attin
+    - Et bien d'autres
 
-informations regionales . séjour . vélo . oise:
-  titre: Découvrez les balades à vélo dans l'Oise
-  icônes: 🚲
+informations regionales . séjour . vélo . baie de somme:
+  titre: Découvrez les balades à vélo autour de la Baie de Somme
+  icônes: 🚲🏞️
 #  formule: 1
 #  unité: kgCO2e
   intensiteCouleur: 100
-  description: C'est [ici](https://droitauvelo.org/Carte-des-amenagements-cyclables-des-Hauts-de-France) que ça se passe.
+  description: |
+    [Ce site](https://www.komoot.com/fr-fr/discover/Baie_de_Somme/@50.2137313,1.5964407/tours?sport=touringbicycle&map=true&max_distance=5000) vous aidera à trouver votre bonheur à vélo.
+  
+    Petit florilège de belles balades :
+    - 15 km sur la [V30](https://www.af3v.org/les-voies-vertes/voies/55-v30-voie-verte-du-canal-de-la-somme-de-st-valery-somme-a-abbeville/), Voie Verte du canal de la Somme de St-Valéry/Somme à Abbeville
+    - 13 km de [boucle](https://www.komoot.com/fr-fr/smarttour/8366792?tour_origin=smart_tour_search) autour du port du Crotoy
+    - Et bien d'autres
+
 
 informations regionales . séjour . vélo . par défaut:
   titre: Découvrez les balades à vélo dans les Hauts-de-France
@@ -80,42 +109,66 @@ informations regionales . séjour . marche . dunkerquois:
 #  unité: kgCO2e
   intensiteCouleur: 100
   description: |
-    2 marches simples et jolies:
-      - De Petit-Fort-Philippe au phare [4km-1h] pour une agréable balade entre mer et nature
-      - De Coudekerque à Bergues [6,2km-1h40], au coeur du Bois des Forts, pour une immersion en pleine forêt
-      - Et bien d'autres [ici](https://www.sentiers-en-france.eu/randonnee?lieu_id=1639&lieu=Nord%20%2859%29).
+    Deux sites pour trouver votre bonheur pédestre : [ici](https://www.komoot.com/fr-fr/guide/1526994/randonnees-autour-de-dunkerque) et [là](https://www.sentiers-en-france.eu/sentiers-nord-59/sentiers-nord-pas-de-calais-nord-59.php) !
+    Petit florilège de belles balades :
+    - De [Coudekerque à Bergues](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=711029&mb_titre=sentier-du-bois-des-forts) [6km - 1h40], au coeur du Bois des Forts, pour une immersion en pleine forêt
+    - De [Petit-Fort-Philippe au phare](https://www.komoot.com/fr-fr/smarttour/35322491?tour_origin=smart_tour_search) [4km - 1h] pour une agréable balade entre terre et mer
+    - Et bien d'autres encore
 
-informations regionales . séjour . marche . pas de calais:
-  titre: Découvrez les sentiers pédestres dans le Pas-de-Calais
+informations regionales . séjour . marche . calaisis:
+  titre: Découvrez les sentiers pédestres dans le Calaisis
   icônes: 🚶🚶🏾‍♀️
 #  formule: 1
 #  unité: kgCO2e
   intensiteCouleur: 100
-  description: C'est [ici](https://www.sentiers-en-france.eu/randonnee?lieu_id=1642&lieu=Pas-de-Calais%20%2862%29) que ça se passe.
+  description: |
+    Deux sites pour trouver votre bonheur pédestre : [ici](https://www.komoot.com/fr-fr/discover/Calais/@50.9524769,1.8538446/tours?sport=hike&map=true&max_distance=5000) et [là](https://www.sentiers-en-france.eu/sentiers-nord-59/sentiers-nord-pas-de-calais-nord-59.php) !
+    Petit florilège de belles balades :
+    - Sentier du [Platier d'Oye](https://velo-rando-pasdecalais.com/randonnees-pedestres/sentiers-de-petite-randonnee/?mb_page=circuit&mb_id=164282&mb_titre=sentier-du-platier-d-oye) [3,5km - 1h], à la découverte d'un site ornithologique d'exception
+    - Balade autour de [l'Etang d'Ardres](https://www.komoot.com/fr-fr/smarttour/21647067?tour_origin=smart_tour_search) [5km - 1h] au départ de Brêmes pour un moment de calme au bord de l'eau
+    - Randonnée facile et familiale autour du [Cap Blanc-Nez](https://velo-rando-pasdecalais.com/randonnees-pedestres/sentiers-de-petite-randonnee?mb_page=circuit&mb_id=81791&mb_titre=les-noires-mottes) avec une vue splendide sur la mer 
+    - Et bien d'autres encore
 
-informations regionales . séjour . marche . somme:
-  titre: Découvrez les sentiers pédestres dans la Somme
+informations regionales . séjour . marche . boulonnais:
+  titre: Découvrez les sentiers pédestres dans le Boulonnais
   icônes: 🚶🚶🏾‍♀️
 #  formule: 1
 #  unité: kgCO2e
   intensiteCouleur: 100
-  description: C'est [ici](https://www.sentiers-en-france.eu/randonnee?lieu_id=1659&lieu=Somme%20%2880%29) que ça se passe.
+  description: |
+    Deux sites pour trouver votre bonheur pédestre : [ici](https://www.komoot.com/fr-fr/discover/Boulogne-sur-Mer/@50.7259985,1.6118771/tours?sport=hike&map=true&max_distance=5000) et [là](https://www.sentiers-en-france.eu/sentiers-nord-59/sentiers-nord-pas-de-calais-nord-59.php) !
+    Petit florilège de belles balades :
+    - Randonnée sur le Sentier du [Fartz](https://velo-rando-pasdecalais.com/randonnees-pedestres/sentiers-de-petite-randonnee/?mb_page=circuit&mb_id=405123&mb_titre=le-sentier-du-fartz) [4km - 1h15] pour découvrir la faune et la flore de la baie de Wissant
+    - Balade touristique des [Villas à Wimereux](https://velo-rando-pasdecalais.com/randonnees-pedestres/sentiers-de-petite-randonnee/?mb_page=circuit&mb_id=416751&mb_titre=la-balade-des-villas) [4km - 1h30] pour une promenade entre bord de mer et architecture Belle Époque
+    - Et bien d'autres encore
 
-informations regionales . séjour . marche . aisne:
-  titre: Découvrez les sentiers pédestres dans l'Aisne
+informations regionales . séjour . marche . cote opale:
+  titre: Découvrez les sentiers pédestres dans le Boulonnais
   icônes: 🚶🚶🏾‍♀️
 #  formule: 1
 #  unité: kgCO2e
   intensiteCouleur: 100
-  description: C'est [ici](https://www.sentiers-en-france.eu/randonnee?lieu_id=1581&lieu=Aisne%20%2802%29) que ça se passe.
+  description: |
+    Deux sites pour trouver votre bonheur pédestre : [ici](https://www.komoot.com/fr-fr/discover/Boulogne-sur-Mer/@50.7259985,1.6118771/tours?sport=hike&map=true&max_distance=5000) et [là](https://www.sentiers-en-france.eu/sentiers-nord-59/sentiers-nord-pas-de-calais-nord-59.php) !
+    Petit florilège de belles balades :
+    - Randonnée à [Montreuil-sur-Mer](https://velo-rando-pasdecalais.com/randonnees-pedestres/sentiers-de-petite-randonnee/?mb_page=circuit&mb_id=402954&mb_titre=montreuil-extra-muros) [4km - 1h] pour découvrir la ville qui a inspiré Victor Hugo, entre patrimoine et nature
+    - Randonnée autour de [Montreuil-sur-Mer](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=390064&mb_titre=le-portus) [6km - 1h30] pour profiter des paysages et des remparts
+    - Balade en pleine nature sur le sentier de [l'Épitaphe](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=390067&mb_titre=l-epitaphe) [4,5km - 1h]
+    - Et bien d'autres encore
 
-informations regionales . séjour . marche . oise:
-  titre: Découvrez les sentiers pédestres dans l'Oise
+informations regionales . séjour . marche . baie de somme:
+  titre: Découvrez les sentiers pédestres autour de la Baie de Somme
   icônes: 🚶🚶🏾‍♀️
 #  formule: 1
 #  unité: kgCO2e
   intensiteCouleur: 100
-  description: C'est [ici](https://www.sentiers-en-france.eu/randonnee?lieu_id=1640&lieu=Oise%20%2860%29) que ça se passe.
+  description: |
+    Deux sites pour trouver votre bonheur pédestre : [ici](https://www.komoot.com/fr-fr/discover/Baie_de_Somme/@50.2137313,1.5964407/tours?sport=hike&map=true&max_distance=5000) et [là](https://www.sentiers-en-france.eu/sentiers-nord-59/sentiers-nord-pas-de-calais-nord-59.php) !
+    Petit florilège de belles balades :
+    - Randonnée pédestre à [Saint-Valery-sur-Somme](https://www.komoot.com/fr-fr/smarttour/36105464?tour_origin=smart_tour_search) [5km - 1h20] à la découverte de la ville, de la baie et de son patrimoine
+    - Balade autour des étangs et marais de [Mareuil-Caubert](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=482239&mb_titre=les-etangs-et-marais-de-mareuil-caubert) [4km - 1h15] pour une immersion en pleine nature   
+    - Et bien d'autres encore
+
 
 informations regionales . séjour . marche . par défaut:
   titre: Découvrez les sentiers pédestres dans les Hauts-de-France
@@ -127,7 +180,7 @@ informations regionales . séjour . marche . par défaut:
 
 informations regionales . séjour . transport commun:
 informations regionales . séjour . transport commun . dunkerquois:
-  titre: Découvrez les balades à vélo dans le Dunkerquois
+  titre: Le réseau DK bus à votre service !
   icônes: 🚌
   intensitéCouleur: 200
   description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
@@ -137,8 +190,7 @@ informations regionales . séjour . train:
   icônes: 🚗❌
   intensiteCouleur: 100
   description: |
-    C'est ici sur [TER HdF](https://www.ter.sncf.com/hauts-de-france).
-
+    C'est ici sur [TER Hauts-de-France](https://www.ter.sncf.com/hauts-de-france).
 
 informations regionales . alimentation:
   titre: Informations régionales liées au poste Alimentation
@@ -232,7 +284,6 @@ informations regionales . alimentation . licques:
   description: La volaille c'est génial !
 
 informations regionales . alimentation . achat produits locaux:
-informations regionales . alimentation . achat produits locaux . dunkerquois:
   titre: Emportez un peu du Nord chez vous
   icônes: 😋
 #  formule: 1
@@ -258,10 +309,10 @@ informations regionales . alimentation . chicorée:
 informations regionales . hébergement:
 informations regionales . hébergement . nuitées:
 informations regionales . hébergement . nuitées . dunkerquois:
-  titre: Informations régionales liées au poste Hébergement dans le Dunkerquois
+  titre: Découvrez les hébergements labellisés dans le Dunkerquois
   icônes: 🏨
   intensiteCouleur: 100
-  description: Découvrez les [hébergements labellisés](https://www.laclefverte.org/recherche/?locations%5B%5D=Nord) dans le Dunkerquois
+  description: Un label d'importance, le label [Clef Verte](https://www.laclefverte.org/).
 
 informations regionales . hébergement . nuitées . pas de calais:
   titre: Informations régionales liées au poste Hébergement dans le Pas-de-Calais
@@ -299,35 +350,13 @@ informations regionales . divers:
 
 informations regionales . divers . loisir:
 informations regionales . divers . loisir . dunkerquois:
-informations regionales . divers . loisir . dunkerquois . marche:
-  titre: Découvrez toutes nos balades et randonnées pédestres 
-  icônes: 🚶🏞️
-  intensiteCouleur: 100
-  description: |
-    Deux sites pour trouver votre bonheur pédestre : [ici](https://www.komoot.com/fr-fr/guide/1526994/randonnees-autour-de-dunkerque) et [là](https://www.sentiers-en-france.eu/sentiers-nord-59/sentiers-nord-pas-de-calais-nord-59.php) !
-    Petit florilège de belles balades :
-    - 6 km de [Balade au coeur du Bois des Forts](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=711029&mb_titre=sentier-du-bois-des-forts)
-    - 4 km de [Boucle autour du Phare de Petit-Fort-Philippe](https://www.komoot.com/fr-fr/smarttour/35322491?tour_origin=smart_tour_search)
-    - Et bien d'autres
-  
-informations regionales . divers . loisir . dunkerquois . vélo:
-  titre: Découvrez toutes nos balades et circuits vélo 
-  icônes: 🚲🏞️
-  intensiteCouleur: 100
-  description: |
-    [Ce site](https://www.komoot.com/fr-fr/guide/1526997/pistes-cyclables-autour-de-dunkerque) vous aidera à trouver votre bonheur à vélo.
-    Petit florilège de belles balades :
-    - 17 km entre [Dunkerque et Bray-Dunes](https://www.lavelomaritime.fr/itineraire/dunkerque-bray-dunes)
-    - 19 km autour [de Gravelines et sa citadelle](https://www.komoot.com/fr-fr/smarttour/36751931?tour_origin=smart_tour_search)
-    - Et bien d'autres
-
 informations regionales . divers . loisir . dunkerquois . nautique:
-  titre: Découvrez nos bases nautiques 
+  titre: Découvrez les bases nautiques autour de Dunkerque
   icônes: ⛵🏞️
   intensiteCouleur: 100
   description: |
-    Deux bases nautiques autour de Dunkerque : [Base nautique de la Licorne](https://www.dunkerque-tourisme.fr/offres/activites-nautiques-base-de-la-licorne-dunkerque-fr-3396599/) et
-    le [Paarc](https://lepaarc.com/).
+    Deux bases nautiques : [Base nautique de la Licorne](https://www.dunkerque-tourisme.fr/offres/activites-nautiques-base-de-la-licorne-dunkerque-fr-3396599/) et
+    le [PAARC](https://lepaarc.com/).
 
 informations regionales . divers . loisir . dunkerquois . parcs et jardins:
   titre: Profitez des magnifiques parcs et jardins
@@ -337,6 +366,7 @@ informations regionales . divers . loisir . dunkerquois . parcs et jardins:
     Plusieurs parcs aux alentours de Dunkerque pour un temps de pause pendant votre séjour : les [Jardins de la Liberté](https://www.tourisme-en-hautsdefrance.com/offres/jardins-de-la-liberte-gravelines-fr-4249251/) à Gravelines et
     le [Jardin public](https://www.tourisme-en-hautsdefrance.com/offres/jardin-public-de-grande-synthe-grande-synthe-fr-3492006/) de Grande-Synthe.
 
+# On garde ces informations régionales comme modèle d'un éventuel listing assez exhaustif des balades à pied ou à vélo
 informations regionales . divers . loisir . dunkerquois . marche1:
   titre: Circuit Jean Bart 
   icônes: 🚶🏴‍☠️
@@ -351,6 +381,7 @@ informations regionales . divers . loisir . dunkerquois . marche2:
   description: |
     5 kilomètres, 1h40 heures de marche à la découverte des villas anciennes.
 
+### Modèle d'informations régionales ###
 informations regionales . divers . slide-1:
   titre: Slide 1 divers
   icônes: 🥩1️⃣
