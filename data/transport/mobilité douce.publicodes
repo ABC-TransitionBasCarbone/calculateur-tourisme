@@ -1,9 +1,20 @@
+
+
 transport . mobilité douce:
 # Cette variable "intermédiaire" est un hack pour réussir à mettre une mosaique fille après une mosaique mère (même si le choix mobilité douce n'est pas à l'heure actuelle proposé dans la mosaique mère)
   applicable si: présent
   titre: Déplacements actifs
   icônes: 🚋
   formule: transport . mobilité douce . type * 1
+
+transport . mobilité douce . présent:
+  question: Allez-vous utiliser un mode de transport "actif" pour vous déplacer pendant votre séjour ?
+  par défaut: non
+  icônes: 🚲🛴
+  description: |
+    On entend par "transport actif" les modes de déplacement qui ne nécessitent pas de moteur, comme la marche, le vélo, le vélo à assistance électrique (VAE) ou la trottinette électrique.
+    Si vous n'utilisez pas de modes de déplacements actifs, cliquez sur "Aucun", puis passez à la question suivante.
+
 
 transport . mobilité douce . type:
   applicable si: présent

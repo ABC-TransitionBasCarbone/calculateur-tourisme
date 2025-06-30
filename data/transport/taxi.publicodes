@@ -1,13 +1,19 @@
+transport . taxi . présent:
+  question: Allez-vous utiliser un taxi pour vous déplacer pendant votre séjour ?
+  par défaut: non
+
 transport . taxi:
   applicable si: présent
   titre: Taxi
   icônes: 🚕
   formule: heures * impact par heure
 
-
 transport . taxi . heures:
-  question: Combien d'heures allez vous parcourir en taxi pour aller et revenir de votre lieu de séjour ?
-  description: Blablabla
+  question: Combien d'heures allez vous passez dans un taxi pour aller et revenir de votre lieu de séjour ?
+  description: |
+    On considère que le temps passé dans un taxi est proportionnel à la distance parcourue.
+    On ne prend pas en compte le temps d'attente, ni le temps de trajet pour aller au point de prise en charge du taxi.
+    Si vous y passez une demi-heure renseignez 0.5, si vous y passez une heure renseignez 1.
   suggestions:
     15 min: 0.25
     30 min: 0.5
@@ -16,7 +22,11 @@ transport . taxi . heures:
   par défaut: 0.25
 
 transport . taxi . impact par heure:
-  formule: 1
+  formule: 5.7
   unité: kgCO2e/h
   note: |
-    FE à consulter
+    On considère un taxi fonctionnant au gazole et roulant à une vitesse moyenne de 30km/h, en supposant qu'il roule à la fois en ville et sur des axes plus rapides.
+    On utilise le FE suivant : [Voiture/Motorisation gazole/2023](https://base-empreinte.ademe.fr/donnees/jeu-donnees/f1f98cd7-362f-3e73-b4c0-3b3ff2850806/0/false/null) qui est de 0.190kgCO2e/km 
+    On considère que le taxi est occupé par un seul passager, on alloue donc toutes les émissions au passager.
+    On ne prend pas en compte les émissions liées à la venue du taxi jusqu'au point de prise en charge du passager, ni les émissions liées à la fin de course (retour à la base ou à un autre point de prise en charge).
+    On utilise la formule suivante : 0.190kgCO2e/km * 30km/h = 5.7kgCO2e/h

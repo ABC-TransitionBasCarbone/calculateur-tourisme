@@ -1110,7 +1110,7 @@ alimentation . local . consommation:
     > ⚠️ Attention, si vous faites vos courses en voiture à plusieurs km de chez vous chaque semaine, il est possible que l'empreinte du dernier km dépasse les gains d'une alimentation locale !
 
   note: Voir détail de l'approche de calcul [ici](http://nosgestesclimat/documentation/alimentation/local/part-locale)
-  par défaut: "'parfois'" #Obliger de mettre "parfois" et non "jamais" car sinon la notif s'affiche tout de suite
+  par défaut: "'parfois'" #Obligé de mettre "parfois" et non "jamais" car sinon la notif s'affiche tout de suite
   formule:
     une possibilité:
       choix obligatoire: oui

@@ -1,6 +1,5 @@
 transport . train HdF:
   titre: Le train est un poste principal d'empreinte de votre séjour... c'est donc qu'il est peu carboné ! **Félicitations !**
   icônes: 🚅
-#  formule: 10% * transport . train
   description: |
     Le train apparait comme un poste d'empreinte principal de votre séjour... c'est donc que celui-ci est peu carboné ! **Félicitations !**

@@ -1,5 +1,4 @@
-# A faire : 
-#   - ajouter une question pour savoir le nombre de personnes sur le deux roues ?
+
 transport . deux roues:
   titre: Moto
   applicable si: présent
@@ -7,15 +6,19 @@ transport . deux roues:
   formule:
     variations:
       - si: transport . deux roues . présent = oui
-#          est défini: usager
-        alors: empreinte
-      - sinon: empreinte moyenne
+        alors: empreinte / passagers
+      - sinon: empreinte moyenne / passagers
   unité: kgCO2e
 
-#transport . deux roues . usager:
-#  question: Utilisez-vous un scooter ou une moto ?
-#  description: |
-#    Les scooters et motos sont aujourd'hui très majoritairement des engins qui fonctionnent au pétrole. Les scooters électriques ayant fait une réelle percée, ils sont ajoutés au modèle.
+transport . deux roues . passagers:
+  applicable si: présent
+  question: Combien de passagers seront présents sur votre deux roues ?
+  par défaut: 1
+  plancher: 1
+  unité: personnes
+  suggestions:
+    un passager: 1
+    deux passagers: 2
 
 transport . deux roues . empreinte:
   formule: (empreinte au km + entretien pondéré) * km
@@ -24,7 +27,6 @@ transport . deux roues . empreinte:
 transport . deux roues . empreinte moyenne:
   valeur: deux roues . empreinte
   contexte:
-#    deux roues . présent: oui
     deux roues . type: "'moto sup 250'"
     deux roues . km: 200
 
@@ -47,8 +49,6 @@ transport . deux roues . type:
     une possibilité:
       choix obligatoire: oui
       possibilités:
-#        - scooter électrique # On enlève car non adéquat comme mode de transport principal
-#        - scooter thermique  # On enlève car non adéquat comme mode de transport principal
         - moto inf 250
         - moto sup 250
   note: |
@@ -57,10 +57,6 @@ transport . deux roues . type:
     - Les motocyclettes légères (50 à 125 cm³) : 26,00 % du parc
     - Les motocyclettes lourdes (plus de 125 cm³) : 56,00 % du parc
 
-#transport . deux roues . type . scooter électrique:
-#  titre: Électrique
-#transport . deux roues . type . scooter thermique:
-#  titre: 50 cm³
 transport . deux roues . type . moto inf 250:
   titre: Moins de 250 cm³
 transport . deux roues . type . moto sup 250:
@@ -70,10 +66,6 @@ transport . deux roues . empreinte au km:
   unité: kgCO2e/km
   formule:
     variations:
-#      - si: type = 'scooter thermique'
-#        alors: 0.0763 kgCO2e/km
-#      - si: type = 'scooter électrique'
-#        alors: 0.030 kgCO2e/km
       - si: type = 'moto inf 250'
         alors: 0.0763 kgCO2e/km
       - si: type = 'moto sup 250'
@@ -88,11 +80,6 @@ transport . deux roues . empreinte au km:
 
 transport . deux roues . entretien pondéré:
   formule: entretien
-#  formule:
-#    variations:
-#      - si: type = 'scooter électrique'
-#        alors: entretien * 0.75
-#      - sinon: entretien
   unité: kgCO2e/km
 
 transport . deux roues . entretien:
@@ -106,8 +93,6 @@ transport . deux roues . nombre deux roues circulation:
   formule: 2700000
   note: Le nombre de deux-roues en circulation en 2020, stable, est de [2,7 millions](https://www.onisr.securite-routiere.gouv.fr/etudes-et-recherches/vehicules/parc-des-vehicules/le-parc-deux-roues-motorises-des-menages)
 
-#transport . deux roues . pourcentage motards:
-#  formule: nombre deux roues circulation / population
 
 transport . deux roues . km annuels moyen:
   formule: 3000

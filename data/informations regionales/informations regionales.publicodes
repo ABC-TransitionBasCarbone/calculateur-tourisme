@@ -21,7 +21,6 @@ informations regionales . séjour:
 
 informations regionales . séjour . vélo:
 informations regionales . séjour . vélo . dunkerquois:
-#informations regionales . divers . loisir . dunkerquois . vélo:
   titre: Découvrez les balades à vélo dans le Dunkerquois
   icônes: 🚲🏞️
   intensiteCouleur: 100
@@ -32,20 +31,7 @@ informations regionales . séjour . vélo . dunkerquois:
     - 19 km autour [de Gravelines et sa citadelle](https://www.komoot.com/fr-fr/smarttour/36751931?tour_origin=smart_tour_search)
     - Et bien d'autres
 
-#informations regionales . séjour . vélo . dunkerquois:
-#  titre: Découvrez les balades à vélo dans le Dunkerquois
-#  icônes: 🚲
-##  formule: 1
-##  unité: kgCO2e
-#  intensiteCouleur: 100
-#  description: |
-#    3 belles balades pour apprécier les beautés du Dunkerquois 
-#      - 17 km de Dunkerque à Bray-Dunes
-#      - 18 km de Dunkerque à Bray-Dunes
-#      - 19 km autour de Gravelines en passant par la citadelle
-
 informations regionales . séjour . vélo . arras pays d'artois:
-#informations regionales . divers . loisir . arras pays d'artois . vélo:
   titre: Découvrez les balades à vélo dans le Pays d'Artois
   icônes: 🚴‍♂️
   intensiteCouleur: 100
@@ -56,7 +42,6 @@ informations regionales . séjour . vélo . arras pays d'artois:
     - [Boucle Parc de la Bassure – Mur des Fusillés au départ d'Arras](https://www.komoot.com/fr-fr/smarttour/25874018?tour_origin=smart_tour_search) : 18km en 1h15
 
 informations regionales . séjour . vélo . artois lys:
-#informations regionales . divers . loisir . artois lys . vélo:
   titre: Découvrez les balades à vélo dans l’Artois Lys
   icônes: 🚴‍♂️
   intensiteCouleur: 100
@@ -383,49 +368,14 @@ informations regionales . séjour . vélo . villes soeurs:
     - 10 km de [Le Tréport à Criel Sur Mer](https://urlr.me/dBSZYt) (50 min)
     - 14 km de [Boucle Château d'Eu – Piste Cyclable](https://www.komoot.com/fr-fr/smarttour/25872070?tour_origin=smart_tour_search) (50 min)
 
-# informations regionales . séjour . vélo . pas de calais:
-#   titre: Découvrez les balades à vélo dans le Pas-de-Calais
-#   icônes: 🚲
-# #  formule: 1
-# #  unité: kgCO2e
-#   intensiteCouleur: 100
-#   description: C'est [ici](https://droitauvelo.org/Carte-des-amenagements-cyclables-des-Hauts-de-France) que ça se passe.
-
-# informations regionales . séjour . vélo . somme:
-#   titre: Découvrez les balades à vélo dans la Somme
-#   icônes: 🚲
-# #  formule: 1
-# #  unité: kgCO2e
-#   intensiteCouleur: 100
-#   description: C'est [ici](https://droitauvelo.org/Carte-des-amenagements-cyclables-des-Hauts-de-France) que ça se passe.
-
-# informations regionales . séjour . vélo . aisne:
-#   titre: Découvrez les balades à vélo dans l'Aisne
-#   icônes: 🚲
-# #  formule: 1
-# #  unité: kgCO2e
-#   intensiteCouleur: 100
-#   description: C'est [ici](https://droitauvelo.org/Carte-des-amenagements-cyclables-des-Hauts-de-France) que ça se passe. 
-
-# informations regionales . séjour . vélo . oise:
-#   titre: Découvrez les balades à vélo dans l'Oise
-#   icônes: 🚲
-# #  formule: 1
-# #  unité: kgCO2e
-#   intensiteCouleur: 100
-#   description: C'est [ici](https://droitauvelo.org/Carte-des-amenagements-cyclables-des-Hauts-de-France) que ça se passe.
-
 informations regionales . séjour . vélo . par défaut:
   titre: Découvrez les balades à vélo dans les Hauts-de-France
   icônes: 🚲
-#  formule: 1
-#  unité: kgCO2e
   intensiteCouleur: 100
   description: C'est [ici](https://droitauvelo.org/Carte-des-amenagements-cyclables-des-Hauts-de-France) que ça se passe.
 
 informations regionales . séjour . marche:
 informations regionales . séjour . marche . dunkerquois:
-#informations regionales . divers . loisir . dunkerquois . marche:
   titre: Découvrez les sentiers pédestres dans le Dunkerquois
   icônes: 🚶🏞️
   intensiteCouleur: 100
@@ -436,20 +386,7 @@ informations regionales . séjour . marche . dunkerquois:
     - 4 km de [Boucle autour du Phare de Petit-Fort-Philippe](https://www.komoot.com/fr-fr/smarttour/35322491?tour_origin=smart_tour_search)
     - Et bien d'autres
 
-#informations regionales . séjour . marche . dunkerquois:
-#  titre: Découvrez les sentiers pédestres dans le Dunkerquois
-#  icônes: 🚶🚶🏾‍♀️
-##  formule: 1
-##  unité: kgCO2e
-#  intensiteCouleur: 100
-#  description: |
-#    2 marches simples et jolies:
-#      - De Petit-Fort-Philippe au phare [4km-1h] pour une agréable balade entre mer et nature
-#      - De Coudekerque à Bergues [6,2km-1h40], au coeur du Bois des Forts, pour une immersion en pleine forêt
-#      - Et bien d'autres [ici](https://www.sentiers-en-france.eu/randonnee?lieu_id=1639&lieu=Nord%20%2859%29).
-
 informations regionales . séjour . marche . arras pays d'artois:
-#informations regionales . divers . loisir . arras pays d'artois . marche:
   titre: Découvrez les sentiers pédestres dans le Pays d’Artois
   icônes: 🚶‍♂️
   intensiteCouleur: 100
@@ -460,7 +397,6 @@ informations regionales . séjour . marche . arras pays d'artois:
     - [Sentiers de l'Écureuil à Maroeuil pour observer la biodiversité du bois et ses habitants discrets](https://velo-rando-pasdecalais.com/randonnees-pedestres/balades-et-randos-familles/?mb_page=circuit&mb_id=331591&mb_titre=sentier-de-l-ecureuil) : 2,6km en 40min
 
 informations regionales . séjour . marche . artois lys:
-#informations regionales . divers . loisir . artois lys . marche:
   titre: Découvrez les sentiers pédestres dans l'Artois Lys
   icônes: 🚶‍♂️
   intensiteCouleur: 100
@@ -784,45 +720,9 @@ informations regionales . séjour . marche . villes soeurs:
     - 6 km de [Mers-les-Bains, nature et patrimoine](https://www.komoot.com/fr-fr/smarttour/e1317839390/notre-dame-de-la-falaise-boucle-depuis-mers-les-bains?tour_origin=smart_tour_search) (1h40)
     - 4 km de [Criel-sur-Mer, côte d'Albâtre](https://www.komoot.com/fr-fr/smarttour/36091428?tour_origin=smart_tour_search) (1h)
 
-
-
-# informations regionales . séjour . marche . pas de calais:
-#   titre: Découvrez les sentiers pédestres dans le Pas-de-Calais
-#   icônes: 🚶🚶🏾‍♀️
-# #  formule: 1
-# #  unité: kgCO2e
-#   intensiteCouleur: 100
-#   description: C'est [ici](https://www.sentiers-en-france.eu/randonnee?lieu_id=1642&lieu=Pas-de-Calais%20%2862%29) que ça se passe.
-
-# informations regionales . séjour . marche . somme:
-#   titre: Découvrez les sentiers pédestres dans la Somme
-#   icônes: 🚶🚶🏾‍♀️
-# #  formule: 1
-# #  unité: kgCO2e
-#   intensiteCouleur: 100
-#   description: C'est [ici](https://www.sentiers-en-france.eu/randonnee?lieu_id=1659&lieu=Somme%20%2880%29) que ça se passe.
-
-# informations regionales . séjour . marche . aisne:
-#   titre: Découvrez les sentiers pédestres dans l'Aisne
-#   icônes: 🚶🚶🏾‍♀️
-# #  formule: 1
-# #  unité: kgCO2e
-#   intensiteCouleur: 100
-#   description: C'est [ici](https://www.sentiers-en-france.eu/randonnee?lieu_id=1581&lieu=Aisne%20%2802%29) que ça se passe.
-
-# informations regionales . séjour . marche . oise:
-#   titre: Découvrez les sentiers pédestres dans l'Oise
-#   icônes: 🚶🚶🏾‍♀️
-# #  formule: 1
-# #  unité: kgCO2e
-#   intensiteCouleur: 100
-#   description: C'est [ici](https://www.sentiers-en-france.eu/randonnee?lieu_id=1640&lieu=Oise%20%2860%29) que ça se passe.
-
 informations regionales . séjour . marche . par défaut:
   titre: Découvrez les sentiers pédestres dans les Hauts-de-France
   icônes: 🚶🚶🏾‍♀️
-#  formule: 1
-#  unité: kgCO2e
   intensiteCouleur: 100
   description: C'est [ici](https://www.sentiers-en-france.eu/hauts-de-france) que ça se passe.
 
@@ -934,8 +834,6 @@ informations regionales . alimentation . licques:
 informations regionales . alimentation . achat produits locaux:
   titre: Emportez un peu du Nord chez vous
   icônes: 😋
-#  formule: 1
-#  unité: kgCO2e
   intensiteCouleur: 100
   description: Trouvez une [boutique](https://gastronomie-hautsdefrance.fr/boutiques-de-nos-terroirs/) ou un [point de vente](https://ouacheterlocal.fr/nos-points-de-vente/)) à côté de votre hébergement !
 
@@ -943,8 +841,6 @@ informations regionales . alimentation . liste aop:
 informations regionales . alimentation . liste aop . dunkerquois:
   titre: Découvrez nos AOP locales
   icônes: 😋
-#  formule: 1
-#  unité: kgCO2e
   intensiteCouleur: 100
   description: La liste ici !
 
@@ -995,7 +891,6 @@ informations regionales . hébergement . nuitées . par défaut:
 informations regionales . divers:
   titre: Informations régionales liées au poste Divers
   intensiteCouleur: 100
-
 
 
 informations regionales . divers . loisir:

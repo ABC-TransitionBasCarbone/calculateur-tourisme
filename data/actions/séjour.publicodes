@@ -44,10 +44,10 @@ séjour . voiture . opter transport commun:
   description: |
 
 séjour . voiture . opter transport commun . part report modal:
-  titre: Part de déplacements en voiture faisable en TC #A variabiliser selon le lieu ? Pas pour une v1
-  formule: 15% #Valeur arbitraire et non sourcée
+  titre: Part de déplacements en voiture faisable en Train 
+  formule: 10% 
   note: |
-    Valeur choisie arbitrairement et non (encore) sourcée
+    On compte de l'ordre de 10% de potentiel de report modal de la voiture sur le train en HdF d'après cette étude : https://www.observatoire-transports-hauts-de-france.fr/IMG/pdf/lettre_de_l_ort_no55.pdf?utm_source=chatgpt.com, en considérant que le temps de parcours et les modalités de voyage seront différentes par rapport à un trajet en voiture.
 
 séjour . voiture . sans voiture:
   titre: Essayez un séjour sans voiture 
@@ -62,7 +62,6 @@ séjour . voiture . sans voiture:
     Se passer de voiture c'est aussi un moyen de découvrir les beautés proches de votre hébergement. Ce n'est, certes, pas chose aisée mais pas impossible non plus : sorties pédestres,
     balades à vélo, transport en commun, TER, les moyens de se passer de voiture existent.
 
-# Action à confirmer au regard des données GES utilisées qui semblait mettre en avant que les e-scooter shared avait un énorme impact car gros et à durée de vie très faible
 séjour . deux roues . location deux roues électrique:
   titre: Louer électrique plutôt que thermique
   icônes: 🔌🚗
@@ -97,7 +96,7 @@ séjour . voiture . location réduire taille:
   non applicable si:
     une de ces conditions:
       - séjour . voiture . motorisation = 'petite'
-      - séjour . voiture . voyageurs > 3 #Si plus de 3 passagers on considère qu'on ne peut pas prendre une petite voiture
+      - séjour . voiture . voyageurs > 3 
       - toutes ces conditions:
           - est défini: transport . voiture . utilisateur
           - une de ces conditions:

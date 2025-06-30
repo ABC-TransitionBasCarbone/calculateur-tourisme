@@ -1,13 +1,10 @@
-#A voir si on détail par type de trajets (TGV, TER, Europe)
+
 transport . train:
   applicable si: présent
   titre: Train
   icônes: 🚆
-#  description: |
-#    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/TER_Vesoul.jpg/640px-TER_Vesoul.jpg)
   formule: km * impact par km
 
-# On fait pour l'instant l'hypothèse que la proportion d'utilisation des différents train en HdF est la même qu'au niveau national
 transport . train . impact par km:
   formule:
     somme:
@@ -21,6 +18,7 @@ transport . train . impact par km:
     Source : [Autorité de régulation des transports](https://www.autorite-transports.fr/wp-content/uploads/2023/06/bilan-ferroviaire-2022-a-mi-2023.pdf)
 
     ![Répartition Passagers.km](https://github.com/incubateur-ademe/nosgestesclimat/assets/55186402/4bbdf823-8e9a-4570-90da-77ff8af05b14)
+    On fait l'hypothèse que la proportion d'utilisation des différents train en HdF est la même qu'au niveau national
 
 transport . train . TGV:
   formule: 0.00293
@@ -83,7 +81,6 @@ transport . train . passagers km intercités:
     Chiffres issus de l'[autorité de régulation des transports](https://www.autorite-transports.fr/wp-content/uploads/2023/06/bilan-ferroviaire-2022-a-mi-2023.pdf).
     On omet ici les trajets en RER et transilien.
 
-### A voir si on passe le modèle en heure et non plus en km
 transport . train . km:
   question: Combien de kilomètres allez vous parcourir en train pour aller et revenir de votre lieu de séjour ?
   description: Renseignez un nombre de km cohérent (en arrondissant à la dizaine ou centaine supérieure) avec les distances que vous allez parcourir en train pour vous rendre sur votre lieu de séjour et en revenir.
@@ -93,8 +90,3 @@ transport . train . km:
   unité: km
   plancher: 0
   par défaut: 300
-
-#  question: Combien de kilomètres parcourez-vous en train par an ?
-#  description: |
-#    Renseignez un nombre de km cohérent avec les distances que vous allez parcourir en train le temps de votre séjour (aller-retour depuis votre domicile 
-#    et déplacements éventuels pendant le séjour).

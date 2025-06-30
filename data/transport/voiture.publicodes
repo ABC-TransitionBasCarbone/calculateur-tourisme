@@ -17,7 +17,6 @@ transport . voiture:
                       une de ces conditions:
                         - utilisateur = 'propriétaire'
                         - utilisateur = 'propriétaire covoit'
-#                        - utilisateur = 'régulier non propriétaire'
                     alors: empreinte calculée
                   - si:
                       toutes ces conditions:
@@ -45,25 +44,13 @@ transport . voiture:
                     alors: empreinte non régulier électrique
             - sinon: empreinte moyenne
   unité: kgCO2e
-#  description: |
-#    ![](https://upload.wikimedia.org/wikipedia/commons/9/9a/Congestion_caused_by_a_road_accident%2C_Algarve%2C_Portugal.jpg)
-#
-#    La voiture est aujourd'hui en France essentiellement thermique (essence, diesel), bien que l'électrique progresse lentement.
-#
-#    Pourtant, électrique ou thermique, elle reste un moyen de déplacement très peu efficient :
-#    **il s'agit en moyenne de déplacer un humain de 80kg dans une boîte en métal de 1200kg**.
-#
-#    Un peu comme si chaque midi, nous faisions à manger pour 10 avant de jeter 90% de la nourriture, ou que nous décidions de chauffer tout le pâté de maisons plutôt que l'intérieur de chacune des 10 maisons.
-#
-#    Notons finalement qu'il est important de prendre en compte à la fois l'usage (les km parcourus) et la construction de ce véhicule de plus d'une tonne de matériaux divers.
 
 transport . voiture . km:
-#  ordre: 1
+
   titre: Km en voiture
   question: Quelle distance allez-vous parcourir en voiture pour aller et revenir de votre lieu de séjour  ?
   description: |
     Ne cherchez pas à renseignez le kilométrage exact, l'arrondi à la dizaine ou centaine supérieure fera l'affaire.
-# It seems that there is a [publicodes bug](https://github.com/publicodes/publicodes/issues/517). For now, we can't use `km annuels moyen réel` directly here, until the problem is fixed.
 #  par défaut: 8210  
   par défaut: 500 
   unité: km
@@ -71,10 +58,6 @@ transport . voiture . km:
   suggestions:
     Paris ⇄ Lille: 440
     Bruxelles ⇄ Lille : 220
-
-#transport . voiture . km annuels moyen réel:
-#  #8210
-#  formule: km annuels moyen * nombre véhicules circulation / population
 
 transport . voiture . km annuels moyen:
   #12216
@@ -135,8 +118,6 @@ transport . voiture . nombre véhicules circulation . VUL:
 
 #On garde la sémantique du modèle source NGC (propriétaire, régulier non propriétaire, non régulier) pour ne pas se compliquer quand bien même elle n'est pas des plus claire au regard des cas d'utilisation (proprio, location/emprunt, covoit)
 transport . voiture . utilisateur:
-#  ordre: 2
-#  question: Allez-vous utiliser votre propre voiture, faire du covoiturage ou bien utiliser une voiture louée ou empruntée ?
   question: Parmi les situations ci-dessous, dans quel cas vous trouverez-vous pour venir en Hauts-de-France en voiture ?
   applicable si: km > 0
   formule:
@@ -148,9 +129,7 @@ transport . voiture . utilisateur:
         - régulier non propriétaire
         - régulier non propriétaire covoit
         - non régulier
-#  par défaut: "'propriétaire'"
-#  par défaut: "'régulier non propriétaire'"
-#  par défaut: "'non régulier'"
+
 
 transport . voiture . utilisateur . propriétaire:
   titre: Je vais utiliser ma propre voiture
@@ -164,16 +143,6 @@ transport . voiture . utilisateur . régulier non propriétaire covoit:
   titre: Je vais louer ou emprunter une voiture et prendre des covoitureurs pour le trajet
 transport . voiture . utilisateur . non régulier:
   titre: Je vais faire du covoiturage (en tant que passager)
-
-#transport . voiture . notif utilsateur irrégulier:
-#  type: notification
-#  formule:
-#    toutes ces conditions:
-#      - est défini: voiture . utilisateur
-#      - utilisateur = 'non régulier'
-#      - km > 0
-#  description: |
-#    Vous roulez avec des véhicules différents : nous vous avons donc attribué les caractéristiques d'une voiture "moyenne".
 
 transport . voiture . empreinte moyenne:
   valeur: voiture . empreinte calculée
@@ -233,12 +202,10 @@ transport . voiture . empreinte non régulier électrique:
         voiture . utilisateur: "'propriétaire'"
 
 transport . voiture . empreinte calculée:
-#  formule: (usage + construction) / voyageurs / durée séjour #Je commente car je ne sais plus pourquoi j'avais mis divisé par durée séjour (alors qu'on a un amortissement par km en plus).
   formule: (usage + construction) / voyageurs  
   unité: kgCO2e
 
 transport . voiture . voyageurs:
-#  ordre: 3
   titre: Nombre de voyageurs
   question: Quel sera le nombre moyen de voyageurs dans la voiture ?
   applicable si: km > 0
@@ -250,7 +217,6 @@ transport . voiture . voyageurs:
   avertissement: |
     Le nombre de voyageurs ne peut pas être nul. Il y a forcément un conducteur derrière le volant.
   par défaut: 2
-#  par défaut: 1.2
   suggestions:
     je suis seul: 1
     deux: 2
@@ -267,49 +233,6 @@ transport . voiture . usage au kilomètre:
 
 transport . voiture . empreinte au kilomètre: #On laisse cette variable intermédaire pour l'instant afin de pas avoir à toucher au modèle action qui s'appuie sur voiture . empreinte au kilomètre
   formule: empreinte au kilomètre calculée
-#    variations:
-#      - si:
-#          est défini: utilisateur
-#        alors:
-#          variations:
-#            - si:
-#                une de ces conditions:
-#                  - utilisateur = 'propriétaire'
-#                  - utilisateur = 'régulier non propriétaire'
-#              alors: empreinte au kilomètre calculée
-#            - si: utilisateur = 'non régulier'
-#              alors: empreinte au kilomètre non régulier
-#      - sinon: empreinte au kilomètre moyenne
-#
-#transport . voiture . empreinte au kilomètre moyenne:
-#  valeur: voiture . empreinte au kilomètre calculée
-#  contexte:
-#    voiture . utilisateur: "'propriétaire'"
-#    voiture . gabarit: "'berline'"
-#    voiture . motorisation: "'thermique'"
-#    voiture . thermique . carburant: "'essence E5 ou E10'"
-#    voiture . thermique . consommation aux 100:
-#      valeur: voiture . thermique . consommation estimée
-#      contexte:
-#        voiture . utilisateur: "'propriétaire'"
-#        voiture . gabarit: "'berline'"
-#        voiture . motorisation: "'thermique'"
-#        voiture . thermique . carburant: "'essence E5 ou E10'"
-#
-#transport . voiture . empreinte au kilomètre non régulier:
-#  valeur: voiture . empreinte au kilomètre calculée
-#  contexte:
-#    voiture . utilisateur: "'régulier non propriétaire'"
-#    voiture . gabarit: "'berline'"
-#    voiture . motorisation: "'thermique'"
-#    voiture . thermique . carburant: "'essence E5 ou E10'"
-#    voiture . thermique . consommation aux 100:
-#      valeur: voiture . thermique . consommation estimée
-#      contexte:
-#        voiture . utilisateur: "'régulier non propriétaire'"
-#        voiture . gabarit: "'berline'"
-#        voiture . motorisation: "'thermique'"
-#        voiture . thermique . carburant: "'essence E5 ou E10'"
 
 transport . voiture . empreinte au kilomètre calculée:
   formule:
@@ -385,7 +308,6 @@ transport . voiture . thermique . consommation aux 100:
       - une de ces conditions:
           - utilisateur = 'propriétaire'
           - utilisateur = 'propriétaire covoit'
-#          - utilisateur = 'régulier non propriétaire'
       - une de ces conditions:
           - motorisation = 'thermique'
           - motorisation = 'hybride'
@@ -573,7 +495,6 @@ transport . voiture . thermique . carburant:
       - une de ces conditions:
           - utilisateur = 'propriétaire'
           - utilisateur = 'propriétaire covoit'
-#          - utilisateur = 'régulier non propriétaire'
       - une de ces conditions:
           - motorisation = 'thermique'
           - motorisation = 'hybride'
@@ -631,7 +552,7 @@ transport . voiture . électrique:
 transport . voiture . électrique . empreinte au kilomètre:
   titre: empreinte au km électrique
   unité: kgCO2e/km
-  formule: consommation au kilomètre * logement . électricité . réseau . intensité carbone 
+  formule: consommation au kilomètre * séjour . voiture . électrique . empreinte au kWh
   note: |
     Nous considérons ici le FE moyen du réseau et on ne fait pas appel à la variable "logement . électricité . empreinte au kWh" (comme le modèle source de NGC) car cette dernière implique le questionnement de la possession de panneaux photo au sein du logement.
     De plus, ce FE moyen réseau ne correspond pas parfaitement aux réalités de recharge (mais ce n'est pas grave). La majorité des possesseurs de voitures électriques rechargent leur véhicule chez eux avec une tarification heure creuses, qui est plus avantageuse financièrement et correspond d'ailleurs aux moments où la demande en électricité est moins forte et le mix électrique moins carboné (les centrales gaz ne sont pas sollicitées).
@@ -650,7 +571,6 @@ transport . voiture . électrique . consommation aux 100:
       - une de ces conditions:
           - utilisateur = 'propriétaire'
           - utilisateur = 'propriétaire covoit'
-#          - utilisateur = 'régulier non propriétaire'
       - motorisation = 'électrique'
       - km > 0
   suggestions:
@@ -796,7 +716,6 @@ transport . voiture . climatisation . émissions gaz fluorés transport:
     D'après l'excel [Données par substance de gaz à effet de serre (GES) édition 2023, onglet "GF-UE_total"](https://www.citepa.org/wp-content/uploads/publications/secten/2023/Citepa_gaz_a_effet_de_serre_v2.zip),
     les émissions de gaz fluorés pour le secteur du transport (provenant des équipements de réfrigération et d'air conditionné, utilisant des halocarbures ou du SF6), sont de 1374 ktCO₂e.
 
-# On enlève le '* seuil km' pour les propriétaires car c'était beaucoup trop pénalisant --> il n'y a donc pas de variations de modèle entre propriétaire et régulier non propriétaire
 transport . voiture . construction:
   titre: Construction de la voiture
   formule:
@@ -812,9 +731,7 @@ transport . voiture . construction:
   unité: kgCO2e
   note: |
     Pour le moment, nous ne considérons pas l'amortissement complet d'une voiture (c'est-à-dire que nous n'avons pas l'info de l'âge ou le kilométrage complet de la voiture donc sa contruction ne sera jamais nulle).
-  # Nous pourrions utiliser ici le mécanisme `plancher` avec pour valeur "construction au kilomètre * seuil km"
-  # mais il est plus simple ici de comprendre la méhotodo avec `variations`.
-
+ 
 transport . voiture . construction . seuil km:
   formule: voiture . durée de vie en km / durée de vie moyenne
   plafond: voiture . km annuels moyen
