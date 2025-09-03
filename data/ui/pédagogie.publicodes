@@ -9,56 +9,46 @@ ui . pédagogie:
 ui . pédagogie . sous catégories:
 ui . pédagogie . sous catégories . transport:
 ui . pédagogie . sous catégories . séjour:
-ui . pédagogie . sous catégories . alimentation:
+#ui . pédagogie . sous catégories . alimentation:
 ui . pédagogie . sous catégories . logement:
 ui . pédagogie . sous catégories . divers:
 #ui . pédagogie . sous catégories . divers . loisirs:
 #ui . pédagogie . sous catégories . divers . loisirs . activité:
 
-ui . pédagogie . sous catégories . transport . voiture dunkerquois:
+ui . pédagogie . sous catégories . transport . voiture:
   titre: Voiture pour venir en Hauts-de-France
-#  applicable si: transport . localisation séjour = 1
   icônes: 🚗
   formule: transport . voiture
   actions:
     - transport . voiture . éco-conduite
-    - transport . voiture . faire durer
-    - transport . voiture . réduire taille
-    - transport . voiture . autopartage
-    - transport . voiture . covoiturage
-    - transport . voiture . voiture 5km
-    - transport . voiture . voiture électrique
+    - transport . voiture . location réduire taille
+    - transport . voiture . covoiturage un
+    - transport . voiture . covoiturage deux
+    - transport . voiture . location voiture électrique
     - transport . voiture . limitation autoroute
   informations:
     - informations regionales . transport . alternartives
     - informations regionales . transport . alternartives train
-#    - informations regionales . transport . vélo . par défaut
-#    - informations regionales . transport . marche . par défaut
-#    - informations regionales . alimentation . achat produits locaux . dunkerquois
-#    - informations regionales . transport . vélo . dunkerquois
-#    - informations regionales . transport . marche . dunkerquois
-#    - informations regionales . divers . loisir . dunkerquois . marche1
-#    - informations regionales . divers . loisir . dunkerquois . marche2
 
 ui . pédagogie . sous catégories . séjour . voiture dunkerquois:
   titre: Voiture pendant votre séjour
-  applicable si: transport . localisation séjour = 1
+  applicable si: transport . localisation séjour = 15
   icônes: 🚗
   formule: séjour . voiture
   actions:
     - séjour . voiture . éco-conduite
     - séjour . voiture . opter transport commun
     - séjour . voiture . sans voiture
+    - séjour . voiture . location réduire taille
+    - séjour . voiture . location voiture électrique
   informations:
-#    - informations regionales . transport . vélo . par défaut
-#    - informations regionales . transport . marche . par défaut
+#    - informations regionales . séjour . vélo . par défaut
+#    - informations regionales . séjour . marche . par défaut
 #    - informations regionales . alimentation . achat produits locaux
     - informations regionales . séjour . vélo . dunkerquois
     - informations regionales . séjour . marche . dunkerquois
     - informations regionales . séjour . transport commun . dunkerquois
     - informations regionales . séjour . train
-    - informations regionales . divers . loisir . dunkerquois . marche1
-    - informations regionales . divers . loisir . dunkerquois . marche2
 #    variations:
 #      - si: transport . localisation séjour = 1
 #        alors:
@@ -94,27 +84,19 @@ ui . pédagogie . sous catégories . transport . deux roues dunkerquois:
     - informations regionales . transport . alternartives
     - informations regionales . transport . alternartives train
 
-ui . pédagogie . sous catégories . transport . mobilité douce:
-  icônes: 🚲
-  formule: transport . mobilité douce
+# On commente pour l'instant tant qu'on ne peut pas afficher une action sans que 'formule' soit défini en son sein
+#ui . pédagogie . sous catégories . transport . train:
+#  titre: Train pour venir en Hauts-de-France
+#  icônes: 🚋
+#  formule: transport . train
+#  actions:
+#    - transport . train HdF
 
-ui . pédagogie . sous catégories . transport . bus:
-  icônes: 🚌
-  formule: transport . bus
-
-ui . pédagogie . sous catégories . transport . train:
-  titre: Train pour venir en Hauts-de-France
-  icônes: 🚋
-  formule: transport . train
-  actions:
-    - transport . train HdF
-
-ui . pédagogie . sous catégories . alimentation . découverte:
-  applicable si: transport . localisation séjour = 1
+ui . pédagogie . sous catégories . alimentation:
   titre: Votre alimentation pendant le séjour
   icônes: 🎯
   formule:
-    somme: #Obliger de passer par une somme car la variable alimentation dans "formule" ne fonctionne pas
+    somme: #Obliger de passer par une somme de repas et boisson car la variable alimentation dans "formule" ne fonctionne pas
       - alimentation . repas
       - alimentation . boisson 
   actions:
@@ -129,12 +111,12 @@ ui . pédagogie . sous catégories . alimentation . découverte:
     - alimentation . bonus . manger de saison
     - alimentation . bonus . manger local
   informations:
-    - informations regionales . alimentation . achat produits locaux . dunkerquois
+    - informations regionales . alimentation . achat produits locaux
     - informations regionales . alimentation . chicorée
-    - informations regionales . alimentation . liste aop . dunkerquois
+#    - informations regionales . alimentation . liste aop . dunkerquois #On commente pour l'instant car on a pas l'info
 
+#On commente cette ui pour éviter de porter un message centré uniquement sur la viande
 #ui . pédagogie . sous catégories . alimentation . viande:
-#  applicable si: transport . localisation séjour = 1
 #  titre: Repas avec viande
 #  icônes: 🥩
 #  formule:
@@ -143,26 +125,24 @@ ui . pédagogie . sous catégories . alimentation . découverte:
 #      - alimentation . plats . viande blanche
 #  actions:
 #    - alimentation . repas . réduire viande . max 1 par jour
-#    - alimentation . repas . réduire viande . max 2 par semaine
 #    - alimentation . repas . viande faible empreinte
 #    - alimentation . devenir végétarien
-#    #  Pour le moment, nous ne souhaitons pas afficher cette action pour cette sous-catégorie
-#    # - alimentation . devenir végétalien
+#    # - alimentation . devenir végétalien #  Pour le moment, nous ne souhaitons pas afficher cette action pour cette sous-catégorie
 #    - alimentation . bonus . manger de saison
 #    - alimentation . bonus . manger local
 #  informations:
-#    - informations regionales . alimentation . achat produits locaux . dunkerquois
+#    - informations regionales . alimentation . achat produits locaux
 #    - informations regionales . alimentation . rhubarbe
 #    - informations regionales . alimentation . hareng
 #    - informations regionales . alimentation . licques
 #    - informations regionales . alimentation . soissons
-##    - informations regionales . alimentation . fraise
-##    - informations regionales . alimentation . chou fleur
-##    - informations regionales . alimentation . pomme
-##    - informations regionales . alimentation . miel
-##    - informations regionales . alimentation . pomme de terre
-##    - informations regionales . alimentation . saint jacques
-##    - informations regionales . alimentation . endive
+#    - informations regionales . alimentation . fraise
+#    - informations regionales . alimentation . chou fleur
+#    - informations regionales . alimentation . pomme
+#    - informations regionales . alimentation . miel
+#    - informations regionales . alimentation . pomme de terre
+#    - informations regionales . alimentation . saint jacques
+#    - informations regionales . alimentation . endive
 
 ui . pédagogie . sous catégories . alimentation . poisson:
   titre: Repas avec poisson
@@ -172,14 +152,14 @@ ui . pédagogie . sous catégories . alimentation . poisson:
       - alimentation . plats . poisson gras
       - alimentation . plats . poisson blanc
   actions:
-    - alimentation . repas . réduire poisson . max 2 par semaine
+    #- alimentation . repas . réduire poisson . max 2 par semaine #A voir comment adapter l'action au contexte des courts séjour --> pour l'instant on commente
     - alimentation . repas . poisson faible empreinte
     - alimentation . devenir végétarien
-    #  Pour le moment, nous ne souhaitons pas afficher cette action pour cette sous-catégorie
-    # - alimentation . devenir végétalien
+    #- alimentation . devenir végétalien # Pour le moment, nous ne souhaitons pas afficher cette action pour cette sous-catégorie
     - alimentation . bonus . manger de saison
     - alimentation . bonus . manger local
 
+# On commente pour l'instant tant qu'on ne peut pas afficher une action sans que 'formule' soit défini en son sein
 #ui . pédagogie . sous catégories . alimentation . végé:
 #  titre: Repas végétariens
 #  icônes: 🥦
@@ -187,25 +167,23 @@ ui . pédagogie . sous catégories . alimentation . poisson:
 #    somme:
 #      - alimentation . plats . végétalien
 #      - alimentation . plats . végétarien
+#  actions:
+#    - alimentation . repas . végétarien:
 
+# Réfléchir en v2 à l'intérêt ou non d'une ui sur le petit-dej
 #ui . pédagogie . sous catégories . alimentation . petit déjeuner:
 #  icônes: 🥐
 #  formule: alimentation . petit déjeuner séjour
 
 ui . pédagogie . sous catégories . alimentation . boisson:
+  titre: Votre consommation de boissons pendant le séjour
   icônes: 🥤
   formule: alimentation . boisson
   actions:
     - alimentation . boisson . réduire café . max deux par jour
-    - alimentation . boisson . réduire café . max un par jour
     - alimentation . boisson . réduire café . remplace un café par jour par thé
     - alimentation . boisson . réduire café . remplace par chicorée
-    - alimentation . boisson . réduire café . remplace par thé
     - alimentation . boisson . réduire chocolat chaud . max un par jour
-    - alimentation . boisson . réduire boissons sucrées . max un litres par semaine
-    - alimentation . boisson . réduire boissons sucrées . changer pour sirop
-    - alimentation . boisson . réduire alcool . max un litres par semaine
-    - alimentation . boisson . eau en bouteille . arrêter
 
 #ui . pédagogie . sous catégories . alimentation . déchets:
 #  icônes: 🚮
@@ -259,32 +237,41 @@ ui . pédagogie . sous catégories . alimentation . boisson:
 
 # Réfléchir aux informations qu'on pourrait pousser ici
 ui . pédagogie . sous catégories . divers . activités décarbonées dunkerquois:
-  applicable si: transport . localisation séjour = 1
+  applicable si: transport . localisation séjour = 15
+  non applicable si: 
+    toutes ces conditions:
+      - est défini: divers . loisirs . activité . activité motorisée . présent
+      - divers . loisirs . activité . activité motorisée . présent
   titre: Activités culturelles et de loisirs
   icônes: 🌳
-  formule: divers . loisirs - divers . loisirs . activité . empreinte activité motorisée #On fait cette soustraction pour que si empreinte "activité motorisée" est cochée ça soit l'ui juste après qui s'affiche (pour l'instant "activité motorisée a plus d'empreinte que toutes les autres activités).
+  formule: divers . loisirs
   actions:
     - divers . loisirs . activité décarbonée
   informations:
-    - informations regionales . divers . loisir . dunkerquois . marche
-    - informations regionales . divers . loisir . dunkerquois . vélo
+    - informations regionales . séjour . marche . dunkerquois
+    - informations regionales . séjour . vélo . dunkerquois
     - informations regionales . divers . loisir . dunkerquois . nautique
     - informations regionales . divers . loisir . dunkerquois . parcs et jardins
 #    - informations regionales . divers . loisir . dunkerquois . marche1
 #    - informations regionales . divers . loisir . dunkerquois . marche2
 
 ui . pédagogie . sous catégories . divers . activités carbonées dunkerquois:
-  applicable si: transport . localisation séjour = 1
+  applicable si: transport . localisation séjour = 15
   titre: Activités carbonées durant votre séjour
   icônes: 🛻
   formule: divers . loisirs . activité . empreinte activité motorisée
   actions:
     - divers . loisirs . activité moins carbonée
   informations:
-    - informations regionales . divers . loisir . dunkerquois . marche1
-    - informations regionales . divers . loisir . dunkerquois . marche2
+    - informations regionales . séjour . marche . dunkerquois
+    - informations regionales . séjour . vélo . dunkerquois
+    - informations regionales . divers . loisir . dunkerquois . nautique
+    - informations regionales . divers . loisir . dunkerquois . parcs et jardins
+#    - informations regionales . divers . loisir . dunkerquois . marche1
+#    - informations regionales . divers . loisir . dunkerquois . marche2
 
-##########################################################################################################
+################################################################################################################################
+################################################################################################################################
 ### On commente car ces sous catégories et les actions qu'elle contiennent car elles ne sont pas utiles ici (car reprises de NGC)
 #ui . pédagogie . sous catégories . transport . avion:
 #  icônes: ✈️
