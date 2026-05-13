@@ -15,7 +15,7 @@ transport:
       - voiture . présent
       - deux roues . présent
 #      - transports commun . présent
-#      - mobilité douce . présent
+      - mobilité douce . présent
 #      - taxi . présent
 #      - avion . présent
     suggestions:
@@ -25,7 +25,7 @@ transport:
         voiture . présent: non
         deux roues . présent: non
 #        transports commun . présent: non
-#        mobilité douce . présent: non
+        mobilité douce . présent: non
 #        taxi . présent: non
 #        avion . présent: non
   question: Quel moyen de transport allez-vous utiliser pour vous rendre sur votre lieu de séjour et pour en revenir ?
