@@ -1167,6 +1167,7 @@ alimentation . local . choix utilisateur:
   formule:
     une de ces conditions:
       - local . consommation = 'jamais'
+      - local . consommation = 'parfois'
       - local . consommation = 'souvent'
       - local . consommation = 'oui toujours'
 
