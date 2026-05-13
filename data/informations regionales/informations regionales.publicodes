@@ -829,202 +829,202 @@ informations regionales . séjour . marche . par défaut:
 
 informations regionales . séjour . transport commun:
 informations regionales . séjour . transport commun . arras pays d'artois:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Bus Artis à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Bus Artis](https://www.bus-artis.fr/).
 
 informations regionales . séjour . transport commun . artois lys:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Tadao à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Tadao](https://www.tadao.fr/fr/).
 
 informations regionales . séjour . transport commun . audomarois:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Mouvéo à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Mouvéo](https://mouveo.ca-pso.fr/).
 
 informations regionales . séjour . transport commun . aumale blangy:
-  titre: Le réseau DK bus à votre service !
+  titre: Les réseaux Nomad et trans'80 à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez les réseaux [Nomad](https://nomad.normandie.fr/lignes-de-cars) ou [trans'80](https://trans80.hautsdefrance.fr/).
 
 informations regionales . séjour . transport commun . avesnois thiérache:
-  titre: Le réseau DK bus à votre service !
+  titre: Les réseaux Stibus et Avesnois Mobilité à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez les réseaux [Stibus](https://www.stibus.fr/) ou [Avesnois Mobilité](https://avesnois.manett-ondemand.cityway.fr/AVESNOIS/fr-fr).
 
 informations regionales . séjour . transport commun . baie de somme:
-  titre: Le réseau DK bus à votre service !
+  titre: Les réseaux Baie de Somme et trans'80 à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez [Baie de Somme Agglo](https://www.baiedesommeagglo.fr/quotidien/mobilites/lignes-urbaines/) ou [trans'80](https://trans80.hautsdefrance.fr/).
 
 informations regionales . séjour . transport commun . boulonnais:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Marineo à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Marineo](https://www.marineo.fr/).
 
 informations regionales . séjour . transport commun . calaisis:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau SITAC Calais à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [SITAC Calais](https://www.sitac-calais-opale-bus.fr/).
 
 informations regionales . séjour . transport commun . cambresis:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau TUC à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [TUC](https://www.tuc-cambresis.fr/fr/).
 
 informations regionales . séjour . transport commun . chaunois:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Lyneo à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Lyneo](https://www.bus-lyneo.fr/).
 
 informations regionales . séjour . transport commun . cœur des hauts de france:
-  titre: Le réseau DK bus à votre service !
+  titre: La Communauté de Communes de Haute Somme à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez la [Communauté de Communes de Haute Somme](https://www.coeurhautesomme.fr/mobilite/transport-urbain-a-peronne/).
 
 informations regionales . séjour . transport commun . compiègne pierrefonds:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Oise mobilités à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Oise mobilités](https://www.oise-mobilite.fr/).
 
 informations regionales . séjour . transport commun . côte d'opale:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau CA2BN à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [CA2BN](https://www.ca2bm.fr/).
 
 informations regionales . séjour . transport commun . creil halatte:
-  titre: Le réseau DK bus à votre service !
+  titre: Les réseaux Oise mobilités et Creil sud Oise à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez [Oise mobilités](https://www.oise-mobilite.fr/) ou [Creil sud Oise](https://www.creilsudoise.fr/mon-quotidien/deplacements).
 
 informations regionales . séjour . transport commun . dunkerquois:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau DKBUS à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [DKBUS](https://www.dkbus.com/).
 
 informations regionales . séjour . transport commun . flandre rurale:
-  titre: Le réseau DK bus à votre service !
+  titre: Les réseaux Coeur de Flandre agglo et CCHF à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez [Coeur de Flandre agglo](https://www.ca-coeurdeflandre.fr/bus) ou [CCHF](https://www.cchf.fr/articles/ligne-de-bus-gratuite-pour-tous).
 
 informations regionales . séjour . transport commun . grand amiénois:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Ametis à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Ametis](https://www.ametis.fr/le-reseau-ametis/).
 
 informations regionales . séjour . transport commun . grand beauvaisis:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Corolis à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Corolis](https://www.corolis.fr/).
 
 informations regionales . séjour . transport commun . grand laonnois:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau TUL à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [TUL](https://www.tul-laon.fr/).
 
 informations regionales . séjour . transport commun . hainaut:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Transvilles à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Transvilles](https://www.transvilles.com/).
 
 informations regionales . séjour . transport commun . lens-hénin:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Tadao à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Tadao](https://www.tadao.fr/fr/).
 
 informations regionales . séjour . transport commun . liancourtois:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Oise mobilités à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Oise mobilités](https://www.oise-mobilite.fr/).
 
 informations regionales . séjour . transport commun . métropole européenne de lille:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Ilévia à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Ilévia](https://www.ilevia.fr/).
 
 informations regionales . séjour . transport commun . noyonnais deux vallées:
-  titre: Le réseau DK bus à votre service !
+  titre: Les réseaux Oise mobilités et Ville de Noyon à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez [Oise mobilités](https://www.oise-mobilite.fr/) ou [Ville de Noyon](https://www.ville-noyon.fr/vivre-a-noyon/vie-pratique/transports/).
 
 informations regionales . séjour . transport commun . pays de valois:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Oise mobilités à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Oise mobilités](https://www.oise-mobilite.fr/).
 
 informations regionales . séjour . transport commun . pévélois douaisis:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Évéole à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Évéole](https://www.eveole.com/).
 
 informations regionales . séjour . transport commun . plateau picard:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Oise mobilités à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Oise mobilités](https://www.oise-mobilite.fr/).
 
 informations regionales . séjour . transport commun . portes de la champagne:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Fablio à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Fablio](https://www.fablio.fr/).
 
 informations regionales . séjour . transport commun . saint-quentinois:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Bus pastel à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Bus pastel](https://buspastel.fr/).
 
 informations regionales . séjour . transport commun . senlis chantilly:
-  titre: Le réseau DK bus à votre service !
+  titre: Les réseaux Ville de Senlis et Keolis à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez [Ville de Senlis](https://www.ville-senlis.fr/tus-transports-collectifs/) ou [Keolis](https://www.keolis-oise.com/se-deplacer/duc-chantilly/).
 
 informations regionales . séjour . transport commun . soissonnais-valois:
-  titre: Le réseau DK bus à votre service !
+  titre: Les réseaux Situs et Villéo retzéo à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez [Situs](https://mobilinfos.org/) ou [Villéo retzéo](https://www.villeo-retzeo.fr/).
 
 informations regionales . séjour . transport commun . vexin sablons:
-  titre: Le réseau DK bus à votre service !
+  titre: Le réseau Sablons bus à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau [Sablons bus](https://sablons-bus.fr/).
 
 informations regionales . séjour . transport commun . villes sœurs:
-  titre: Le réseau DK bus à votre service !
+  titre: Les réseaux Nomad, trans'80 et Villes sœurs à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Transport à la demande, Noctibus, le réseau [DK bus](https://www.dkbus.com/) vous simplifiera les trajets dans le Dunkerquois.
+  description: Pour planifier vos trajets en transports en commun, consultez [Nomad](https://nomad.normandie.fr/lignes-de-cars), [trans'80](https://trans80.hautsdefrance.fr/) ou [Villes sœurs](https://www.villes-soeurs.fr/vie-quotidienne/transport-mobilite/tad/).
 
 informations regionales . séjour . train:
   titre: Le TER qu'il vous faut
