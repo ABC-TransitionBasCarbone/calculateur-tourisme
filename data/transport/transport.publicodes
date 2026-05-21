@@ -45,6 +45,7 @@ transport:
       - car longue distance
       - voiture
       - deux roues
+      - mobilité douce
 
 transport . notif train:
   type: notification
