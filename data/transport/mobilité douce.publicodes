@@ -1,8 +1,8 @@
 transport . mobilité douce:
 # Cette variable "intermédiaire" est un hack pour réussir à mettre une mosaique fille après une mosaique mère (même si le choix mobilité douce n'est pas à l'heure actuelle proposé dans la mosaique mère)
   applicable si: présent
-  titre: Déplacements actifs
-  icônes: 🚋
+  titre: Mobilité douce
+  icônes: 🚲🛴
   formule: transport . mobilité douce . type * 1
 
 transport . mobilité douce . type:
@@ -22,7 +22,7 @@ transport . mobilité douce . type:
         vae . présent: non
         trottinette électrique . présent: non
   question: Quel(s) mode(s) de déplacement "actif" allez-vous utiliser pour aller et revenir de votre lieu de séjour  ?
-  titre: Déplacements actifs 
+  titre: Mobilité douce
   description: Avec ou sans assistance électrique (marche, vélo, trottinette)
 #  description: |
 #    Ces déplacements incluent tout ce qu'on regroupe aussi sous le terme de mobilité douce car il s'agit de déplacements alternatifs aux transports motorisés. Cela
