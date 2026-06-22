@@ -87,6 +87,16 @@ séjour . empreinte par défaut:
 #        alors: séjour . voiture . empreinte par défaut
 #      - sinon: 0 #Si A-R = défini --> on considère qu'on peut dire jnsp à séjour (car on ne sait pas ce qu'on va faire) et donc attribuer 0
 
+séjour . notif choix carboné:
+  type: notification
+  formule:
+    une de ces conditions:
+      - voiture . présent
+      - deux roues . présent
+      - taxi . présent
+  description: |
+    Et si vous optiez pour des transports moins carbonés pendant votre séjour ? Le réseau de transport en commun ([Bus Artis](https://www.bus-artis.fr/)) ou la location de vélo (Avec [V'Electric, le vélo artis](https://www.bus-artis.fr/velectric-le-velo-artis/) ou [Riverside park](https://riversidepark.fr/)) sont des gestes forts pour un séjour durable !
+
 séjour . notif choix carboné arras pays d'artois:
   type: notification
   formule:
@@ -97,7 +107,7 @@ séjour . notif choix carboné arras pays d'artois:
           - deux roues . présent
           - taxi . présent
   description: |
-    Et si vous optiez pour des transports moins carbonés pendant votre séjour ? Le réseau de transport en commun ([Bus Artis](https://www.bus-artis.fr/)) ou la location de vélo (Avec [V'Electric, le vélo artis](https://www.bus-artis.fr/velectric-le-velo-artis/) ou [Riverside park](https://riversidepark.fr/)) sont des gestes forts pour un séjour durable !
+    Et si vous optiez pour des transports moins carbonés pendant votre séjour ? Le réseau de transport en commun ([Tadao](https://www.tadao.fr/fr/)) ou la location de vélo (Avec [Cyclable Bethune](https://cyclablebethune.lokki.rent/) ou [Ange ou Démon électrique](https://angeoudemon-electrique.fr/location-2/)) sont des gestes forts pour un séjour durable !
 
 séjour . notif choix carboné artois lys:
   type: notification
@@ -135,7 +145,7 @@ séjour . notif choix carboné aumale blangy:
   description: |
     Et si vous optiez pour des transports moins carbonés pendant votre séjour ? Le réseau de transport en commun ([Nomad](https://nomad.normandie.fr/lignes-de-cars) ou [trans'80](https://trans80.hautsdefrance.fr/)) ou la location de vélo (Avec [l'association Gamaches plein air](https://www.gamachespleinair.com/activites-terrestres/vtt/)) sont des gestes forts pour un séjour durable !
 
-séjour . notif choix carboné avesnois thiérache:
+séjour . notif choix carboné Avesnois Thiérache:
   type: notification
   formule:
     toutes ces conditions:
@@ -145,7 +155,25 @@ séjour . notif choix carboné avesnois thiérache:
           - deux roues . présent
           - taxi . présent
   description: |
-    Et si vous optiez pour des transports moins carbonés pendant votre séjour ? Le réseau de transport en commun ([Stibus](https://www.stibus.fr/) ou [Avesnois mobilité](https://avesnois.manett-ondemand.cityway.fr/AVESNOIS/fr-fr)) ou la location de vélo (Avec [l'office du tourisme de la Thiérache](https://www.tourisme-thierache.fr/fiche/detail/447/Boutique-Les-Copains-d-Thi%C3%A9rache-:-Location-de-v%C3%A9lo), [Valjoly](https://valjoly.com/portfolio/vttvtc/) ou [Relais éco-vélo](https://relais-eco-velo.fr/tousauveloetunvelopourtous/)) sont des gestes forts pour un séjour durable !
+    Et si vous optiez pour des transports moins carbonés pendant votre séjour ? 
+
+    Réseau de transport en commun :
+
+    - [Hauts-de-France mobilités](https://arcenciel.hautsdefrance.fr/arcenciel4) 
+    - [Stibus](https://www.stibus.fr/) 
+    - [ici](https://aisne.transportscolaire.hautsdefrance.fr/crhdf_02/horaires/index.php#)
+    
+    Quelques loueurs de vélo: 
+
+    Avesnois :
+    - Avec l'[OT de l'Avesnois](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/ev3-2-2-2/6269162_bureau-du-quesnoy/), 
+    - [Maison du Bocage Sains-du-Nord](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/ev3-2-2-2/6645101_location-velo-tous-terrains-vtt-a-la-maison-du-bocage/)
+    - [Plage verte Marpent](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/ev3-2-2-2/6990995_location-de-velos-a-assistance-electrique/) 
+    
+    Thiérache :
+    - [Thiérache Sport Nature](https://thierachesportnature.com/)
+    - [Les Copains d'Thiérache](https://copains-thierache.fr/?srsltid=AfmBOor-PgO30YcU2fC2mLKxdB4J7P3tWmf0Fy-fl6hmTEPhD5m5Dix6) 
+    - [Alex Cycles](https://www.tourisme-thierache.fr/fiche/detail/1602/a-voir-a-faire~Loisirs/Alex'Cycles)
 
 séjour . notif choix carboné baie de somme:
   type: notification
@@ -520,15 +548,14 @@ séjour . notif transport commun aumale blangy:
   description: |
     Bravo ! Vous optez pour les transports en commun ? Pour planifier vos itinéraires, consulter les horaires, c'est [Nomad](https://nomad.normandie.fr/lignes-de-cars) ou [trans'80](https://trans80.hautsdefrance.fr/).
 
-séjour . notif transport commun avesnois thiérache:
+séjour . notif transport commun Avesnois Thiérache:
   type: notification
   formule:
     toutes ces conditions:
       - transport . localisation séjour = 5
       - transports commun . présent
   description: |
-    Bravo ! Vous optez pour les transports en commun ? Pour planifier vos itinéraires, consulter les horaires, c'est [Stibus](https://www.stibus.fr/) ou [Avesnois mobilité](https://avesnois.manett-ondemand.cityway.fr/AVESNOIS/fr-fr).
-
+    Bravo ! Vous optez pour les transports en commun ? Pour planifier vos itinéraires, consulter les horaires, c'est [Hauts-de-France mobilités](https://arcenciel.hautsdefrance.fr/arcenciel4), [Stibus](https://www.stibus.fr/) ou [ici](https://aisne.transportscolaire.hautsdefrance.fr/crhdf_02/horaires/index.php#).
 séjour . notif transport commun baie de somme:
   type: notification
   formule:
@@ -818,14 +845,25 @@ séjour . notif mobilité douce aumale blangy:
   description: |
     Vélo ! Vous avez dit vélo ? Quelques adresses de loueurs : [l'association Gamaches plein air](https://www.gamachespleinair.com/activites-terrestres/vtt/) pour trouver le compagnon de route parfait !
 
-séjour . notif mobilité douce avesnois thiérache:
+séjour . notif mobilité douce Avesnois Thiérache:
   type: notification
   formule:
     toutes ces conditions:
       - transport . localisation séjour = 5
       - séjour . mobilité douce . présent
   description: |
-    Vélo ! Vous avez dit vélo ? Quelques adresses de loueurs : [l'office du tourisme de la Thiérache](https://www.tourisme-thierache.fr/fiche/detail/447/Boutique-Les-Copains-d-Thi%C3%A9rache-:-Location-de-v%C3%A9lo), [Valjoly](https://valjoly.com/portfolio/vttvtc/), [Relais éco-vélo](https://relais-eco-velo.fr/tousauveloetunvelopourtous/) pour trouver le compagnon de route parfait !
+    Vélo ! Vous avez dit vélo ? Quelques adresses de loueurs : 
+    
+    Avesnois :
+    - Avec l'[OT de l'Avesnois](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/ev3-2-2-2/6269162_bureau-du-quesnoy/), 
+    - [Maison du Bocage Sains-du-Nord](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/ev3-2-2-2/6645101_location-velo-tous-terrains-vtt-a-la-maison-du-bocage/)
+    - [Plage verte Marpent](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/ev3-2-2-2/6990995_location-de-velos-a-assistance-electrique/) 
+    
+    Thiérache :
+    - [Thiérache Sport Nature](https://thierachesportnature.com/)
+    - [Les Copains d'Thiérache](https://copains-thierache.fr/?srsltid=AfmBOor-PgO30YcU2fC2mLKxdB4J7P3tWmf0Fy-fl6hmTEPhD5m5Dix6) 
+    - [Alex Cycles](https://www.tourisme-thierache.fr/fiche/detail/1602/a-voir-a-faire~Loisirs/Alex'Cycles)
+
 
 séjour . notif mobilité douce baie de somme:
   type: notification
