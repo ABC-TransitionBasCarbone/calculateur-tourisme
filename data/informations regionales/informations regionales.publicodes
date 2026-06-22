@@ -93,11 +93,17 @@ informations regionales . séjour . vélo . avesnois thierache:
   icônes: 🚴‍♂️
   intensiteCouleur: 100
   description: |
-    Le site [Komoot](https://www.komoot.com/fr-fr/discover/Braye-en-Thi%C3%A9rache/@49.7794257,3.9588314/tours?sport=touringbicycle&map=true&max_distance=5000&pageNumber=1) vous aidera à trouver votre bonheur à vélo.
-    Petit florilège de belles balades :
-    - [Boucle Pique-nique - Ronquières à Fourmies](https://www.komoot.com/fr-fr/smarttour/12684599?tour_origin=smart_tour_search) : 16,8 km, 1h09
-    - [V31 - Véloroute du Bassin Minier/Sambre de Aulnoye-Aymeries à Maubeuge](https://www.af3v.org/les-voies-vertes/voies/741-v31-veloroute-du-bassin-minier-veloroute-de-la-sambre-de-aulnoye-aymeries-a-maubeuge/) : 18,4 km
-    - [V31 - Véloroute du Bassin Minier de Le Quesnoy à Aulnoye-Aymeries](https://www.af3v.org/les-voies-vertes/voies/740-v31-veloroute-du-bassin-minier-de-le-quesnoy-a-aulnoye-aymeries/) : 18,4 km
+    🚴‍♂️ Circuits à vélo :
+
+    Avesnois :
+      - [Moulins et kiosques en Thiérache](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/randonnee-vtt-2/6302371_moulins-et-kiosques-en-thierache/) (42 km)
+      - [La route Van Gogh de Hon-Hergies à Catillon-sur-Sambre](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/randonnee-vtt-2/6302331_la-route-van-gogh-de-hon-hergies-a-catillon-sur-sambre/) (48 km)
+      - [La Transfrontalière par Maubeuge](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/randonnee-vtt-2/7439343_la-transfrontaliere-par-maubeuge/) (61 km)
+    
+    Thiérache :
+      - [Carnet de route de Blangy à Saint-Michel](https://www.randonner.fr/offres/carnet-de-route-de-blangy-a-saint-michel-hirson-fr-5992398/) (18,7 km)
+      - [Carnet de route de Hirson à Guise](https://www.randonner.fr/offres/carnet-de-route-de-hirson-a-guise-hirson-fr-5998041/) (79,8 km)
+      - [L'Aisne à vélo - La Thiérache Bocagère](https://www.randonner.fr/offres/laisne-a-velo-la-thierache-bocagere-guise-fr-2161600/) (48,9 km)
 
 informations regionales . séjour . vélo . baie de somme:
   titre: Découvrez des balades à vélo dans la Baie de Somme
@@ -496,11 +502,17 @@ informations regionales . séjour . marche . avesnois thierache:
   icônes: 🚶‍♂️
   intensiteCouleur: 100
   description: |
-    Deux sites pour trouver votre bonheur pédestre : [Komoot](https://www.komoot.com/fr-fr/discover/Avesnes-sur-Helpe/@50.1218835,3.9321056/tours?sport=hike&map=true&max_distance=5000&pageNumber=1) et [Sentiers en France](https://www.sentiers-en-france.eu/randonnee?lieu_id=1639&lieu=Nord%20%2859%29&ville_rayon=10&autour%5Brayon%5D=10&autour%5Blat%5D=0&autour%5Blng%5D=0&motcle=&distance%5Bmin%5D=0&distance%5Bmax%5D=100&duree%5Bmin%5D=0&duree%5Bmax%5D=24&trace=0) !
-    Petit florilège de belles balades :    
-    - [Circuit des Chapelles et du Château Gaillard](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=672646&mb_titre=circuit-des-chapelles) : 5,8 km, 1h30
-    - [Randonnée à Mondrepuis, étang des Moines](https://www.komoot.com/fr-fr/smarttour/35378585?tour_origin=smart_tour_search) : 5,48 km, 1h26
-    - [Balade dans le massif forestier de Mormal](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=675323&mb_titre=circuit-des-nerviens) : 4,1 km, 1h
+    🚶‍♂️ Randonnées :
+
+    Avesnois :
+      - [Par les caches à Frasnoy](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-top-10-des-balades-a-faire-en-famille/6302377_par-les-caches-a-frasnoy/) (4 km)
+      - [Au Fil de la Solre à Solre-le-Château](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-top-10-des-balades-a-faire-en-famille/6302441_au-fil-de-la-solre-a-solre-le-chateau/) (4 km)
+      - [Les Étangs des Moines à Fourmies](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-top-10-des-balades-a-faire-en-famille/6302379_les-etangs-des-moines-a-fourmies/) (4 km)
+
+    Thiérache :
+      - [La Nigaudière](https://www.randonner.fr/offres/la-nigaudiere-plomion-fr-2161147/) (9,7 km)
+      - [Par le fond du Val à Thiérache](https://www.randonner.fr/offres/par-le-fond-du-val-parfondeval-fr-2161151/) (13,1 km)
+      - La Forêt de Saint-Michel (8,1 km)
 
 informations regionales . séjour . marche . baie de somme:
   titre: Découvrez des randonnées pédestres dans la Baie de Somme
@@ -856,8 +868,7 @@ informations regionales . séjour . transport commun . avesnois thiérache:
   titre: Les réseaux Stibus et Avesnois Mobilité à votre service !
   icônes: 🚌
   intensitéCouleur: 200
-  description: Pour planifier vos trajets en transports en commun, consultez les réseaux [Stibus](https://www.stibus.fr/) ou [Avesnois Mobilité](https://avesnois.manett-ondemand.cityway.fr/AVESNOIS/fr-fr).
-
+  description: Pour planifier vos trajets en transports en commun, consultez le réseau c'est [Hauts-de-France mobilités](https://arcenciel.hautsdefrance.fr/arcenciel4), [Stibus](https://www.stibus.fr/) ou [ici](https://aisne.transportscolaire.hautsdefrance.fr/crhdf_02/horaires/index.php#).
 informations regionales . séjour . transport commun . baie de somme:
   titre: Les réseaux Baie de Somme et trans'80 à votre service !
   icônes: 🚌
@@ -1391,35 +1402,68 @@ informations regionales . divers . loisir . avesnois thierache . vélo:
   icônes: 🚴‍♂️
   intensiteCouleur: 100
   description: |
-    - [Boucle Pique-nique - Ronquières à Fourmies](https://www.komoot.com/fr-fr/smarttour/12684599?tour_origin=smart_tour_search) : 16,8 km, 1h09
-    - [V31 - Véloroute du Bassin Minier/Sambre de Aulnoye-Aymeries à Maubeuge](https://www.af3v.org/les-voies-vertes/voies/741-v31-veloroute-du-bassin-minier-veloroute-de-la-sambre-de-aulnoye-aymeries-a-maubeuge/) : 18,4 km
-    - [V31 - Véloroute du Bassin Minier de Le Quesnoy à Aulnoye-Aymeries](https://www.af3v.org/les-voies-vertes/voies/740-v31-veloroute-du-bassin-minier-de-le-quesnoy-a-aulnoye-aymeries/) : 18,4 km
+    🚴‍♂️ Circuits à vélo :
+
+    Avesnois :
+      - [Moulins et kiosques en Thiérache](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/randonnee-vtt-2/6302371_moulins-et-kiosques-en-thierache/) (42 km)
+      - [La route Van Gogh de Hon-Hergies à Catillon-sur-Sambre](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/randonnee-vtt-2/6302331_la-route-van-gogh-de-hon-hergies-a-catillon-sur-sambre/) (48 km)
+      - [La Transfrontalière par Maubeuge](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/randonnee-vtt-2/7439343_la-transfrontaliere-par-maubeuge/) (61 km)
+    
+    Thiérache :
+      - [Carnet de route de Blangy à Saint-Michel](https://www.randonner.fr/offres/carnet-de-route-de-blangy-a-saint-michel-hirson-fr-5992398/) (18,7 km)
+      - [Carnet de route de Hirson à Guise](https://www.randonner.fr/offres/carnet-de-route-de-hirson-a-guise-hirson-fr-5998041/) (79,8 km)
+      - [L'Aisne à vélo - La Thiérache Bocagère](https://www.randonner.fr/offres/laisne-a-velo-la-thierache-bocagere-guise-fr-2161600/) (48,9 km)
 
 informations regionales . divers . loisir . avesnois thierache . marche:
   titre: Découvrez toutes nos balades et randonnées pédestres dans l’Avesnois Thiérache
   icônes: 🚶‍♂️
   intensiteCouleur: 100
   description: |
-    - [Circuit des Chapelles et du Château Gaillard](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=672646&mb_titre=circuit-des-chapelles) : 5,8 km, 1h30
-    - [Randonnée à Mondrepuis, étang des Moines](https://www.komoot.com/fr-fr/smarttour/35378585?tour_origin=smart_tour_search) : 5,48 km, 1h26
-    - [Balade dans le massif forestier de Mormal](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=675323&mb_titre=circuit-des-nerviens) : 4,1 km, 1h
+    🚶‍♂️ Randonnées :
+
+    Avesnois :
+      - [Par les caches à Frasnoy](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-top-10-des-balades-a-faire-en-famille/6302377_par-les-caches-a-frasnoy/) (4 km)
+      - [Au Fil de la Solre à Solre-le-Château](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-top-10-des-balades-a-faire-en-famille/6302441_au-fil-de-la-solre-a-solre-le-chateau/) (4 km)
+      - [Les Étangs des Moines à Fourmies](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-top-10-des-balades-a-faire-en-famille/6302379_les-etangs-des-moines-a-fourmies/) (4 km)
+
+    Thiérache :
+      - [La Nigaudière](https://www.randonner.fr/offres/la-nigaudiere-plomion-fr-2161147/) (9,7 km)
+      - [Par le fond du Val à Thiérache](https://www.randonner.fr/offres/par-le-fond-du-val-parfondeval-fr-2161151/) (13,1 km)
+      - La Forêt de Saint-Michel (8,1 km)
 
 informations regionales . divers . loisir . avesnois thierache . nautique:
   titre: Découvrez nos bases nautiques dans l’Avesnois Thiérache
   icônes: 🌊
   intensiteCouleur: 100
   description: |
-    - [Station Touristique Valjoly (Eppe-Sauvage)](https://valjoly.com/activites/) : pédalo, bateau électrique, catamaran, stand up paddle, planche à voile, canoë
-    - [Base de loisirs du Quesnoy](https://www.lequesnoy.fr/sport/la-base-de-loisirs/#:~:text=La%20base%20de%20loisirs%20du,nautiques%20pour%20toute%20la%20famille.) : pédalo, canoë
+    🌊 Activités nautiques :
+
+    Avesnois :
+      - [CANOE EVASION](https://www.canoesurlosie.com/)
+      - [Thiérache Sport Nature](https://thierachesportnature.com/)
+      - [Ile Verte](https://cap-ile-verte.com/)
+    
+    Thiérache :
+      - [Val Joly - station touristique](https://www.valjoly.com/) (paddle, voile, pédalos, barques électriques)
+      - [Plage Verte - Marpent](https://marpent.fr/ouverture-de-la-plage-verte-le-mardi-2-juillet/) (canoës, bateaux électriques)
 
 informations regionales . divers . loisir . avesnois thierache . parcs et jardins:
   titre: Profitez des magnifiques parcs et jardins dans l’Avesnois Thiérache
   icônes: 🌳
   intensiteCouleur: 100
   description: |
-    - [Le Jardin Roy, 1 rue des Ecoles, 02140 Haution](https://www.tourisme-en-hautsdefrance.com/offres/le-jardin-roy-haution-fr-3275155/)
-    - [Jardin Sauvage et Botanique, 35 Rue Jean-Baptiste Lebas, 59177 Sains-du-Nord](https://www.tourisme-en-hautsdefrance.com/offres/jardin-sauvage-et-botanique-sains-du-nord-fr-3493381/)
-    - [Le Jardin d'Hélène, 2 Rue Bernard Rousselle, 02120 Proisy](https://www.tourisme-en-hautsdefrance.com/offres/le-jardin-dhelene-proisy-fr-4095201/)
+  🌳 Espaces verts :
+
+      Avesnois :
+      - Parc de l'abbaye de Liessies
+      - Le Songe de Laurence : Hypernotomia laureatus (jardins)
+      - [Maison du bocage de Sains-du-Nord](https://sites.google.com/view/maisondubocage)
+      
+      Thiérache :
+      - [Jardin d'Hélène](https://www.stagesculinaireetpassevaulages.com/)
+      - [Jardins du Familistère](https://www.familistere.com/fr/visiter/que-voir-que-faire-au-familistere/les-jardins)
+      - [Jardins du Château d'Aisonville-et-Bernoville](https://www.parcsetjardinsdedepicardie.fr/portfolio/jardin-du-chateau-de-aisonville-et-bernoville/)
+
 
 informations regionales . divers . loisir . baie de somme:
 informations regionales . divers . loisir . baie de somme . vélo:
