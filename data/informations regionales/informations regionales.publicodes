@@ -88,7 +88,7 @@ informations regionales . séjour . vélo . aumale blangy:
     - [Boucle le Château de Digeon au départ de Gauville](https://www.komoot.com/fr-fr/smarttour/12656640?tour_origin=smart_tour_search) : 14 km, 50 min
     - [Parcours de Blangy sur Bresle à Saint-Maxent](https://urlr.me/XT5A4b) : 14,85 km, 1h11
 
-informations regionales . séjour . vélo . avesnois thierache:
+informations regionales . séjour . vélo . Avesnois Thiérache:
   titre: Découvrez des balades à vélo dans l’Avesnois Thiérache
   icônes: 🚴‍♂️
   intensiteCouleur: 100
@@ -497,7 +497,7 @@ informations regionales . séjour . marche . aumale blangy:
     - [Randonnée autour du lac de Bourg](https://www.komoot.com/fr-fr/smarttour/28915079?tour_origin=smart_tour_search) : 3,89 km, 1h
     - [Boucle au départ de Neslette](https://www.komoot.com/fr-fr/smarttour/36278015?tour_origin=smart_tour_search) : 5,37 km, 1h22
 
-informations regionales . séjour . marche . avesnois thierache:
+informations regionales . séjour . marche . Avesnois Thiérache:
   titre: Découvrez des randonnées pédestres dans l’Avesnois Thiérache
   icônes: 🚶‍♂️
   intensiteCouleur: 100
@@ -864,7 +864,7 @@ informations regionales . séjour . transport commun . aumale blangy:
   intensitéCouleur: 200
   description: Pour planifier vos trajets en transports en commun, consultez les réseaux [Nomad](https://nomad.normandie.fr/lignes-de-cars) ou [trans'80](https://trans80.hautsdefrance.fr/).
 
-informations regionales . séjour . transport commun . avesnois thiérache:
+informations regionales . séjour . transport commun . Avesnois Thiérache:
   titre: Les réseaux Stibus et Avesnois Mobilité à votre service !
   icônes: 🚌
   intensitéCouleur: 200
@@ -1396,8 +1396,8 @@ informations regionales . divers . loisir . aumale blangy . parcs et jardins:
   description: |
     - [Jardins de LY, 346 route du Tréport, 80140 Senarpont](https://www.tourisme-en-hautsdefrance.com/offres/jardins-de-ly-senarpont-fr-3274329/)
 
-informations regionales . divers . loisir . avesnois thierache:
-informations regionales . divers . loisir . avesnois thierache . vélo:
+informations regionales . divers . loisir . Avesnois Thiérache:
+informations regionales . divers . loisir . Avesnois Thiérache . vélo:
   titre: Découvrez toutes nos balades et circuits vélo dans l’Avesnois Thiérache
   icônes: 🚴‍♂️
   intensiteCouleur: 100
@@ -1414,7 +1414,7 @@ informations regionales . divers . loisir . avesnois thierache . vélo:
       - [Carnet de route de Hirson à Guise](https://www.randonner.fr/offres/carnet-de-route-de-hirson-a-guise-hirson-fr-5998041/) (79,8 km)
       - [L'Aisne à vélo - La Thiérache Bocagère](https://www.randonner.fr/offres/laisne-a-velo-la-thierache-bocagere-guise-fr-2161600/) (48,9 km)
 
-informations regionales . divers . loisir . avesnois thierache . marche:
+informations regionales . divers . loisir . Avesnois Thiérache . marche:
   titre: Découvrez toutes nos balades et randonnées pédestres dans l’Avesnois Thiérache
   icônes: 🚶‍♂️
   intensiteCouleur: 100
@@ -1431,7 +1431,7 @@ informations regionales . divers . loisir . avesnois thierache . marche:
       - [Par le fond du Val à Thiérache](https://www.randonner.fr/offres/par-le-fond-du-val-parfondeval-fr-2161151/) (13,1 km)
       - La Forêt de Saint-Michel (8,1 km)
 
-informations regionales . divers . loisir . avesnois thierache . nautique:
+informations regionales . divers . loisir . Avesnois Thiérache . nautique:
   titre: Découvrez nos bases nautiques dans l’Avesnois Thiérache
   icônes: 🌊
   intensiteCouleur: 100
@@ -1447,7 +1447,7 @@ informations regionales . divers . loisir . avesnois thierache . nautique:
       - [Val Joly - station touristique](https://www.valjoly.com/) (paddle, voile, pédalos, barques électriques)
       - [Plage Verte - Marpent](https://marpent.fr/ouverture-de-la-plage-verte-le-mardi-2-juillet/) (canoës, bateaux électriques)
 
-informations regionales . divers . loisir . avesnois thierache . parcs et jardins:
+informations regionales . divers . loisir . Avesnois Thiérache . parcs et jardins:
   titre: Profitez des magnifiques parcs et jardins dans l’Avesnois Thiérache
   icônes: 🌳
   intensiteCouleur: 100

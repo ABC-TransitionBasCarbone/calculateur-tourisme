@@ -174,7 +174,7 @@ alimentation . plats . notif alimentation aumale blangy:
     - Marché de Blangy-sur-Bresle : dimanche : 8h à 13h, Place Notre-Dame/Place de la Mairie
     - Marché de Aumale : samedi : 7h à 13h, Place des Marchés, 76390 Aumale
 
-alimentation . plats . notif alimentation avesnois thiérache:
+alimentation . plats . notif alimentation Avesnois Thiérache:
   type: notification
   formule:
     toutes ces conditions:
@@ -1178,7 +1178,7 @@ alimentation . local . choix utilisateur:
       - local . consommation = 'souvent'
       - local . consommation = 'oui toujours'
 
-alimentation . local . consommation . notif avesnois-thierache:
+alimentation . local . consommation . notif arras pays d'artois:
   type: notification
   formule:
     toutes ces conditions:
@@ -1232,7 +1232,7 @@ alimentation . local . consommation . notif aumale blangy:
       - La [Ferme du Vert Pâturage](https://ouacheterlocal.fr/les-producteurs/la-ferme-du-vert-paturage/) saura vous régaler avec des produits fermiers de qualité, en particulier son boeuf savoureux
       - Spécialisée dans l'élevage de porcs et de bovins, la [Ferme des Fontaines](https://ouacheterlocal.fr/les-producteurs/la-ferme-des-fontaines/) vous fera redécouvrir le goût de la viande
 
-alimentation . local . consommation . notif avesnois thiérache:
+alimentation . local . consommation . notif Avesnois Thiérache:
   type: notification
   formule:
     toutes ces conditions:
