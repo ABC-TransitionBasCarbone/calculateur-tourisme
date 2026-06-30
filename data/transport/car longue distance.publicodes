@@ -14,7 +14,7 @@ transport . car longue distance . km:
 #     
 #     Nous nous intéressons ici aux trajets faits en car de type Ouibus, Flixbus, etc.
   description: |
-    Renseignez un nombre de km cohérent avec les distances que vous allez parcourir en car "longue distance" pour vous rendre sur votre lieu de séjour et en revenir. 
+    Renseignez un nombre de km cohérent avec les distances que vous allez parcourir en car "longue distance" pour vous rendre LOCALISATION_PLACEHOLDER et en revenir. 
     Nous nous intéressons ici aux trajets faits en car de type Ouibus, Flixbus, etc.
   suggestions:
     Paris ⇄ Lille: 440

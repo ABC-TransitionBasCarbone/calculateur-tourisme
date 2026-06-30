@@ -38,7 +38,7 @@ séjour:
         transports commun . présent: non
         mobilité douce . présent: non
         taxi . présent: non
-  question: Quel(s) moyen(s) de transport allez-vous utiliser pendant votre séjour ?
+  question: Quel(s) moyen(s) de transport allez-vous utiliser pendant votre séjour en TERRITOIRE_PLACEHOLDER ?
   icônes: 📍
   description: |
     Renseignez les différents types de transport que vous allez utiliser **pendant votre séjour uniquement**. Comme expliqué Précédemment les trajets aller-retour entre 
@@ -1158,7 +1158,7 @@ séjour . train . km:
   question: Combien de kilomètres allez vous parcourir en TER pendant votre séjour ?
   description: |
     Renseignez un nombre de km cohérent (en arrondissant à la dizaine ou centaine supérieure) avec les distances que vous allez parcourir en train pendant votre séjour.
-    Pour rappel, **ne prenez pas en compte** d'éventuels km pour aller sur votre lieu de séjour et revenir à votre domicile. Vous avez dû renseigner ces km lors de la première question.
+    Pour rappel, **ne prenez pas en compte** d'éventuels km pour aller LOCALISATION_PLACEHOLDER et revenir à votre domicile. Vous avez dû renseigner ces km lors de la première question.
   suggestions:
     Amiens ⇄ Lille : 440
     Bruxelles ⇄ Lille : 220
@@ -1184,7 +1184,7 @@ séjour . train . km:
 #  question: Combien de kilomètres allez vous parcourir en car de longue distance (Ouibus, Flixbus, etc.) pendant votre séjour ?
 #  description: |
 #    Renseignez un nombre de km cohérent (en arrondissant à la dizaine ou centaine supérieure) avec les distances que vous allez parcourir en car longue distance pendant votre séjour.
-#    Pour rappel, **ne prenez pas en compte** d'éventuels km pour aller sur votre lieu de séjour et revenir à votre domicile. Vous avez dû renseigner ces km lors de la première question.
+#    Pour rappel, **ne prenez pas en compte** d'éventuels km pour aller LOCALISATION_PLACEHOLDER et revenir à votre domicile. Vous avez dû renseigner ces km lors de la première question.
 #  suggestions:
 #    Paris ⇄ Lille: 440
 #    Bruxelles ⇄ Lille : 220

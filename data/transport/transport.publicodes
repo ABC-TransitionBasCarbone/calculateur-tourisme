@@ -6,7 +6,7 @@ transport:
     toutes ces conditions:
       - durée séjour > 0
       - transport . localisation séjour > 0
-  titre: Transport pour venir en Hauts-de-France
+  titre: Transport pour venir en TERRITOIRE_PLACEHOLDER
   mosaique:
     type: selection
     options:
@@ -28,7 +28,7 @@ transport:
         mobilité douce . présent: non
 #        taxi . présent: non
 #        avion . présent: non
-  question: Quel moyen de transport allez-vous utiliser pour vous rendre sur votre lieu de séjour et pour en revenir ?
+  question: Quel moyen de transport allez-vous utiliser pour vous rendre LOCALISATION_PLACEHOLDER et pour en revenir ?
   abréviation: transp.
   icônes: 🚦
   description: |
@@ -66,34 +66,34 @@ transport . notif pas train:
     Et si vous faisiez un geste pour la planète en optant pour le train ? Regardez sur ce [calculateur d'itinéraire](https://www.rome2rio.com) si c'est possible puis rendez-vous sur [SNCF Connect](https://www.sncf-connect.com/) ou sur [TER Hauts-de-France](https://www.ter.sncf.com/hauts-de-france). On vous prévient, ça peut être un peu plus long 🙂.
 
 transport . train . présent:
-  question: Allez-vous utiliser des trains pour vous rendre et revenir sur votre lieu de séjour ?
+  question: Allez-vous utiliser des trains pour vous rendre et revenir LOCALISATION_PLACEHOLDER ?
   par défaut: non
 
 transport . car longue distance . présent:
-  question: Allez-vous utiliser des cars longue distance pour vous rendre et revenir sur votre lieu de séjour ?
+  question: Allez-vous utiliser des cars longue distance pour vous rendre et revenir LOCALISATION_PLACEHOLDER ?
   par défaut: non
 
 transport . voiture . présent:
-  question: Allez-vous utiliser une voiture pour vous rendre et revenir sur votre lieu de séjour ?
+  question: Allez-vous utiliser une voiture pour vous rendre et revenir LOCALISATION_PLACEHOLDER ?
   par défaut: non
 
 transport . deux roues . présent:
-  question: Allez-vous utiliser un deux roues pour vous rendre et revenir sur votre lieu de séjour ?
+  question: Allez-vous utiliser un deux roues pour vous rendre et revenir LOCALISATION_PLACEHOLDER ?
   par défaut: non
 
 # On laisse le . présent pour ne pas faire buguer le fichier transport commun.publicodes dans l'éventualité où on le remettrai comme mode de transport principal
 transport . transports commun . présent:
-  question: Allez-vous utiliser des transports en commun pour vous rendre et revenir sur votre lieu de séjour ?
+  question: Allez-vous utiliser des transports en commun pour vous rendre et revenir LOCALISATION_PLACEHOLDER ?
   par défaut: non
 
 # On laisse le . présent pour ne pas faire buguer le fichier mobilité douce.publicodes dans l'éventualité où on le remettrai comme mode de transport principal
 transport . mobilité douce . présent:
-  question: Allez-vous utiliser des modes de déplacements "actifs" pour vous rendre et revenir sur votre lieu de séjour ?
+  question: Allez-vous utiliser des modes de déplacements "actifs" pour vous rendre et revenir LOCALISATION_PLACEHOLDER ?
   par défaut: non
 
 # On laisse le . présent pour ne pas faire buguer le fichier taxi.publicodes dans l'éventualité où on le remettrai comme mode de transport principal
 transport . taxi . présent:
-  question: Allez-vous utiliser un/des taxis pour vous rendre et revenir sur votre lieu de séjour ?
+  question: Allez-vous utiliser un/des taxis pour vous rendre et revenir LOCALISATION_PLACEHOLDER ?
   par défaut: non
 
 transport . voyageurs:
