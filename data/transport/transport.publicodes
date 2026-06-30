@@ -6,7 +6,7 @@ transport:
     toutes ces conditions:
       - durée séjour > 0
       - transport . localisation séjour > 0
-  titre: Transport pour venir en Hauts-de-France
+  titre: Transport pour venir en TERRITOIRE_PLACEHOLDER
   mosaique:
     type: selection
     options:

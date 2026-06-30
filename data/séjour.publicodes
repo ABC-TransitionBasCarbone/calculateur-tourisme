@@ -38,7 +38,7 @@ séjour:
         transports commun . présent: non
         mobilité douce . présent: non
         taxi . présent: non
-  question: Quel(s) moyen(s) de transport allez-vous utiliser pendant votre séjour ?
+  question: Quel(s) moyen(s) de transport allez-vous utiliser pendant votre séjour en TERRITOIRE_PLACEHOLDER ?
   icônes: 📍
   description: |
     Renseignez les différents types de transport que vous allez utiliser **pendant votre séjour uniquement**. Comme expliqué Précédemment les trajets aller-retour entre 
