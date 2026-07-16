@@ -63,7 +63,7 @@ transport . notif pas train:
       - transport . deux roues . présent
       - transport . car longue distance . présent
   description: |
-    Et si vous faisiez un geste pour la planète en optant pour le train ? Regardez sur ce [calculateur d'itinéraire](https://www.rome2rio.com) si c'est possible puis rendez-vous sur [SNCF Connect](https://www.sncf-connect.com/) ou sur [TER Hauts-de-France](https://www.ter.sncf.com/hauts-de-france). On vous prévient, ça peut être un peu plus long 🙂.
+    Et si vous faisiez un geste pour la planète en optant pour le train ? Regardez sur ce [Hauts-de-France Mobilités](https://www.hautsdefrance-mobilites.fr/) si c'est possible puis rendez-vous sur [SNCF Connect](https://www.sncf-connect.com/) ou sur [TER Hauts-de-France](https://www.ter.sncf.com/hauts-de-france). On vous prévient, ça peut être un peu plus long 🙂.
 
 transport . train . présent:
   question: Allez-vous utiliser des trains pour vous rendre et revenir LOCALISATION_PLACEHOLDER ?

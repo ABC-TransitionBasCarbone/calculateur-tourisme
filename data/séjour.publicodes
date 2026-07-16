@@ -161,7 +161,7 @@ séjour . notif choix carboné Avesnois Thiérache:
 
     - [Hauts-de-France mobilités](https://arcenciel.hautsdefrance.fr/arcenciel4) 
     - [Stibus](https://www.stibus.fr/) 
-    - [ici](https://aisne.transportscolaire.hautsdefrance.fr/crhdf_02/horaires/index.php#)
+    - [Réseau de transport de l’Aisne](https://aisne.transportscolaire.hautsdefrance.fr/crhdf_02/horaires/index.php#)
     
     Quelques loueurs de vélo: 
 
@@ -555,7 +555,7 @@ séjour . notif transport commun Avesnois Thiérache:
       - transport . localisation séjour = 5
       - transports commun . présent
   description: |
-    Bravo ! Vous optez pour les transports en commun ? Pour planifier vos itinéraires, consulter les horaires, c'est [Hauts-de-France mobilités](https://arcenciel.hautsdefrance.fr/arcenciel4), [Stibus](https://www.stibus.fr/) ou [ici](https://aisne.transportscolaire.hautsdefrance.fr/crhdf_02/horaires/index.php#).
+    Bravo ! Vous optez pour les transports en commun ? Pour planifier vos itinéraires, consulter les horaires, c'est [Hauts-de-France mobilités](https://arcenciel.hautsdefrance.fr/arcenciel4), [Stibus](https://www.stibus.fr/) ou [Réseau de transport de l’Aisne](https://aisne.transportscolaire.hautsdefrance.fr/crhdf_02/horaires/index.php#).
 séjour . notif transport commun baie de somme:
   type: notification
   formule:
@@ -855,7 +855,7 @@ séjour . notif mobilité douce Avesnois Thiérache:
     Vélo ! Vous avez dit vélo ? Quelques adresses de loueurs : 
     
     Avesnois :
-    - Avec l'[OT de l'Avesnois](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/ev3-2-2-2/6269162_bureau-du-quesnoy/), 
+    - Avec l'[OT de l'Avesnois](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/ev3-2-2-2/), vous pourrez trouver un livret d'accueil (ici)[https://www.tourisme-avesnois.com/wp-content/uploads/2026/06/livret-accueil-velo-2026.pdf]
     - [Maison du Bocage Sains-du-Nord](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/ev3-2-2-2/6645101_location-velo-tous-terrains-vtt-a-la-maison-du-bocage/)
     - [Plage verte Marpent](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/ev3-2-2-2/6990995_location-de-velos-a-assistance-electrique/) 
     
