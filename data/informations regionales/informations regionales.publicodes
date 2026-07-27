@@ -7,7 +7,7 @@ informations regionales . transport . alternartives:
   icônes: 🚗❌
   intensiteCouleur: 100
   description: |
-    Ce [calculateur d'itinéraire](https://www.rome2rio.com) vous permettra de trouver une alternative à la voiture. On vous prévient, ça peut être un peu plus long 🙂.
+    Ce [Hauts-de-France Mobilités](https://www.hautsdefrance-mobilites.fr/) vous permettra de trouver une alternative à la voiture. On vous prévient, ça peut être un peu plus long 🙂.
 
 informations regionales . transport . alternartives train:
   titre: Le train qu'il vous faut !
@@ -95,12 +95,9 @@ informations regionales . séjour . vélo . Avesnois Thiérache:
   description: |
     🚴‍♂️ Circuits à vélo :
 
-    Avesnois :
       - [Moulins et kiosques en Thiérache](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/randonnee-vtt-2/6302371_moulins-et-kiosques-en-thierache/) (42 km)
       - [La route Van Gogh de Hon-Hergies à Catillon-sur-Sambre](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/randonnee-vtt-2/6302331_la-route-van-gogh-de-hon-hergies-a-catillon-sur-sambre/) (48 km)
       - [La Transfrontalière par Maubeuge](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/randonnee-vtt-2/7439343_la-transfrontaliere-par-maubeuge/) (61 km)
-    
-    Thiérache :
       - [Carnet de route de Blangy à Saint-Michel](https://www.randonner.fr/offres/carnet-de-route-de-blangy-a-saint-michel-hirson-fr-5992398/) (18,7 km)
       - [Carnet de route de Hirson à Guise](https://www.randonner.fr/offres/carnet-de-route-de-hirson-a-guise-hirson-fr-5998041/) (79,8 km)
       - [L'Aisne à vélo - La Thiérache Bocagère](https://www.randonner.fr/offres/laisne-a-velo-la-thierache-bocagere-guise-fr-2161600/) (48,9 km)
@@ -504,12 +501,9 @@ informations regionales . séjour . marche . Avesnois Thiérache:
   description: |
     🚶‍♂️ Randonnées :
 
-    Avesnois :
       - [Par les caches à Frasnoy](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-top-10-des-balades-a-faire-en-famille/6302377_par-les-caches-a-frasnoy/) (4 km)
       - [Au Fil de la Solre à Solre-le-Château](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-top-10-des-balades-a-faire-en-famille/6302441_au-fil-de-la-solre-a-solre-le-chateau/) (4 km)
       - [Les Étangs des Moines à Fourmies](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-top-10-des-balades-a-faire-en-famille/6302379_les-etangs-des-moines-a-fourmies/) (4 km)
-
-    Thiérache :
       - [La Nigaudière](https://www.randonner.fr/offres/la-nigaudiere-plomion-fr-2161147/) (9,7 km)
       - [Par le fond du Val à Thiérache](https://www.randonner.fr/offres/par-le-fond-du-val-parfondeval-fr-2161151/) (13,1 km)
       - La Forêt de Saint-Michel (8,1 km)
@@ -1404,12 +1398,9 @@ informations regionales . divers . loisir . Avesnois Thiérache . vélo:
   description: |
     🚴‍♂️ Circuits à vélo :
 
-    Avesnois :
       - [Moulins et kiosques en Thiérache](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/randonnee-vtt-2/6302371_moulins-et-kiosques-en-thierache/) (42 km)
       - [La route Van Gogh de Hon-Hergies à Catillon-sur-Sambre](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/randonnee-vtt-2/6302331_la-route-van-gogh-de-hon-hergies-a-catillon-sur-sambre/) (48 km)
       - [La Transfrontalière par Maubeuge](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-velo/randonnee-vtt-2/7439343_la-transfrontaliere-par-maubeuge/) (61 km)
-    
-    Thiérache :
       - [Carnet de route de Blangy à Saint-Michel](https://www.randonner.fr/offres/carnet-de-route-de-blangy-a-saint-michel-hirson-fr-5992398/) (18,7 km)
       - [Carnet de route de Hirson à Guise](https://www.randonner.fr/offres/carnet-de-route-de-hirson-a-guise-hirson-fr-5998041/) (79,8 km)
       - [L'Aisne à vélo - La Thiérache Bocagère](https://www.randonner.fr/offres/laisne-a-velo-la-thierache-bocagere-guise-fr-2161600/) (48,9 km)
@@ -1421,12 +1412,9 @@ informations regionales . divers . loisir . Avesnois Thiérache . marche:
   description: |
     🚶‍♂️ Randonnées :
 
-    Avesnois :
       - [Par les caches à Frasnoy](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-top-10-des-balades-a-faire-en-famille/6302377_par-les-caches-a-frasnoy/) (4 km)
       - [Au Fil de la Solre à Solre-le-Château](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-top-10-des-balades-a-faire-en-famille/6302441_au-fil-de-la-solre-a-solre-le-chateau/) (4 km)
       - [Les Étangs des Moines à Fourmies](https://www.tourisme-avesnois.com/preparer-son-sejour/se-ressourcer-en-pleine-nature/le-top-10-des-balades-a-faire-en-famille/6302379_les-etangs-des-moines-a-fourmies/) (4 km)
-
-    Thiérache :
       - [La Nigaudière](https://www.randonner.fr/offres/la-nigaudiere-plomion-fr-2161147/) (9,7 km)
       - [Par le fond du Val à Thiérache](https://www.randonner.fr/offres/par-le-fond-du-val-parfondeval-fr-2161151/) (13,1 km)
       - La Forêt de Saint-Michel (8,1 km)
@@ -1438,12 +1426,9 @@ informations regionales . divers . loisir . Avesnois Thiérache . nautique:
   description: |
     🌊 Activités nautiques :
 
-    Avesnois :
       - [CANOE EVASION](https://www.canoesurlosie.com/)
       - [Thiérache Sport Nature](https://thierachesportnature.com/)
       - [Ile Verte](https://cap-ile-verte.com/)
-    
-    Thiérache :
       - [Val Joly - station touristique](https://www.valjoly.com/) (paddle, voile, pédalos, barques électriques)
       - [Plage Verte - Marpent](https://marpent.fr/ouverture-de-la-plage-verte-le-mardi-2-juillet/) (canoës, bateaux électriques)
 
@@ -1454,12 +1439,9 @@ informations regionales . divers . loisir . Avesnois Thiérache . parcs et jardi
   description: |
   🌳 Espaces verts : |
 
-      Avesnois : |
       - Parc de l'abbaye de Liessies
       - Le Songe de Laurence : Hypernotomia laureatus (jardins)
       - [Maison du bocage de Sains-du-Nord](https://sites.google.com/view/maisondubocage)
-      
-      Thiérache : |
       - [Jardin d'Hélène](https://www.stagesculinaireetpassevaulages.com/)
       - [Jardins du Familistère](https://www.familistere.com/fr/visiter/que-voir-que-faire-au-familistere/les-jardins)
       - [Jardins du Château d'Aisonville-et-Bernoville](https://www.parcsetjardinsdedepicardie.fr/portfolio/jardin-du-chateau-de-aisonville-et-bernoville/)

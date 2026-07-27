@@ -424,7 +424,7 @@ transport . voiture . prendre le train:
   icônes: 🚆
   description: |
     Le train est vraiment LE mode de transport écologique ! Mais nous le savons, il est parfois plus cher et tous les trajets n'ont pas forcément de connexions simples par rail.
-    Consultez ce [calculateur d'itinéraire)(https://www.rome2rio.com) pour trouver les alternatives à la voiture possibles.
+    Consultez ce [Hauts-de-France Mobilités](https://www.hautsdefrance-mobilites.fr/) pour trouver les alternatives à la voiture possibles.
   non applicable si: 
     une de ces conditions:
       - transport . train . présent
