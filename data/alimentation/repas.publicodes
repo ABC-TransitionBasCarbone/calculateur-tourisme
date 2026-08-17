@@ -174,7 +174,7 @@ alimentation . plats . notif alimentation aumale blangy:
     - Marché de Blangy-sur-Bresle : dimanche : 8h à 13h, Place Notre-Dame/Place de la Mairie
     - Marché de Aumale : samedi : 7h à 13h, Place des Marchés, 76390 Aumale
 
-alimentation . plats . notif alimentation avesnois thiérache:
+alimentation . plats . notif alimentation Avesnois Thiérache:
   type: notification
   formule:
     toutes ces conditions:
@@ -182,10 +182,17 @@ alimentation . plats . notif alimentation avesnois thiérache:
       - est défini: alimentation . plats
       - alimentation . nombre plats >= 1
   description: |
-    Si vous voulez manger en circuit court et soutenir l'économie locale, voici les horaires des marchés de l'Avesnois Thiérache :
-    - Marché d'Étréaupont : 3ème samedi du mois : 15h-18h, Place de la mairie, 02580 Étréaupont
-    - Marché de Fourmies : samedi : 8h à 12h, Place de la République (Face rue de Verdun), 59610 Fourmies
-    - Marché de Hirson : lundi : 8h à 13h, Places Victor Hugo /Pasteur et Décamp, 02500 Hirson
+    Si vous voulez manger en circuit court et soutenir l'économie locale, voici les horaires des marchés de l'Avesnois :
+    - Le Marché de Hon-Hergies : sur le site de l'ancienne gare, rue Maxime Ansieau. Dernier vendredi du mois de 17h à 20h. Excepté pour novembre et décembre dates variables. Pas de marché en janvier et février
+    - Le Marché d'Anor : site de la Verrerie Blanche, 4è samedi de 9h30 à 12h excepté pour mars et décembre : 3é dimanche. Pas de marché en juillet, août et novembre. 
+    - Le marché de Dourlers : Place Stroh : chaque samedi matin de 9h30 à 12h. 
+    - L'ensemble des marchés sur [ce site](https://www.parc-naturel-avesnois.fr/blog/2026/03/17/les-marches-de-lavesnois-2/)
+    
+    Les marchés dans la Thiérache :
+
+    - Marché Thiérache Fermière : [ici](https://www.tourisme-thierache.fr/Sejourner/Gastronomie/Marches)
+    - Marché bio à Etréaupont
+    - Marché bio à Bucilly
 
 alimentation . plats . notif alimentation baie de somme:
   type: notification
@@ -1178,7 +1185,7 @@ alimentation . local . consommation . notif arras pays d'artois:
       - transport . localisation séjour = 1
       - local . choix utilisateur
   description: |
-    Pour consommer des produits de chez nous et trouver un point de vente à côté de votre hébergement aller sur [ouacheterlocal.fr](https://ouacheterlocal.fr/nos-points-de-vente/).
+    Pour consommer des produits de chez nous et trouver un point de vente à côté de votre hébergement aller sur [ouacheterlocal.fr](https://ouacheterlocal.fr/partenaires/pnr-de-lavesnois/).
     Quelques bonnes adresses à connaitre :
       - Comme son nom l'indique, [Cit'Abeille](https://ouacheterlocal.fr/les-producteurs/cit-abeille/) vous accueille avec du bon miel, tout droit sorti de la ruche :
       - Envie de poisson ? Retrouvez toutes vos saveurs préférées à la [Pisciculture d'Étrun](https://ouacheterlocal.fr/les-producteurs/sarl-pisciculture-detrun/)
@@ -1225,7 +1232,7 @@ alimentation . local . consommation . notif aumale blangy:
       - La [Ferme du Vert Pâturage](https://ouacheterlocal.fr/les-producteurs/la-ferme-du-vert-paturage/) saura vous régaler avec des produits fermiers de qualité, en particulier son boeuf savoureux
       - Spécialisée dans l'élevage de porcs et de bovins, la [Ferme des Fontaines](https://ouacheterlocal.fr/les-producteurs/la-ferme-des-fontaines/) vous fera redécouvrir le goût de la viande
 
-alimentation . local . consommation . notif avesnois thiérache:
+alimentation . local . consommation . notif Avesnois Thiérache:
   type: notification
   formule:
     toutes ces conditions:
@@ -1233,10 +1240,9 @@ alimentation . local . consommation . notif avesnois thiérache:
       - local . choix utilisateur
   description: |
     Pour consommer des produits de chez nous et trouver un point de vente à côté de votre hébergement aller sur [ouacheterlocal.fr](https://ouacheterlocal.fr/nos-points-de-vente/).
-    Quelques bonnes adresses à connaitre :
-      - La spécialité des [Vergers Tellier](https://gastronomie-hautsdefrance.fr/boutique/les-vergers-tellier/) ? Leurs délicieuses pommes !
-      - Des paniers de légumes frais aux bières typiques de la région, tout se passe chez [Au Fil des Saisons](https://gastronomie-hautsdefrance.fr/boutique/au-fil-des-saisons/)
-      - Vous êtes à Maroilles et curieux de découvrir ses spécialités ? Chez [Les Caves de l'Abbaye](https://gastronomie-hautsdefrance.fr/boutique/les-caves-de-labbaye/) vous trouverez tout ce qu'il vous faut
+      - Pour du jus de pomme, [Haute Tige](https://www.parc-naturel-avesnois.fr/blog/2018/02/01/un-jus-de-pomme-haute-tige/) 
+      - Pour du Maroilles [ici](https://ouacheterlocal.fr/les-producteurs/oeufs-produits-laitiers/fromages/fromage-de-vache/maroilles-aop/) ou [ici](https://www.tourisme-thierache.fr/Sejourner/Gastronomie/Produits-du-Terroir)
+      - Pour du [cidre](https://www.tourisme-thierache.fr/Sejourner/Gastronomie/Produits-du-Terroir)
 
 alimentation . local . consommation . notif baie de somme:
   type: notification

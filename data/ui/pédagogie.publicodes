@@ -148,7 +148,7 @@ ui . pédagogie . sous catégories . séjour . voiture aumale blangy:
     - informations regionales . séjour . transport commun . aumale blangy
     - informations regionales . séjour . train
 
-ui . pédagogie . sous catégories . séjour . voiture avesnois thiérache:
+ui . pédagogie . sous catégories . séjour . voiture Avesnois Thiérache:
   titre: Voiture pendant votre séjour
   applicable si: transport . localisation séjour = 5
   icônes: 🚗
@@ -161,9 +161,9 @@ ui . pédagogie . sous catégories . séjour . voiture avesnois thiérache:
 #    - séjour . voiture . location réduire taille
     - séjour . voiture . location voiture électrique
   informations:
-    - informations regionales . séjour . vélo . avesnois thiérache
-    - informations regionales . séjour . marche . avesnois thiérache
-    - informations regionales . séjour . transport commun . avesnois thiérache
+    - informations regionales . séjour . vélo . Avesnois Thiérache
+    - informations regionales . séjour . marche . Avesnois Thiérache
+    - informations regionales . séjour . transport commun . Avesnois Thiérache
     - informations regionales . séjour . train
 
 ui . pédagogie . sous catégories . séjour . voiture baie de somme:
@@ -892,7 +892,7 @@ ui . pédagogie . sous catégories . divers . activités décarbonées aumale bl
     - informations regionales . divers . loisir . aumale blangy . nautique
     - informations regionales . divers . loisir . aumale blangy . parcs et jardins
 
-ui . pédagogie . sous catégories . divers . activités décarbonées avesnois thiérache:
+ui . pédagogie . sous catégories . divers . activités décarbonées Avesnois Thiérache:
   applicable si: transport . localisation séjour = 5
   non applicable si: 
     toutes ces conditions:
@@ -904,10 +904,10 @@ ui . pédagogie . sous catégories . divers . activités décarbonées avesnois 
   actions:
     - divers . loisirs . activité décarbonée
   informations:
-    - informations regionales . séjour . marche . avesnois thiérache
-    - informations regionales . séjour . vélo . avesnois thiérache
-    - informations regionales . divers . loisir . avesnois thiérache . nautique
-    - informations regionales . divers . loisir . avesnois thiérache . parcs et jardins
+    - informations regionales . séjour . marche . Avesnois Thiérache
+    - informations regionales . séjour . vélo . Avesnois Thiérache
+    - informations regionales . divers . loisir . Avesnois Thiérache . nautique
+    - informations regionales . divers . loisir . Avesnois Thiérache . parcs et jardins
 
 ui . pédagogie . sous catégories . divers . activités décarbonées baie de somme:
   applicable si: transport . localisation séjour = 6
@@ -1441,7 +1441,7 @@ ui . pédagogie . sous catégories . divers . activités carbonées aumale blang
     - informations regionales . divers . loisir . aumale blangy . nautique
     - informations regionales . divers . loisir . aumale blangy . parcs et jardins
 
-ui . pédagogie . sous catégories . divers . activités carbonées avesnois thiérache:
+ui . pédagogie . sous catégories . divers . activités carbonées Avesnois Thiérache:
   applicable si: transport . localisation séjour = 5
   titre: Activités carbonées durant votre séjour
   icônes: 🛻
@@ -1449,10 +1449,10 @@ ui . pédagogie . sous catégories . divers . activités carbonées avesnois thi
   actions:
     - divers . loisirs . activité moins carbonée
   informations:
-    - informations regionales . séjour . marche . avesnois thiérache
-    - informations regionales . séjour . vélo . avesnois thiérache
-    - informations regionales . divers . loisir . avesnois thiérache . nautique
-    - informations regionales . divers . loisir . avesnois thiérache . parcs et jardins
+    - informations regionales . séjour . marche . Avesnois Thiérache
+    - informations regionales . séjour . vélo . Avesnois Thiérache
+    - informations regionales . divers . loisir . Avesnois Thiérache . nautique
+    - informations regionales . divers . loisir . Avesnois Thiérache . parcs et jardins
 
 ui . pédagogie . sous catégories . divers . activités carbonées baie de somme:
   applicable si: transport . localisation séjour = 6
