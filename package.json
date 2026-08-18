@@ -1,6 +1,6 @@
 {
   "name": "@abc-transitionbascarbone/calculateur-tourisme",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "Le modèle de calcul d'empreinte climat de tourisme, fork du modèle de calcul Nos Gestes Climat",
   "main": "index.js",
   "types": "index.d.ts",
@@ -88,7 +88,7 @@
     "yargs": "^18.1.0"
   },
   "engines": {
-    "node": "24.18.1"
+    "node": "24.x"
   },
   "resolutions": {
     "follow-redirects": "1.16.0",
