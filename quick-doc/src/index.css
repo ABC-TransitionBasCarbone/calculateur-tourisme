@@ -1,5 +1,41 @@
-@config '../tailwind.config.js';
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --font-sans: Ubuntu, sans-serif;
+
+  --color-primary-100: #f6f3f8;
+  --color-primary-200: #e8dfee;
+  --color-primary-300: #aa90bf;
+  --color-primary-400: #6d418f;
+  --color-primary-500: #491273;
+  --color-primary-700: #3a0e5b;
+  --color-primary-800: #2a0a42;
+  --color-secondary: #d40983;
+  --color-default: #1a1a1a;
+  --color-grey-100: #f8f8f7;
+  --color-grey-200: #e3e3db;
+}
+
+@utility prose {
+  --tw-prose-quote-borders: transparent;
+
+  blockquote {
+    border-left: none;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-style: normal;
+  }
+
+  blockquote p {
+    margin: 0.5rem;
+  }
+
+  blockquote p:first-of-type::before,
+  blockquote p:first-of-type::after {
+    content: none;
+  }
+}
 
 #documentation-rule-root {
   @apply min-h-[90vh];
