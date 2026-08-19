@@ -4,17 +4,17 @@
 @theme {
   --font-sans: Ubuntu, sans-serif;
 
-  --color-primary-100: #f6f3f8;
-  --color-primary-200: #e8dfee;
-  --color-primary-300: #aa90bf;
-  --color-primary-400: #6d418f;
-  --color-primary-500: #491273;
-  --color-primary-700: #3a0e5b;
-  --color-primary-800: #2a0a42;
-  --color-secondary: #d40983;
-  --color-default: #1a1a1a;
-  --color-grey-100: #f8f8f7;
-  --color-grey-200: #e3e3db;
+  --color-primary-100: #e3ebfc;
+  --color-primary-200: #cdd9f8;
+  --color-primary-300: #afbff2;
+  --color-primary-400: #8e9eeb;
+  --color-primary-500: #737de1;
+  --color-primary-700: #4949ba;
+  --color-primary-800: #3d3f96;
+  --color-secondary: #fd69d0;
+  --color-default: #585ad3;
+  --color-grey-100: #F7FBFF;
+  --color-grey-200: #E3E3DB;
 }
 
 @utility prose {
