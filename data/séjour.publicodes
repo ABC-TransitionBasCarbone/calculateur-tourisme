@@ -341,7 +341,7 @@ séjour . notif choix carboné grand laonnois:
           - deux roues . présent
           - taxi . présent
   description: |
-    Et si vous optiez pour des transports moins carbonés pendant votre séjour ? Le réseau de transport en commun ([TUL](https://www.tul-laon.fr/)) ou la location de vélo (Avec [La ville de Laon](https://laon.fr/VILLE_LAON_21_WEB/FR/Accueil.awp?page=122&m=&ar=597)) sont des gestes forts pour un séjour durable !
+    Et si vous optiez pour des transports moins carbonés pendant votre séjour ? Le réseau de transport en commun ([TUL](https://www.tul-laon.fr/)) ou la location de vélo (Avec [La ville de Laon](https://www.ca-paysdelaon.fr/vivre/transports/mobilites-douces/)) sont des gestes forts pour un séjour durable !
 
 séjour . notif choix carboné hainaut:
   type: notification
@@ -989,7 +989,7 @@ séjour . notif mobilité douce grand laonnois:
       - transport . localisation séjour = 19
       - séjour . mobilité douce . présent
   description: |
-    Vélo ! Vous avez dit vélo ? Quelques adresses de loueurs : [La ville de Laon](https://laon.fr/VILLE_LAON_21_WEB/FR/Accueil.awp?page=122&m=&ar=597) pour trouver le compagnon de route parfait !
+    Vélo ! Vous avez dit vélo ? Quelques adresses de loueurs : [La ville de Laon](https://www.ca-paysdelaon.fr/vivre/transports/mobilites-douces/) pour trouver le compagnon de route parfait !
 
 séjour . notif mobilité douce hainaut:
   type: notification
